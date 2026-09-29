@@ -1,6 +1,6 @@
 /* =========================================================
-   CONTROLES — EMERALD PREMIUM V5
-   CSS COMPLETO
+   CONTROLES — CLEAN PREMIUM
+   VERDE CLARO + VERDE ESMERALDA + LARANJA
    ========================================================= */
 
 * {
@@ -8,32 +8,45 @@
     margin: 0;
     padding: 0;
 }
+
 :root {
-    --bg: #1B4338;
-    --bg-secondary: #1F4B3F;
+    --bg: #eef5f1;
+    --bg-soft: #f4f8f6;
 
-    --card: #285649;
-    --card-light: #306254;
+    --card: #fbfdfc;
+    --card-soft: #f5f9f7;
 
-    --green-deep: #12523F;
-    --green-dark: #176149;
-    --green: #1D7A59;
-    --green-light: #57D6A0;
+    --green-950: #082d23;
+    --green-900: #0b3d2e;
+    --green-800: #0d523d;
+    --green-700: #12684d;
+    --green-600: #18805e;
+    --green-500: #24a276;
 
-    --orange: #FF8126;
-    --orange-light: #FFA15C;
+    --orange: #f58220;
+    --orange-dark: #df6c0d;
+    --orange-soft: #fff1e5;
 
-    --text: #F7FAF8;
-    --text-secondary: #D3E0DB;
-    --muted: #A8BDB5;
+    --text: #10251e;
+    --text-soft: #536b62;
+    --muted: #879990;
 
-    --border: #3A6B5C;
+    --border: #dbe7e1;
 
-    --positive: #57DFA5;
-    --negative: #F58A7F;
+    --positive: #159766;
+    --negative: #db675b;
 
-    --shadow: 0 12px 30px rgba(0,0,0,.12);
+    --shadow:
+        0 10px 30px rgba(16, 55, 42, .07);
+
+    --shadow-strong:
+        0 18px 45px rgba(12, 70, 51, .12);
 }
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
 
 html {
     width: 100%;
@@ -46,16 +59,18 @@ body {
     width: 100%;
     min-height: 100vh;
 
+    overflow-x: hidden;
+
     background:
         radial-gradient(
-            circle at 80% 0%,
-            rgba(53, 175, 128, .10),
-            transparent 32%
+            circle at 90% 0%,
+            rgba(32, 157, 111, .08),
+            transparent 28%
         ),
         linear-gradient(
             180deg,
-            #102b23 0%,
-            #13352b 100%
+            #f5f9f7 0%,
+            #edf5f1 100%
         );
 
     color: var(--text);
@@ -68,7 +83,6 @@ body {
         sans-serif;
 
     -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
 }
 
 button,
@@ -79,6 +93,7 @@ select {
 
 button {
     cursor: pointer;
+
     appearance: none;
     -webkit-appearance: none;
 }
@@ -104,6 +119,8 @@ svg {
     left: 0;
     bottom: 0;
 
+    z-index: 100;
+
     width: 250px;
 
     padding: 30px 20px;
@@ -111,18 +128,16 @@ svg {
     background:
         linear-gradient(
             180deg,
-            #0a4635 0%,
-            #073529 100%
+            #0b4937,
+            #073629
         );
 
-    border-right: 1px solid #1b5140;
+    border-right: 1px solid rgba(255,255,255,.07);
 
     color: white;
 
     display: flex;
     flex-direction: column;
-
-    z-index: 100;
 }
 
 .brand-area {
@@ -146,14 +161,14 @@ svg {
     margin-top: 5px;
     margin-bottom: 30px;
 
-    color: #91afa3;
+    color: #9cb9ae;
 
     font-size: 9px;
 }
 
 
 /* =========================================================
-   MENU SIDEBAR
+   MENU LATERAL
    ========================================================= */
 
 .sidebar-menu {
@@ -170,7 +185,7 @@ svg {
 
     border-radius: 11px;
 
-    color: #a3bcb2;
+    color: #b4cbc2;
 
     display: flex;
     align-items: center;
@@ -182,13 +197,18 @@ svg {
 }
 
 .sidebar-menu a:hover {
-    background: rgba(255,255,255,.05);
+    background: rgba(255,255,255,.06);
 
     color: white;
 }
 
 .sidebar-menu a.active {
-    background: #126148;
+    background:
+        linear-gradient(
+            135deg,
+            #137052,
+            #0f5c45
+        );
 
     color: white;
 }
@@ -215,9 +235,9 @@ svg {
 
     border-radius: 5px;
 
-    background: rgba(244,123,32,.15);
+    background: rgba(245,130,32,.17);
 
-    color: #ffa15c;
+    color: #ffae68;
 
     font-size: 7px;
     font-weight: 800;
@@ -233,17 +253,17 @@ svg {
 
     padding: 16px;
 
-    border: 1px solid #28644f;
+    border: 1px solid rgba(255,255,255,.09);
     border-radius: 15px;
 
     background:
         linear-gradient(
             145deg,
-            #12503d,
-            #0c4031
+            #11523f,
+            #0d4233
         );
 
-    box-shadow: var(--shadow);
+    box-shadow: 0 12px 25px rgba(0,0,0,.12);
 }
 
 .premium-icon {
@@ -254,9 +274,9 @@ svg {
 
     border-radius: 9px;
 
-    background: rgba(244,123,32,.13);
+    background: rgba(245,130,32,.16);
 
-    color: var(--orange);
+    color: #ff9b48;
 
     display: grid;
     place-items: center;
@@ -274,7 +294,7 @@ svg {
 .premium-card p {
     margin: 7px 0 13px;
 
-    color: #a1bdb2;
+    color: #abc2b9;
 
     font-size: 8px;
 
@@ -289,17 +309,25 @@ svg {
     border: 0;
     border-radius: 8px;
 
-    background: var(--orange);
+    background:
+        linear-gradient(
+            135deg,
+            #ff9138,
+            #f47a18
+        );
 
     color: white;
 
     font-size: 9px;
     font-weight: 700;
+
+    box-shadow:
+        0 7px 18px rgba(245,130,32,.22);
 }
 
 
 /* =========================================================
-   PERFIL
+   PERFIL SIDEBAR
    ========================================================= */
 
 .sidebar-profile {
@@ -323,9 +351,9 @@ svg {
 
     border-radius: 50%;
 
-    background: #dcebe5;
+    background: #eaf5f0;
 
-    color: #0a4c38;
+    color: var(--green-800);
 
     display: grid;
     place-items: center;
@@ -346,7 +374,7 @@ svg {
 }
 
 .profile-text span {
-    color: #91afa3;
+    color: #9eb8ae;
 
     font-size: 7px;
 }
@@ -358,12 +386,12 @@ svg {
 
     background: transparent;
 
-    color: #91afa3;
+    color: #9eb8ae;
 }
 
 
 /* =========================================================
-   CONTEÚDO
+   CONTEÚDO PRINCIPAL
    ========================================================= */
 
 .main-content {
@@ -377,14 +405,14 @@ svg {
 
     background:
         radial-gradient(
-            circle at 80% 0%,
-            rgba(57, 187, 137, .08),
+            circle at 85% 0%,
+            rgba(24, 128, 94, .07),
             transparent 30%
         ),
         linear-gradient(
             180deg,
-            #102b23,
-            #13352b
+            #f6faf8,
+            #eef5f1
         );
 }
 
@@ -402,7 +430,7 @@ svg {
 }
 
 .header-date {
-    color: #8da69c;
+    color: var(--muted);
 
     font-size: 8px;
     font-weight: 700;
@@ -413,16 +441,16 @@ svg {
 .header h1 {
     margin: 5px 0;
 
-    color: #f5f8f6;
+    color: var(--green-950);
 
     font-size: 25px;
-    font-weight: 750;
+    font-weight: 780;
 
     letter-spacing: -1px;
 }
 
 .header p {
-    color: #96aaa2;
+    color: var(--text-soft);
 
     font-size: 10px;
 }
@@ -444,12 +472,14 @@ svg {
     border: 1px solid var(--border);
     border-radius: 11px;
 
-    background: var(--card);
+    background: rgba(255,255,255,.82);
 
-    color: #d3e0db;
+    color: var(--green-800);
 
     display: grid;
     place-items: center;
+
+    box-shadow: var(--shadow);
 }
 
 .header-icon-button svg {
@@ -476,14 +506,14 @@ svg {
 
     padding: 0 16px;
 
-    border: 1px solid #177458;
+    border: 0;
     border-radius: 11px;
 
     background:
         linear-gradient(
             135deg,
-            #116b50,
-            #0d5842
+            #ff9138,
+            #f47a18
         );
 
     color: white;
@@ -496,7 +526,8 @@ svg {
     font-size: 10px;
     font-weight: 700;
 
-    box-shadow: var(--shadow);
+    box-shadow:
+        0 10px 22px rgba(245,130,32,.22);
 }
 
 .new-transaction svg {
@@ -506,7 +537,7 @@ svg {
 
 
 /* =========================================================
-   CARD SALDO
+   CARD PRINCIPAL — SALDO
    ========================================================= */
 
 .balance-card {
@@ -518,21 +549,41 @@ svg {
 
     overflow: hidden;
 
-    border: 1px solid rgba(103,205,162,.22);
-    border-radius: 21px;
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 22px;
 
     background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(39,171,126,.26),
+            transparent 38%
+        ),
         linear-gradient(
-            125deg,
-            #084332 0%,
-            #0b5a42 58%,
-            #107052 100%
+            135deg,
+            #073e2f 0%,
+            #0b5b43 54%,
+            #0e7454 100%
         );
 
     color: white;
 
     box-shadow:
-        0 18px 40px rgba(0,0,0,.17);
+        0 18px 40px rgba(9,75,54,.18);
+}
+
+.balance-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 270px;
+    height: 270px;
+
+    right: -120px;
+    bottom: -150px;
+
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: 50%;
 }
 
 .balance-info {
@@ -542,7 +593,7 @@ svg {
 }
 
 .balance-title {
-    color: #b0c9bf;
+    color: #b7d0c6;
 
     display: flex;
     align-items: center;
@@ -561,9 +612,9 @@ svg {
     border: 0;
     border-radius: 7px;
 
-    background: rgba(255,255,255,.05);
+    background: rgba(255,255,255,.07);
 
-    color: #bdd2ca;
+    color: #d4e5de;
 
     display: grid;
     place-items: center;
@@ -580,7 +631,7 @@ svg {
     color: white;
 
     font-size: 35px;
-    font-weight: 750;
+    font-weight: 780;
 
     letter-spacing: -1.5px;
 }
@@ -595,11 +646,11 @@ svg {
 .balance-positive {
     padding: 6px 8px;
 
-    border-radius: 7px;
+    border-radius: 8px;
 
-    background: rgba(63,229,158,.13);
+    background: rgba(65,220,154,.15);
 
-    color: #75edb7;
+    color: #74e8b2;
 
     display: flex;
     align-items: center;
@@ -611,7 +662,7 @@ svg {
 }
 
 .balance-change small {
-    color: #a0bbb0;
+    color: #aec8bd;
 
     font-size: 8px;
 }
@@ -624,16 +675,16 @@ svg {
 
     z-index: 5;
 
-    height: 33px;
+    height: 36px;
 
-    padding: 0 11px;
+    padding: 0 12px;
 
-    border: 1px solid rgba(255,255,255,.12);
-    border-radius: 9px;
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 10px;
 
     background: rgba(255,255,255,.07);
 
-    color: #d0ded8;
+    color: #d8e7e1;
 
     display: flex;
     align-items: center;
@@ -651,13 +702,13 @@ svg {
 .balance-chart {
     position: absolute;
 
-    right: 4%;
+    right: 3%;
     bottom: 8px;
 
-    width: 45%;
-    height: 110px;
-
     z-index: 2;
+
+    width: 47%;
+    height: 110px;
 }
 
 .balance-chart svg {
@@ -666,7 +717,7 @@ svg {
 }
 
 .chart-fill {
-    fill: rgba(91,226,164,.10) !important;
+    fill: rgba(78,220,160,.10) !important;
 
     stroke: none !important;
 }
@@ -674,9 +725,9 @@ svg {
 .chart-stroke {
     fill: none !important;
 
-    stroke: #63e4a8 !important;
+    stroke: #4ed59d !important;
 
-    stroke-width: 2.3 !important;
+    stroke-width: 2.4 !important;
 
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -706,13 +757,13 @@ svg {
     padding: 17px;
 
     border: 1px solid var(--border);
-    border-radius: 15px;
+    border-radius: 17px;
 
     background:
         linear-gradient(
             145deg,
-            #1b4438,
-            #15382e
+            rgba(255,255,255,.98),
+            rgba(247,251,249,.98)
         );
 
     display: flex;
@@ -724,12 +775,12 @@ svg {
 }
 
 .summary-icon {
-    flex: 0 0 40px;
+    flex: 0 0 42px;
 
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
 
-    border-radius: 11px;
+    border-radius: 13px;
 
     display: grid;
     place-items: center;
@@ -741,21 +792,21 @@ svg {
 }
 
 .income-icon {
-    background: rgba(65,222,153,.14);
+    background: #e5f7ef;
 
-    color: #63e3a7;
+    color: #159766;
 }
 
 .expense-icon {
-    background: rgba(240,123,112,.14);
+    background: #fff0ed;
 
-    color: #ff9287;
+    color: #dc675c;
 }
 
 .receive-icon {
-    background: rgba(244,123,32,.14);
+    background: var(--orange-soft);
 
-    color: #ffa15e;
+    color: var(--orange);
 }
 
 .summary-content {
@@ -766,7 +817,7 @@ svg {
 }
 
 .summary-content > span {
-    color: #9db3aa;
+    color: #74877f;
 
     font-size: 8px;
 }
@@ -774,7 +825,7 @@ svg {
 .summary-content > strong {
     margin: 4px 0;
 
-    color: #f5f8f6;
+    color: var(--green-950);
 
     font-size: 16px;
 
@@ -782,17 +833,17 @@ svg {
 }
 
 .summary-content small {
-    color: #91a79e;
+    color: var(--muted);
 
     font-size: 7px;
 }
 
 .positive-text {
-    color: #63e3a7 !important;
+    color: #159766 !important;
 }
 
 .negative-text {
-    color: #ff8b80 !important;
+    color: #d96358 !important;
 }
 
 .card-more {
@@ -810,7 +861,7 @@ svg {
 
     background: transparent;
 
-    color: #8fa79d;
+    color: #91a29b;
 }
 
 
@@ -834,13 +885,13 @@ svg {
     padding: 20px;
 
     border: 1px solid var(--border);
-    border-radius: 17px;
+    border-radius: 18px;
 
     background:
         linear-gradient(
             145deg,
-            #1b4438,
-            #15382e
+            #ffffff,
+            #f7faf8
         );
 
     color: var(--text);
@@ -859,13 +910,13 @@ svg {
 .panel-header h3 {
     margin-bottom: 4px;
 
-    color: #f5f8f6;
+    color: var(--green-950);
 
     font-size: 12px;
 }
 
 .panel-header p {
-    color: #91a79e;
+    color: var(--muted);
 
     font-size: 8px;
 }
@@ -877,10 +928,10 @@ svg {
 
     background: transparent;
 
-    color: #66dfa8;
+    color: var(--green-700);
 
     font-size: 8px;
-    font-weight: 700;
+    font-weight: 750;
 }
 
 
@@ -909,11 +960,11 @@ svg {
 
     background:
         conic-gradient(
-            #f47b20 0 28%,
-            #42a9d6 28% 46%,
-            #8c77df 46% 61%,
-            #36c4b4 61% 73%,
-            #42695b 73% 100%
+            #f58220 0 28%,
+            #35a5d3 28% 46%,
+            #8271d9 46% 61%,
+            #2ab8a5 61% 73%,
+            #dce7e2 73% 100%
         );
 
     display: grid;
@@ -930,7 +981,7 @@ svg {
 
     border-radius: 50%;
 
-    background: #183d32;
+    background: white;
 }
 
 .donut-inner {
@@ -944,13 +995,13 @@ svg {
 .donut-inner strong {
     display: block;
 
-    color: white;
+    color: var(--green-950);
 
     font-size: 14px;
 }
 
 .donut-inner span {
-    color: #95aca3;
+    color: var(--muted);
 
     font-size: 7px;
 }
@@ -979,7 +1030,7 @@ svg {
 }
 
 .category-name {
-    color: #c0d0ca;
+    color: var(--text-soft);
 
     display: flex;
     align-items: center;
@@ -988,11 +1039,11 @@ svg {
 }
 
 .category-row strong {
-    color: #f0f6f3;
+    color: var(--text);
 }
 
 .category-row > span {
-    color: #91a79e;
+    color: var(--muted);
 }
 
 .dot {
@@ -1002,11 +1053,11 @@ svg {
     border-radius: 50%;
 }
 
-.food-dot { background: #f47b20; }
-.transport-dot { background: #42a9d6; }
-.home-dot { background: #8c77df; }
-.bill-dot { background: #36c4b4; }
-.other-dot { background: #54796c; }
+.food-dot { background: #f58220; }
+.transport-dot { background: #35a5d3; }
+.home-dot { background: #8271d9; }
+.bill-dot { background: #2ab8a5; }
+.other-dot { background: #b6c7c0; }
 
 
 /* =========================================================
@@ -1020,17 +1071,17 @@ svg {
 
     overflow: hidden;
 
-    border: 1px solid #28644f;
-    border-radius: 17px;
+    border: 1px solid #cfe2da;
+    border-radius: 18px;
 
     background:
         linear-gradient(
             145deg,
-            #0b4b38,
-            #116149
+            #edf8f3,
+            #e5f3ed
         );
 
-    color: white;
+    color: var(--text);
 
     box-shadow: var(--shadow);
 }
@@ -1052,14 +1103,22 @@ svg {
     width: 36px;
     height: 36px;
 
-    border-radius: 10px;
+    border-radius: 11px;
 
-    background: #177457;
+    background:
+        linear-gradient(
+            145deg,
+            #0f7153,
+            #0b5c44
+        );
 
-    color: #78ecb8;
+    color: white;
 
     display: grid;
     place-items: center;
+
+    box-shadow:
+        0 7px 16px rgba(13,104,77,.18);
 }
 
 .ai-icon svg {
@@ -1068,6 +1127,8 @@ svg {
 }
 
 .ai-brand strong {
+    color: var(--green-950);
+
     font-size: 11px;
 }
 
@@ -1076,19 +1137,19 @@ svg {
 
     margin-top: 3px;
 
-    color: #a0bdb1;
+    color: var(--muted);
 
     font-size: 7px;
 }
 
 .ai-premium {
-    padding: 4px 6px;
+    padding: 4px 7px;
 
-    border-radius: 5px;
+    border-radius: 6px;
 
-    background: rgba(244,123,32,.14);
+    background: var(--orange-soft);
 
-    color: #ffac6e;
+    color: var(--orange-dark);
 
     font-size: 6px;
     font-weight: 800;
@@ -1099,13 +1160,15 @@ svg {
 }
 
 .ai-small {
-    color: #a0b9af;
+    color: var(--muted);
 
     font-size: 6px;
 }
 
 .ai-content h3 {
     margin: 6px 0 13px;
+
+    color: var(--green-950);
 
     font-size: 13px;
 
@@ -1122,12 +1185,12 @@ svg {
 .ai-suggestions button {
     padding: 6px 8px;
 
-    border: 1px solid rgba(255,255,255,.11);
+    border: 1px solid #d1e4dc;
     border-radius: 20px;
 
-    background: rgba(255,255,255,.06);
+    background: rgba(255,255,255,.72);
 
-    color: #c2d5cd;
+    color: var(--green-800);
 
     font-size: 7px;
 }
@@ -1137,12 +1200,12 @@ svg {
 
     padding: 7px 7px 7px 10px;
 
-    border: 1px solid #36715d;
+    border: 1px solid #d2e4dc;
     border-radius: 10px;
 
-    background: #1a4638;
+    background: white;
 
-    color: #a2b8af;
+    color: #8a9c94;
 
     display: flex;
     align-items: center;
@@ -1160,7 +1223,12 @@ svg {
     border: 0;
     border-radius: 8px;
 
-    background: #137053;
+    background:
+        linear-gradient(
+            145deg,
+            #ff9138,
+            #f47a18
+        );
 
     color: white;
 
@@ -1184,7 +1252,7 @@ svg {
 .transaction-item {
     min-height: 56px;
 
-    border-bottom: 1px solid #285246;
+    border-bottom: 1px solid #e4ece8;
 
     display: grid;
 
@@ -1218,23 +1286,27 @@ svg {
 }
 
 .supermarket {
-    background: rgba(244,123,32,.14);
-    color: #ffa05b;
+    background: var(--orange-soft);
+
+    color: var(--orange);
 }
 
 .salary-icon {
-    background: rgba(67,211,145,.14);
-    color: #63e3a7;
+    background: #e5f7ef;
+
+    color: #159766;
 }
 
 .gas-icon {
-    background: rgba(66,169,214,.14);
-    color: #73c5e9;
+    background: #e7f5fb;
+
+    color: #349dcc;
 }
 
 .internet-icon {
-    background: rgba(140,119,223,.15);
-    color: #aa99ed;
+    background: #efecfb;
+
+    color: #7665d1;
 }
 
 .transaction-description {
@@ -1247,7 +1319,7 @@ svg {
 }
 
 .transaction-description strong {
-    color: #f2f7f4;
+    color: var(--text);
 
     font-size: 8px;
 }
@@ -1255,7 +1327,7 @@ svg {
 .transaction-description span {
     overflow: hidden;
 
-    color: #91a79e;
+    color: var(--muted);
 
     font-size: 7px;
 
@@ -1265,17 +1337,17 @@ svg {
 
 .transaction-value {
     font-size: 8px;
-    font-weight: 600;
+    font-weight: 650;
 
     white-space: nowrap;
 }
 
 .expense-value {
-    color: #ff8b80;
+    color: var(--negative);
 }
 
 .income-value {
-    color: #63e3a7;
+    color: var(--positive);
 }
 
 
@@ -1292,14 +1364,14 @@ svg {
 
     overflow: hidden;
 
-    border: 1px solid #326153;
+    border: 1px solid #d6e6df;
     border-radius: 13px;
 
     background:
         linear-gradient(
             130deg,
-            #245747,
-            #1a4437
+            #edf7f3,
+            #f7faf8
         );
 }
 
@@ -1314,9 +1386,9 @@ svg {
 
     border-radius: 50%;
 
-    background: #2b6250;
+    background: #e1f4eb;
 
-    color: #79e7b7;
+    color: var(--green-600);
 
     display: grid;
     place-items: center;
@@ -1341,7 +1413,7 @@ svg {
 }
 
 .goal-title span {
-    color: #91a79e;
+    color: var(--muted);
 
     font-size: 6px;
     font-weight: 700;
@@ -1350,13 +1422,13 @@ svg {
 .goal-title h4 {
     margin-top: 3px;
 
-    color: #f3f7f5;
+    color: var(--text);
 
     font-size: 11px;
 }
 
 .goal-title > strong {
-    color: #65dfa9;
+    color: var(--green-600);
 
     font-size: 11px;
 }
@@ -1371,13 +1443,13 @@ svg {
 }
 
 .goal-money strong {
-    color: #f3f7f5;
+    color: var(--text);
 
     font-size: 9px;
 }
 
 .goal-money span {
-    color: #91a79e;
+    color: var(--muted);
 
     font-size: 7px;
 }
@@ -1391,7 +1463,7 @@ svg {
 
     border-radius: 10px;
 
-    background: #285447;
+    background: #e1ebe6;
 }
 
 .goal-progress div {
@@ -1403,13 +1475,13 @@ svg {
     background:
         linear-gradient(
             90deg,
-            #18a671,
-            #54dfa3
+            #159766,
+            #42cf91
         );
 }
 
 .goal-footer {
-    color: #91a79e;
+    color: var(--muted);
 
     display: flex;
     align-items: center;
@@ -1421,7 +1493,7 @@ svg {
 
 
 /* =========================================================
-   MOBILE NAV
+   MENU MOBILE
    ========================================================= */
 
 .mobile-navigation {
@@ -1466,7 +1538,7 @@ svg {
 
         overflow-x: hidden;
 
-        background: #102b23 !important;
+        background: #eef5f1 !important;
     }
 
     body {
@@ -1476,6 +1548,9 @@ svg {
     .sidebar {
         display: none !important;
     }
+
+
+    /* FUNDO */
 
     .main-content {
         width: 100% !important;
@@ -1491,14 +1566,14 @@ svg {
 
         background:
             radial-gradient(
-                circle at 85% 0%,
-                rgba(72, 201, 151, .10),
-                transparent 28%
+                circle at 90% 0%,
+                rgba(22,128,92,.08),
+                transparent 27%
             ),
             linear-gradient(
                 180deg,
-                #102b23 0%,
-                #14382d 100%
+                #f6faf8 0%,
+                #edf5f1 100%
             ) !important;
     }
 
@@ -1518,7 +1593,10 @@ svg {
     .header h1 {
         margin: 0 0 5px;
 
+        color: #0b3025;
+
         font-size: 26px;
+        font-weight: 780;
 
         letter-spacing: -1.1px;
     }
@@ -1526,7 +1604,7 @@ svg {
     .header p {
         max-width: 270px;
 
-        color: #99aea6;
+        color: #71857c;
 
         font-size: 10px;
 
@@ -1542,21 +1620,25 @@ svg {
     }
 
     .new-transaction {
-        width: 48px;
-        height: 48px;
+        width: 50px;
+        height: 50px;
 
         padding: 0;
 
-        border-radius: 14px;
-
-        justify-content: center;
+        border: 0;
+        border-radius: 15px;
 
         background:
             linear-gradient(
                 145deg,
-                #147354,
-                #0d5c45
+                #ff943d,
+                #f47718
             );
+
+        justify-content: center;
+
+        box-shadow:
+            0 10px 24px rgba(245,130,32,.25);
     }
 
     .new-transaction span {
@@ -1564,8 +1646,8 @@ svg {
     }
 
     .new-transaction svg {
-        width: 20px;
-        height: 20px;
+        width: 21px;
+        height: 21px;
     }
 
 
@@ -1579,12 +1661,20 @@ svg {
         border-radius: 22px;
 
         background:
+            radial-gradient(
+                circle at 90% 10%,
+                rgba(54,185,136,.25),
+                transparent 40%
+            ),
             linear-gradient(
                 135deg,
-                #084332 0%,
-                #0b5a42 58%,
-                #107052 100%
+                #073e2f 0%,
+                #0b5b43 56%,
+                #0e7454 100%
             ) !important;
+
+        box-shadow:
+            0 18px 38px rgba(10,80,58,.18);
     }
 
     .balance-card h2 {
@@ -1605,6 +1695,8 @@ svg {
     .balance-change {
         max-width: 170px;
 
+        margin-top: 3px;
+
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -1619,14 +1711,14 @@ svg {
         width: 54%;
         height: 92px;
 
-        opacity: .8;
+        opacity: .82;
     }
 
 
     /* RESUMO */
 
     .summary-grid {
-        margin: 12px 0;
+        margin: 13px 0;
 
         grid-template-columns:
             repeat(2,minmax(0,1fr));
@@ -1639,21 +1731,20 @@ svg {
 
         padding: 14px 12px;
 
-        border-color: #2a5a4a;
-
-        border-radius: 18px;
+        border: 1px solid #dbe7e1;
+        border-radius: 19px;
 
         background:
             linear-gradient(
                 145deg,
-                #1c473a,
-                #173c31
+                #ffffff,
+                #f7faf8
             ) !important;
 
         gap: 10px;
 
         box-shadow:
-            0 10px 25px rgba(0,0,0,.13);
+            0 9px 25px rgba(17,72,53,.07);
     }
 
     .summary-card:nth-child(3) {
@@ -1671,8 +1762,22 @@ svg {
         border-radius: 13px;
     }
 
+    .summary-content > span {
+        color: #7b8e86;
+
+        font-size: 8px;
+    }
+
     .summary-content > strong {
+        margin: 4px 0;
+
+        color: #102a21;
+
         font-size: 14px;
+    }
+
+    .summary-content small {
+        font-size: 7px;
     }
 
     .card-more {
@@ -1696,18 +1801,31 @@ svg {
     }
 
     .panel {
-        border-color: #2a5a4a;
+        border: 1px solid #dbe7e1;
 
         background:
             linear-gradient(
                 145deg,
-                #1c473a,
-                #173c31
+                #ffffff,
+                #f7faf8
             ) !important;
+
+        box-shadow:
+            0 9px 25px rgba(17,72,53,.07);
     }
 
     .panel-header h3 {
+        color: #102a21;
+
         font-size: 13px;
+    }
+
+    .panel-header p {
+        margin-top: 3px;
+
+        color: #899b93;
+
+        font-size: 8px;
     }
 
 
@@ -1730,7 +1848,11 @@ svg {
         width: 76px;
         height: 76px;
 
-        background: #183d32;
+        background: white;
+    }
+
+    .donut-inner strong {
+        font-size: 12px;
     }
 
     .categories-list {
@@ -1741,16 +1863,38 @@ svg {
     /* IA */
 
     .ai-card {
+        border: 1px solid #cfe4db;
+
         background:
             linear-gradient(
                 145deg,
-                #0b4b38,
-                #116149
+                #eef8f4,
+                #e5f3ed
             ) !important;
+
+        box-shadow:
+            0 9px 25px rgba(17,72,53,.07);
+    }
+
+    .ai-content h3 {
+        max-width: 240px;
+
+        font-size: 14px;
+    }
+
+    .ai-input {
+        background: white;
     }
 
 
-    /* MOBILE NAV */
+    /* TRANSAÇÕES */
+
+    .transaction-item {
+        min-height: 58px;
+    }
+
+
+    /* MENU INFERIOR */
 
     .mobile-navigation {
         position: fixed;
@@ -1763,29 +1907,31 @@ svg {
 
         height: 76px;
 
-        padding: 7px 8px 10px;
+        padding:
+            7px
+            8px
+            10px;
 
-        border-top: 1px solid #285648;
+        border-top: 1px solid #dce7e2;
 
         background:
-            rgba(16,43,35,.97) !important;
+            rgba(250,252,251,.96) !important;
 
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
 
         display: flex !important;
-
         align-items: center;
         justify-content: space-around;
 
         box-shadow:
-            0 -10px 30px rgba(0,0,0,.18);
+            0 -8px 30px rgba(15,65,47,.08);
     }
 
     .mobile-navigation a {
         min-width: 52px;
 
-        color: #8da69c;
+        color: #85978f;
 
         display: flex;
         flex-direction: column;
@@ -1794,33 +1940,36 @@ svg {
         gap: 5px;
 
         font-size: 7px;
+        font-weight: 500;
     }
 
     .mobile-navigation a svg {
         width: 19px;
         height: 19px;
+
+        stroke-width: 1.8;
     }
 
     .mobile-navigation a.active {
-        color: #63dfa9;
+        color: #116a4e;
     }
 
     .mobile-add {
-        width: 54px;
-        height: 54px;
+        width: 56px;
+        height: 56px;
 
-        margin-top: -30px;
+        margin-top: -31px;
 
         padding: 0;
 
-        border: 4px solid #102b23;
+        border: 4px solid #f4f8f6;
         border-radius: 50%;
 
         background:
             linear-gradient(
                 145deg,
-                #ff8c35,
-                #ed6d10
+                #ff943d,
+                #f47718
             );
 
         color: white;
@@ -1829,7 +1978,7 @@ svg {
         place-items: center;
 
         box-shadow:
-            0 10px 28px rgba(244,123,32,.30);
+            0 10px 27px rgba(245,130,32,.30);
     }
 
     .mobile-add svg {
@@ -1840,7 +1989,7 @@ svg {
 
 
 /* =========================================================
-   CELULAR PEQUENO
+   CELULARES MENORES
    ========================================================= */
 
 @media (max-width: 480px) {
@@ -1868,10 +2017,12 @@ svg {
         font-size: 30px;
     }
 
+    .month-selector {
+        right: 15px;
+    }
+
     .balance-chart {
         width: 54%;
-
-        opacity: .72;
     }
 
     .summary-card {
@@ -1898,6 +2049,22 @@ svg {
     .donut-chart {
         margin: 0 auto;
     }
+
+    .categories-list {
+        margin-top: 5px;
+    }
+}
+
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
+.more-button,
+.card-more,
+.balance-title button,
+.text-button {
+    border: 0;
 }
 
 
@@ -1910,11 +2077,11 @@ svg {
 }
 
 ::-webkit-scrollbar-track {
-    background: #102b23;
+    background: #edf5f1;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #36715d;
+    background: #a7c4b8;
 
     border-radius: 20px;
 }
