@@ -1,1 +1,785 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>ControleS — Pagina inicial </title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div>
+      <a href="#" class="brand">
+        Controle<span>S</span>
+      </a>
+
+      <p class="brand-sub">
+        Seu dinheiro sob controle.
+      </p>
+    </div>
+
+    <nav class="side-nav">
+
+      <a href="#" class="active">
+        <span class="nav-icon">⌂</span>
+        Visão geral
+      </a>
+
+      <a href="#">
+        <span class="nav-icon">↕</span>
+        Lançamentos
+      </a>
+
+      <a href="#">
+        <span class="nav-icon">◷</span>
+        A receber
+      </a>
+
+      <a href="#">
+        <span class="nav-icon">▦</span>
+        Categorias
+      </a>
+
+      <a href="#">
+        <span class="nav-icon">◫</span>
+        Relatórios
+      </a>
+
+      <a href="#">
+        <span class="nav-icon">◎</span>
+        Metas
+      </a>
+
+      <a href="#">
+        <span class="nav-icon">✦</span>
+        ControleS IA
+        <span class="pro">PRO</span>
+      </a>
+
+    </nav>
+
+
+    <!-- PREMIUM -->
+    <div class="premium-box">
+
+      <div class="premium-star">
+        ✦
+      </div>
+
+      <strong>
+        Desbloqueie o Premium
+      </strong>
+
+      <p>
+        Relatórios avançados, IA e muito mais.
+      </p>
+
+      <button>
+        Conhecer Premium
+      </button>
+
+    </div>
+
+
+    <!-- PERFIL -->
+    <div class="profile">
+
+      <div class="avatar">
+        TS
+      </div>
+
+      <div class="profile-info">
+        <strong>Tadeu</strong>
+        <small>Plano gratuito</small>
+      </div>
+
+      <span class="profile-more">
+        •••
+      </span>
+
+    </div>
+
+  </aside>
+
+
+  <!-- CONTEÚDO -->
+  <main class="main">
+
+    <!-- HEADER -->
+    <header class="topbar">
+
+      <div>
+
+        <p class="date">
+          DOMINGO, 28 DE SETEMBRO
+        </p>
+
+        <h1>
+          Olá, Tadeu 👋
+        </h1>
+
+        <p class="subtitle">
+          Aqui está o resumo das suas finanças.
+        </p>
+
+      </div>
+
+
+      <div class="top-actions">
+
+        <button class="round-button">
+          ◐
+        </button>
+
+        <button class="round-button">
+          ♢
+        </button>
+
+        <button class="new-button">
+          <span>＋</span>
+          Novo lançamento
+        </button>
+
+      </div>
+
+    </header>
+
+
+    <!-- SALDO -->
+    <section class="balance-card">
+
+      <div class="balance-content">
+
+        <p class="balance-label">
+          Saldo disponível
+          <span>◉</span>
+        </p>
+
+        <h2>
+          R$ 2.480,50
+        </h2>
+
+        <div class="balance-growth">
+
+          <strong>
+            ↗ 12,4%
+          </strong>
+
+          <span>
+            em relação ao mês anterior
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="month">
+        Setembro 2026⌄
+      </div>
+
+
+      <div class="chart">
+
+        <svg
+          viewBox="0 0 400 130"
+          preserveAspectRatio="none"
+        >
+
+          <defs>
+
+            <linearGradient
+              id="chartFill"
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="1"
+            >
+
+              <stop
+                offset="0%"
+                stop-color="#4cdf93"
+                stop-opacity=".35"
+              />
+
+              <stop
+                offset="100%"
+                stop-color="#4cdf93"
+                stop-opacity="0"
+              />
+
+            </linearGradient>
+
+          </defs>
+
+
+          <path
+            class="chart-area"
+            d="
+              M0 105
+              C35 100 50 80 80 84
+              C110 88 125 65 155 69
+              C185 73 195 50 225 55
+              C255 60 265 33 295 39
+              C330 46 345 20 400 13
+              L400 130
+              L0 130
+              Z
+            "
+          />
+
+
+          <path
+            class="chart-line"
+            d="
+              M0 105
+              C35 100 50 80 80 84
+              C110 88 125 65 155 69
+              C185 73 195 50 225 55
+              C255 60 265 33 295 39
+              C330 46 345 20 400 13
+            "
+          />
+
+        </svg>
+
+      </div>
+
+    </section>
+
+
+    <!-- CARDS -->
+    <section class="summary-grid">
+
+      <article class="summary-card">
+
+        <div class="summary-icon income">
+          ↗
+        </div>
+
+        <div>
+
+          <p>
+            Receitas
+          </p>
+
+          <h3>
+            R$ 4.230,00
+          </h3>
+
+          <small class="green">
+            ↗ 8,2% este mês
+          </small>
+
+        </div>
+
+      </article>
+
+
+      <article class="summary-card">
+
+        <div class="summary-icon expense">
+          ↘
+        </div>
+
+        <div>
+
+          <p>
+            Despesas
+          </p>
+
+          <h3>
+            R$ 1.749,50
+          </h3>
+
+          <small class="red">
+            ↗ 3,1% este mês
+          </small>
+
+        </div>
+
+      </article>
+
+
+      <article class="summary-card">
+
+        <div class="summary-icon receive">
+          ◷
+        </div>
+
+        <div>
+
+          <p>
+            A receber
+          </p>
+
+          <h3>
+            R$ 850,00
+          </h3>
+
+          <small>
+            2 pagamentos pendentes
+          </small>
+
+        </div>
+
+      </article>
+
+    </section>
+
+
+    <!-- GRID PRINCIPAL -->
+    <section class="dashboard-grid">
+
+
+      <!-- GASTOS -->
+      <article class="panel spending-panel">
+
+        <div class="panel-header">
+
+          <div>
+
+            <h3>
+              Gastos do mês
+            </h3>
+
+            <p>
+              Distribuição por categoria
+            </p>
+
+          </div>
+
+          <button>
+            Ver relatório →
+          </button>
+
+        </div>
+
+
+        <div class="spending-content">
+
+          <div class="donut">
+
+            <div class="donut-center">
+
+              <strong>
+                R$ 1.749
+              </strong>
+
+              <span>
+                Total gasto
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="categories">
+
+            <div class="category">
+
+              <i class="orange"></i>
+
+              <span>
+                Alimentação
+              </span>
+
+              <strong>
+                R$ 489,90
+              </strong>
+
+              <small>
+                28%
+              </small>
+
+            </div>
+
+
+            <div class="category">
+
+              <i class="blue"></i>
+
+              <span>
+                Transporte
+              </span>
+
+              <strong>
+                R$ 314,50
+              </strong>
+
+              <small>
+                18%
+              </small>
+
+            </div>
+
+
+            <div class="category">
+
+              <i class="purple"></i>
+
+              <span>
+                Moradia
+              </span>
+
+              <strong>
+                R$ 261,00
+              </strong>
+
+              <small>
+                15%
+              </small>
+
+            </div>
+
+
+            <div class="category">
+
+              <i class="cyan"></i>
+
+              <span>
+                Contas
+              </span>
+
+              <strong>
+                R$ 210,00
+              </strong>
+
+              <small>
+                12%
+              </small>
+
+            </div>
+
+
+            <div class="category">
+
+              <i class="gray"></i>
+
+              <span>
+                Outros
+              </span>
+
+              <strong>
+                R$ 474,10
+              </strong>
+
+              <small>
+                27%
+              </small>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- IA -->
+      <article class="panel ai-panel">
+
+        <div class="ai-header">
+
+          <div class="ai-logo">
+            ✦
+          </div>
+
+          <div>
+
+            <h3>
+              ControleS IA
+            </h3>
+
+            <p>
+              Seu assistente financeiro
+            </p>
+
+          </div>
+
+          <span class="premium-label">
+            PREMIUM
+          </span>
+
+        </div>
+
+
+        <h4>
+          Olá, Tadeu! Como posso ajudar?
+        </h4>
+
+
+        <div class="questions">
+
+          <button>
+            Quanto gastei este mês?
+          </button>
+
+          <button>
+            Onde posso economizar?
+          </button>
+
+          <button>
+            Resuma minhas finanças
+          </button>
+
+        </div>
+
+
+        <div class="ai-input">
+
+          <span>
+            Pergunte sobre suas finanças...
+          </span>
+
+          <button>
+            ➤
+          </button>
+
+        </div>
+
+      </article>
+
+
+      <!-- LANÇAMENTOS -->
+      <article class="panel transactions-panel">
+
+        <div class="panel-header">
+
+          <div>
+
+            <h3>
+              Últimos lançamentos
+            </h3>
+
+            <p>
+              Movimentações mais recentes
+            </p>
+
+          </div>
+
+          <button>
+            Ver todos →
+          </button>
+
+        </div>
+
+
+        <div class="transaction">
+
+          <div class="transaction-icon food">
+            ♨
+          </div>
+
+          <div class="transaction-info">
+
+            <strong>
+              Supermercado
+            </strong>
+
+            <span>
+              Hoje, 14:32 · Alimentação
+            </span>
+
+          </div>
+
+          <strong class="transaction-value negative">
+            − R$ 120,50
+          </strong>
+
+        </div>
+
+
+        <div class="transaction">
+
+          <div class="transaction-icon salary">
+            ↗
+          </div>
+
+          <div class="transaction-info">
+
+            <strong>
+              Salário
+            </strong>
+
+            <span>
+              Hoje, 08:15 · Receita
+            </span>
+
+          </div>
+
+          <strong class="transaction-value positive">
+            + R$ 2.500,00
+          </strong>
+
+        </div>
+
+
+        <div class="transaction">
+
+          <div class="transaction-icon transport">
+            ◆
+          </div>
+
+          <div class="transaction-info">
+
+            <strong>
+              Combustível
+            </strong>
+
+            <span>
+              Ontem, 18:40 · Transporte
+            </span>
+
+          </div>
+
+          <strong class="transaction-value negative">
+            − R$ 80,00
+          </strong>
+
+        </div>
+
+
+        <div class="transaction">
+
+          <div class="transaction-icon internet">
+            ◉
+          </div>
+
+          <div class="transaction-info">
+
+            <strong>
+              Internet
+            </strong>
+
+            <span>
+              26 Set · Contas
+            </span>
+
+          </div>
+
+          <strong class="transaction-value negative">
+            − R$ 99,90
+          </strong>
+
+        </div>
+
+      </article>
+
+
+      <!-- META -->
+      <article class="panel goal-panel">
+
+        <div class="panel-header">
+
+          <div>
+
+            <h3>
+              Minha meta
+            </h3>
+
+            <p>
+              Continue assim!
+            </p>
+
+          </div>
+
+          <button>
+            Ver metas →
+          </button>
+
+        </div>
+
+
+        <div class="goal-image">
+          ✈
+        </div>
+
+
+        <h4>
+          Viagem 2027
+        </h4>
+
+
+        <div class="goal-values">
+
+          <strong>
+            R$ 2.800,00
+          </strong>
+
+          <span>
+            de R$ 5.000,00
+          </span>
+
+          <b>
+            56%
+          </b>
+
+        </div>
+
+
+        <div class="progress">
+
+          <div></div>
+
+        </div>
+
+
+        <small>
+          Faltam R$ 2.200,00 para alcançar sua meta
+        </small>
+
+      </article>
+
+    </section>
+
+  </main>
+
+
+  <!-- MENU MOBILE -->
+  <nav class="mobile-nav">
+
+    <a href="#" class="active">
+      <b>⌂</b>
+      <span>Início</span>
+    </a>
+
+    <a href="#">
+      <b>↕</b>
+      <span>Lançamentos</span>
+    </a>
+
+    <button class="mobile-add">
+      ＋
+    </button>
+
+    <a href="#">
+      <b>◫</b>
+      <span>Relatórios</span>
+    </a>
+
+    <a href="#">
+      <b>●</b>
+      <span>Perfil</span>
+    </a>
+
+  </nav>
+
+</body>
+</html>
