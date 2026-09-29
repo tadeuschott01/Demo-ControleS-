@@ -1,11 +1,11 @@
 /* =========================================================
-   CONTROLES — PREMIUM DARK + WHITE 4.0
-   Preto + Verde Esmeralda + Branco + Laranja
+   CONTROLES — PREMIUM MINT 5.0
+   Dark + Verde Esmeralda + Verde Menta + Laranja
    ========================================================= */
 
 
 /* =========================================================
-   RESET / VARIÁVEIS
+   RESET
    ========================================================= */
 
 * {
@@ -15,40 +15,44 @@
 }
 
 :root {
-    --bg: #07110d;
-    --bg-2: #0a1712;
 
-    --surface: #101d17;
-    --surface-2: #16271f;
-    --surface-3: #1a3026;
+    --bg: #07110D;
+    --bg-soft: #0B1813;
 
-    --white: #ffffff;
-    --white-soft: #f4f8f6;
-    --white-green: #edf5f1;
+    --sidebar: #071B14;
 
-    --green-dark: #054c37;
-    --green: #07865b;
-    --green-2: #0aa16c;
-    --green-bright: #18bd7e;
-    --green-light: #50e3aa;
+    --mint-50: #EFFAF4;
+    --mint-100: #E7F6EE;
+    --mint-200: #D9EFE4;
+    --mint-300: #CBE7D8;
 
-    --orange: #ff7817;
-    --orange-light: #ff9c45;
+    --green-950: #063B2C;
+    --green-900: #07523C;
+    --green-800: #076B4C;
+    --green-700: #07865B;
+    --green-600: #0A9D69;
+    --green-500: #16B77A;
+    --green-400: #3CD698;
 
-    --red: #ff7468;
-    --yellow: #ffb84b;
+    --orange-700: #E45C08;
+    --orange-600: #F36B0D;
+    --orange-500: #FF7A18;
+    --orange-400: #FF9940;
 
-    --text: #f5faf7;
-    --soft: #a2b4ac;
-    --muted: #74877e;
+    --red: #E75F55;
+    --yellow: #E59A18;
 
-    --dark-text: #10231b;
-    --dark-soft: #66786f;
+    --dark-text: #10271E;
+    --dark-soft: #526C60;
+    --dark-muted: #748A80;
 
-    --border: rgba(255,255,255,.09);
+    --white: #FFFFFF;
 
-    --shadow: 0 14px 35px rgba(0,0,0,.28);
-    --shadow-light: 0 14px 35px rgba(0,0,0,.20);
+    --shadow:
+        0 15px 35px rgba(0,0,0,.22);
+
+    --shadow-strong:
+        0 22px 48px rgba(0,0,0,.32);
 }
 
 
@@ -59,12 +63,14 @@
 html {
     width: 100%;
     min-height: 100%;
+
     background: var(--bg);
 }
 
 body {
     width: 100%;
     min-height: 100vh;
+
     overflow-x: hidden;
 
     font-family:
@@ -74,23 +80,23 @@ body {
         "Segoe UI",
         sans-serif;
 
-    color: var(--text);
+    color: white;
 
     background:
         radial-gradient(
-            circle at 88% 0%,
-            rgba(24,189,126,.11),
+            circle at 90% 0%,
+            rgba(22,183,122,.13),
             transparent 30%
         ),
         radial-gradient(
             circle at 0% 65%,
-            rgba(255,120,23,.04),
-            transparent 27%
+            rgba(255,122,24,.045),
+            transparent 28%
         ),
         linear-gradient(
             180deg,
-            #0d1914 0%,
-            #07110d 100%
+            #0D1A15 0%,
+            #07110D 100%
         );
 
     -webkit-font-smoothing: antialiased;
@@ -104,6 +110,7 @@ select {
 
 button {
     cursor: pointer;
+
     appearance: none;
     -webkit-appearance: none;
 }
@@ -126,8 +133,8 @@ svg {
     position: fixed;
 
     top: 0;
-    bottom: 0;
     left: 0;
+    bottom: 0;
 
     z-index: 100;
 
@@ -140,17 +147,19 @@ svg {
 
     background:
         radial-gradient(
-            circle at 0 0,
-            rgba(22,190,125,.17),
-            transparent 30%
+            circle at 0% 0%,
+            rgba(23,184,121,.18),
+            transparent 32%
         ),
         linear-gradient(
             180deg,
-            #092119,
-            #06120e
+            #092219,
+            #06120E
         );
 
-    border-right: 1px solid rgba(255,255,255,.07);
+    border-right:
+        1px solid
+        rgba(255,255,255,.07);
 }
 
 
@@ -165,21 +174,21 @@ svg {
 .brand {
     color: white;
 
-    font-size: 26px;
+    font-size: 27px;
     font-weight: 800;
 
-    letter-spacing: -1px;
+    letter-spacing: -1.2px;
 }
 
 .brand span {
-    color: var(--orange);
+    color: var(--orange-500);
 }
 
 .brand-area p {
     margin-top: 5px;
     margin-bottom: 30px;
 
-    color: #82988e;
+    color: #839A90;
 
     font-size: 9px;
 }
@@ -208,18 +217,24 @@ svg {
 
     gap: 10px;
 
-    color: #94a89f;
+    color: #94A99F;
 
     font-size: 12px;
     font-weight: 600;
 
-    transition: .2s ease;
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease;
 }
 
 .sidebar-menu a:hover {
     color: white;
 
-    background: rgba(255,255,255,.05);
+    background:
+        rgba(255,255,255,.055);
+
+    transform: translateX(2px);
 }
 
 .sidebar-menu a.active {
@@ -228,17 +243,19 @@ svg {
     background:
         linear-gradient(
             135deg,
-            #0ba36d,
-            #08704f
+            #0BA36D,
+            #08704F
         );
 
     box-shadow:
-        0 10px 25px rgba(0,0,0,.20),
+        0 10px 25px rgba(0,0,0,.18),
         inset 0 1px 0 rgba(255,255,255,.10);
 }
 
 
-/* ÍCONES SIDEBAR */
+/* =========================================================
+   ÍCONES SIDEBAR
+   ========================================================= */
 
 .menu-icon {
     width: 34px;
@@ -246,14 +263,15 @@ svg {
 
     flex: 0 0 34px;
 
+    border-radius: 11px;
+
     display: grid;
     place-items: center;
 
-    border-radius: 11px;
+    background:
+        rgba(255,255,255,.05);
 
-    background: rgba(255,255,255,.05);
-
-    color: #b2c5bc;
+    color: #B2C5BC;
 }
 
 .menu-icon svg {
@@ -264,27 +282,27 @@ svg {
 }
 
 .sidebar-menu a:nth-child(2) .menu-icon {
-    color: #ff9946;
+    color: #FF9946;
 }
 
 .sidebar-menu a:nth-child(3) .menu-icon {
-    color: #ffb84b;
+    color: #FFB84B;
 }
 
 .sidebar-menu a:nth-child(4) .menu-icon {
-    color: #58e0ad;
+    color: #58E0AD;
 }
 
 .sidebar-menu a:nth-child(5) .menu-icon {
-    color: #55dda9;
+    color: #55DDA9;
 }
 
 .sidebar-menu a:nth-child(6) .menu-icon {
-    color: #ff9946;
+    color: #FF9946;
 }
 
 .ai-menu .menu-icon {
-    color: #5be8b1 !important;
+    color: #5BE8B1 !important;
 }
 
 .ai-menu small {
@@ -294,9 +312,10 @@ svg {
 
     border-radius: 6px;
 
-    background: rgba(255,120,23,.17);
+    background:
+        rgba(255,122,24,.17);
 
-    color: #ff9b4b;
+    color: #FF9B4B;
 
     font-size: 7px;
     font-weight: 800;
@@ -312,19 +331,22 @@ svg {
 
     padding: 16px;
 
-    border: 1px solid rgba(255,255,255,.09);
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
     border-radius: 18px;
 
     background:
         radial-gradient(
             circle at 100% 0%,
-            rgba(255,120,23,.11),
+            rgba(255,122,24,.11),
             transparent 40%
         ),
         linear-gradient(
             145deg,
-            #15362b,
-            #0b2019
+            #15362B,
+            #0B2019
         );
 
     box-shadow: var(--shadow);
@@ -336,14 +358,15 @@ svg {
 
     margin-bottom: 10px;
 
+    border-radius: 12px;
+
     display: grid;
     place-items: center;
 
-    border-radius: 12px;
+    background:
+        rgba(255,122,24,.15);
 
-    background: rgba(255,120,23,.15);
-
-    color: #ff9d4b;
+    color: #FF9D4B;
 }
 
 .premium-icon svg {
@@ -360,7 +383,7 @@ svg {
 .premium-card p {
     margin: 7px 0 13px;
 
-    color: #9eafa7;
+    color: #9EAFA7;
 
     font-size: 8px;
     line-height: 1.5;
@@ -379,15 +402,16 @@ svg {
     background:
         linear-gradient(
             135deg,
-            #ff9b42,
-            #ff6d0b
+            #FF9B42,
+            #FF6D0B
         );
 
     font-size: 9px;
     font-weight: 700;
 
     box-shadow:
-        0 8px 22px rgba(255,110,12,.20);
+        0 8px 22px
+        rgba(255,110,12,.20);
 }
 
 
@@ -404,7 +428,9 @@ svg {
 
     gap: 9px;
 
-    border-top: 1px solid rgba(255,255,255,.08);
+    border-top:
+        1px solid
+        rgba(255,255,255,.08);
 }
 
 .avatar {
@@ -413,14 +439,19 @@ svg {
 
     flex: 0 0 36px;
 
+    border-radius: 50%;
+
     display: grid;
     place-items: center;
 
-    border-radius: 50%;
+    background:
+        linear-gradient(
+            145deg,
+            #194334,
+            #113126
+        );
 
-    background: #16392d;
-
-    color: #61e4af;
+    color: #65E4B0;
 
     font-size: 9px;
     font-weight: 800;
@@ -438,7 +469,7 @@ svg {
 }
 
 .profile-text span {
-    color: #81958c;
+    color: #81958C;
 
     font-size: 7px;
 }
@@ -450,7 +481,7 @@ svg {
 
     background: transparent;
 
-    color: #8ba097;
+    color: #8BA097;
 }
 
 
@@ -465,7 +496,10 @@ svg {
 
     margin-left: 250px;
 
-    padding: 35px 4.5% 70px;
+    padding:
+        35px
+        4.5%
+        70px;
 }
 
 
@@ -484,7 +518,7 @@ svg {
 }
 
 .header-date {
-    color: #788a82;
+    color: #788A82;
 
     font-size: 8px;
     font-weight: 700;
@@ -504,7 +538,7 @@ svg {
 }
 
 .header p {
-    color: #9caea6;
+    color: #9CAEA6;
 
     font-size: 10px;
 }
@@ -522,13 +556,16 @@ svg {
 
     padding: 0;
 
-    border: 1px solid rgba(255,255,255,.10);
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
     border-radius: 14px;
 
     display: grid;
     place-items: center;
 
-    color: #55e0aa;
+    color: #55E0AA;
 
     background:
         linear-gradient(
@@ -561,8 +598,8 @@ svg {
     background:
         linear-gradient(
             135deg,
-            #ff9940,
-            #ff7010
+            #FF9940,
+            #FF7010
         );
 
     color: white;
@@ -571,7 +608,8 @@ svg {
     font-weight: 700;
 
     box-shadow:
-        0 10px 26px rgba(255,111,14,.25);
+        0 10px 26px
+        rgba(255,111,14,.25);
 }
 
 .new-transaction svg {
@@ -581,7 +619,7 @@ svg {
 
 
 /* =========================================================
-   CARD SALDO
+   SALDO
    ========================================================= */
 
 .balance-card {
@@ -593,7 +631,10 @@ svg {
 
     overflow: hidden;
 
-    border: 1px solid rgba(94,232,174,.16);
+    border:
+        1px solid
+        rgba(94,232,174,.16);
+
     border-radius: 26px;
 
     color: white;
@@ -606,18 +647,17 @@ svg {
         ),
         radial-gradient(
             circle at 0% 100%,
-            rgba(255,255,255,.06),
+            rgba(255,122,24,.07),
             transparent 35%
         ),
         linear-gradient(
             135deg,
-            #06503a 0%,
-            #087d59 48%,
-            #0aa16c 100%
+            #06503A 0%,
+            #087D59 48%,
+            #0AA16C 100%
         );
 
-    box-shadow:
-        0 22px 48px rgba(0,0,0,.30);
+    box-shadow: var(--shadow-strong);
 }
 
 .balance-card::before {
@@ -631,7 +671,10 @@ svg {
     top: -225px;
     right: -80px;
 
-    border: 1px solid rgba(255,255,255,.09);
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
     border-radius: 50%;
 }
 
@@ -646,7 +689,10 @@ svg {
     bottom: -210px;
     left: 8%;
 
-    border: 1px solid rgba(255,255,255,.07);
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+
     border-radius: 50%;
 }
 
@@ -662,7 +708,7 @@ svg {
 
     gap: 8px;
 
-    color: #d5e9e0;
+    color: #D5E9E0;
 
     font-size: 10px;
 }
@@ -673,13 +719,17 @@ svg {
 
     padding: 0;
 
+    border:
+        1px solid
+        rgba(255,255,255,.11);
+
+    border-radius: 10px;
+
     display: grid;
     place-items: center;
 
-    border: 1px solid rgba(255,255,255,.11);
-    border-radius: 10px;
-
-    background: rgba(255,255,255,.11);
+    background:
+        rgba(255,255,255,.11);
 
     color: white;
 }
@@ -710,14 +760,15 @@ svg {
 .balance-positive {
     padding: 9px 11px;
 
+    border-radius: 11px;
+
     display: flex;
     align-items: center;
 
     gap: 5px;
 
-    border-radius: 11px;
-
-    background: rgba(255,255,255,.13);
+    background:
+        rgba(255,255,255,.13);
 
     color: white;
 
@@ -730,7 +781,7 @@ svg {
 }
 
 .balance-change small {
-    color: #d5e5de;
+    color: #D5E5DE;
 
     font-size: 8px;
 }
@@ -747,17 +798,21 @@ svg {
 
     padding: 0 14px;
 
+    border:
+        1px solid
+        rgba(255,255,255,.20);
+
+    border-radius: 13px;
+
     display: flex;
     align-items: center;
 
     gap: 9px;
 
-    border: 1px solid rgba(255,255,255,.20);
-    border-radius: 13px;
-
     color: white;
 
-    background: rgba(255,255,255,.11);
+    background:
+        rgba(255,255,255,.11);
 
     font-size: 8px;
 
@@ -770,7 +825,9 @@ svg {
 }
 
 
-/* GRÁFICO SALDO */
+/* =========================================================
+   GRÁFICO SALDO
+   ========================================================= */
 
 .balance-chart {
     position: absolute;
@@ -790,15 +847,17 @@ svg {
 }
 
 .chart-fill {
-    fill: rgba(255,255,255,.08);
+    fill:
+        rgba(255,255,255,.08) !important;
 }
 
 .chart-stroke {
-    fill: none;
+    fill: none !important;
 
-    stroke: rgba(255,255,255,.88);
+    stroke:
+        rgba(255,255,255,.88) !important;
 
-    stroke-width: 2.5;
+    stroke-width: 2.5 !important;
 
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -814,14 +873,20 @@ svg {
 
     display: grid;
 
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns:
+        repeat(3,1fr);
 
     gap: 14px;
 }
 
+
+/* TODOS OS CARDS VERDE MENTA */
+
 .summary-card {
+    position: relative;
+
     min-width: 0;
-    min-height: 105px;
+    min-height: 108px;
 
     padding: 18px;
 
@@ -830,77 +895,36 @@ svg {
 
     gap: 13px;
 
-    border: 1px solid rgba(255,255,255,.09);
+    border:
+        1px solid
+        rgba(7,134,91,.13);
+
     border-radius: 21px;
 
     background:
         linear-gradient(
             145deg,
-            #182a22,
-            #111e18
+            #EFFAF4 0%,
+            #D9EFE4 100%
         );
 
-    box-shadow: var(--shadow);
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,.22);
+}
+
+.summary-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(0,0,0,.25);
 }
 
 
-/* PRIMEIRO CARD — RECEITAS BRANCO */
-
-.summary-card:nth-child(1) {
-    background:
-        linear-gradient(
-            145deg,
-            #ffffff 0%,
-            #edf5f1 100%
-        );
-
-    border: 1px solid rgba(7,134,91,.12);
-
-    box-shadow: var(--shadow-light);
-}
-
-.summary-card:nth-child(1) .summary-content > span {
-    color: #718078;
-}
-
-.summary-card:nth-child(1) .summary-content > strong {
-    color: #10231b;
-}
-
-.summary-card:nth-child(1) .positive-text {
-    color: #07865b !important;
-}
-
-
-/* TERCEIRO CARD — A RECEBER BRANCO */
-
-.summary-card:nth-child(3) {
-    background:
-        linear-gradient(
-            145deg,
-            #ffffff 0%,
-            #f3f6f4 100%
-        );
-
-    border: 1px solid rgba(255,120,23,.13);
-
-    box-shadow: var(--shadow-light);
-}
-
-.summary-card:nth-child(3) .summary-content > span {
-    color: #718078;
-}
-
-.summary-card:nth-child(3) .summary-content > strong {
-    color: #10231b;
-}
-
-.summary-card:nth-child(3) .summary-content small {
-    color: #718078;
-}
-
-
-/* ÍCONES */
+/* =========================================================
+   ÍCONES RESUMO
+   ========================================================= */
 
 .summary-icon {
     width: 48px;
@@ -908,10 +932,10 @@ svg {
 
     flex: 0 0 48px;
 
+    border-radius: 16px;
+
     display: grid;
     place-items: center;
-
-    border-radius: 16px;
 }
 
 .summary-icon svg {
@@ -922,38 +946,44 @@ svg {
 }
 
 .income-icon {
-    color: #087f58;
+    color: #087E58;
 
     background:
         linear-gradient(
             145deg,
-            #dff7ed,
-            #cceee1
+            #CDEEDF,
+            #BEE5D3
         );
 
     box-shadow:
-        0 8px 20px rgba(7,134,91,.12);
+        0 8px 20px
+        rgba(7,134,91,.10);
 }
 
 .expense-icon {
-    color: #ff796d;
-
-    background: rgba(255,105,91,.14);
-}
-
-.receive-icon {
-    color: #f36e0d;
+    color: #E65F55;
 
     background:
         linear-gradient(
             145deg,
-            #fff0e3,
-            #ffe3cc
+            #FFE5E1,
+            #FBD8D4
         );
-
-    box-shadow:
-        0 8px 20px rgba(255,120,23,.10);
 }
+
+.receive-icon {
+    color: #F06E0D;
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFEAD8,
+            #FFDDC1
+        );
+}
+
+
+/* TEXTOS RESUMO */
 
 .summary-content {
     min-width: 0;
@@ -963,7 +993,7 @@ svg {
 }
 
 .summary-content > span {
-    color: #879a91;
+    color: #647A70;
 
     font-size: 8px;
 }
@@ -971,7 +1001,7 @@ svg {
 .summary-content > strong {
     margin: 4px 0;
 
-    color: white;
+    color: #10271E;
 
     font-size: 16px;
 
@@ -979,7 +1009,7 @@ svg {
 }
 
 .summary-content small {
-    color: #7c8e86;
+    color: #71857C;
 
     font-size: 7px;
 }
@@ -994,16 +1024,32 @@ svg {
 }
 
 .positive-text {
-    color: #4bdda4 !important;
+    color: #07865B !important;
 }
 
 .negative-text {
-    color: #ff796e !important;
+    color: #DE5B51 !important;
+}
+
+.card-more {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    width: 27px;
+    height: 27px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #72877D;
 }
 
 
 /* =========================================================
-   DASHBOARD
+   DASHBOARD GRID
    ========================================================= */
 
 .dashboard-grid {
@@ -1016,23 +1062,35 @@ svg {
     gap: 15px;
 }
 
+
+/* =========================================================
+   TODOS OS PAINÉIS VERDE CLARO
+   ========================================================= */
+
 .panel,
 .ai-card {
     min-width: 0;
 
     padding: 21px;
 
-    border: 1px solid rgba(255,255,255,.09);
-    border-radius: 21px;
+    border:
+        1px solid
+        rgba(7,134,91,.13);
+
+    border-radius: 22px;
 
     background:
         linear-gradient(
             145deg,
-            #182a22,
-            #111e18
+            #EFFAF4 0%,
+            #D9EFE4 100%
         );
 
-    box-shadow: var(--shadow);
+    color: var(--dark-text);
+
+    box-shadow:
+        0 16px 38px
+        rgba(0,0,0,.22);
 }
 
 .panel-header {
@@ -1046,13 +1104,13 @@ svg {
 .panel-header h3 {
     margin-bottom: 4px;
 
-    color: white;
+    color: #10271E;
 
     font-size: 13px;
 }
 
 .panel-header p {
-    color: #798b83;
+    color: #687E73;
 
     font-size: 8px;
 }
@@ -1064,7 +1122,7 @@ svg {
 
     background: transparent;
 
-    color: #4ce0a6;
+    color: #087E58;
 
     display: flex;
     align-items: center;
@@ -1088,13 +1146,13 @@ svg {
     background:
         radial-gradient(
             circle at 0% 100%,
-            rgba(24,189,126,.06),
-            transparent 35%
+            rgba(7,134,91,.07),
+            transparent 38%
         ),
         linear-gradient(
             145deg,
-            #182a22,
-            #111e18
+            #EFFAF4,
+            #D9EFE4
         );
 }
 
@@ -1115,22 +1173,23 @@ svg {
 
     flex: 0 0 150px;
 
+    border-radius: 50%;
+
     display: grid;
     place-items: center;
 
-    border-radius: 50%;
-
     background:
         conic-gradient(
-            #ff7817 0 28%,
-            #18bd7e 28% 46%,
-            #ffb84b 46% 61%,
-            #ff7468 61% 73%,
-            #41554c 73% 100%
+            #FF7817 0 28%,
+            #18B77B 28% 46%,
+            #FFB84B 46% 61%,
+            #FF7468 61% 73%,
+            #80988D 73% 100%
         );
 
     box-shadow:
-        0 10px 28px rgba(0,0,0,.22);
+        0 10px 28px
+        rgba(16,35,27,.14);
 }
 
 .donut-chart::before {
@@ -1143,7 +1202,7 @@ svg {
 
     border-radius: 50%;
 
-    background: #121e19;
+    background: #EAF7F0;
 }
 
 .donut-inner {
@@ -1157,13 +1216,13 @@ svg {
 .donut-inner strong {
     display: block;
 
-    color: white;
+    color: #10271E;
 
     font-size: 14px;
 }
 
 .donut-inner span {
-    color: #7b8d85;
+    color: #6A7F75;
 
     font-size: 7px;
 }
@@ -1197,15 +1256,15 @@ svg {
 
     gap: 7px;
 
-    color: #9baca5;
+    color: #536A5F;
 }
 
 .category-row strong {
-    color: #f3f7f5;
+    color: #10271E;
 }
 
 .category-row > span {
-    color: #73857d;
+    color: #6F8379;
 }
 
 .dot {
@@ -1216,28 +1275,28 @@ svg {
 }
 
 .food-dot {
-    background: #ff7817;
+    background: #FF7817;
 }
 
 .transport-dot {
-    background: #18bd7e;
+    background: #18B77B;
 }
 
 .home-dot {
-    background: #ffb84b;
+    background: #E8A11E;
 }
 
 .bill-dot {
-    background: #ff7468;
+    background: #FF7468;
 }
 
 .other-dot {
-    background: #60736a;
+    background: #789086;
 }
 
 
 /* =========================================================
-   CONTROLES IA
+   CONTROLES IA — MENTA PREMIUM
    ========================================================= */
 
 .ai-card {
@@ -1245,23 +1304,21 @@ svg {
 
     overflow: hidden;
 
-    border-color: rgba(72,224,166,.12);
-
     background:
         radial-gradient(
             circle at 100% 0%,
-            rgba(255,120,23,.12),
-            transparent 38%
+            rgba(255,122,24,.10),
+            transparent 36%
         ),
         radial-gradient(
             circle at 0% 100%,
-            rgba(24,189,126,.11),
-            transparent 42%
+            rgba(7,134,91,.09),
+            transparent 40%
         ),
         linear-gradient(
             145deg,
-            #183027,
-            #101a15
+            #ECF9F2 0%,
+            #D6EDDF 100%
         );
 }
 
@@ -1278,7 +1335,9 @@ svg {
 
     border-radius: 50%;
 
-    background: rgba(255,255,255,.035);
+    border:
+        1px solid
+        rgba(7,134,91,.08);
 }
 
 .ai-header {
@@ -1302,22 +1361,23 @@ svg {
     width: 42px;
     height: 42px;
 
+    border-radius: 14px;
+
     display: grid;
     place-items: center;
-
-    border-radius: 14px;
 
     background:
         linear-gradient(
             145deg,
-            #16c383,
+            #18BD7E,
             #087552
         );
 
     color: white;
 
     box-shadow:
-        0 8px 22px rgba(10,160,106,.25);
+        0 8px 22px
+        rgba(10,160,106,.22);
 }
 
 .ai-icon svg {
@@ -1326,7 +1386,7 @@ svg {
 }
 
 .ai-brand strong {
-    color: white;
+    color: #10271E;
 
     font-size: 11px;
 }
@@ -1336,7 +1396,7 @@ svg {
 
     margin-top: 3px;
 
-    color: #82948c;
+    color: #657A70;
 
     font-size: 7px;
 }
@@ -1346,9 +1406,10 @@ svg {
 
     border-radius: 7px;
 
-    background: rgba(255,120,23,.16);
+    background:
+        rgba(255,122,24,.15);
 
-    color: #ff9a48;
+    color: #E6630A;
 
     font-size: 6px;
     font-weight: 800;
@@ -1363,15 +1424,16 @@ svg {
 }
 
 .ai-small {
-    color: #778a81;
+    color: #07865B;
 
     font-size: 6px;
+    font-weight: 700;
 }
 
 .ai-content h3 {
     margin: 6px 0 14px;
 
-    color: white;
+    color: #10271E;
 
     font-size: 14px;
     line-height: 1.4;
@@ -1387,17 +1449,21 @@ svg {
 .ai-suggestions button {
     padding: 7px 9px;
 
+    border:
+        1px solid
+        rgba(7,134,91,.13);
+
+    border-radius: 20px;
+
     display: flex;
     align-items: center;
 
     gap: 5px;
 
-    border: 1px solid rgba(255,255,255,.10);
-    border-radius: 20px;
+    background:
+        rgba(255,255,255,.48);
 
-    background: rgba(255,255,255,.05);
-
-    color: #d1ddd7;
+    color: #36564A;
 
     font-size: 7px;
 }
@@ -1406,7 +1472,7 @@ svg {
     width: 14px;
     height: 14px;
 
-    color: #5be1ad;
+    color: #07865B;
 }
 
 .ai-input {
@@ -1416,18 +1482,26 @@ svg {
 
     margin-top: 16px;
 
-    padding: 7px 7px 7px 11px;
+    padding:
+        7px
+        7px
+        7px
+        11px;
+
+    border:
+        1px solid
+        rgba(7,134,91,.14);
+
+    border-radius: 12px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    border: 1px solid rgba(255,255,255,.10);
-    border-radius: 12px;
+    background:
+        rgba(255,255,255,.52);
 
-    background: rgba(255,255,255,.055);
-
-    color: #92a59c;
+    color: #667B71;
 
     font-size: 7px;
 }
@@ -1439,8 +1513,10 @@ svg {
     gap: 6px;
 }
 
-.ai-input svg {
+.ai-input > div > svg {
     width: 14px;
+
+    color: #07865B;
 }
 
 .ai-input button {
@@ -1456,8 +1532,8 @@ svg {
     background:
         linear-gradient(
             145deg,
-            #ff9940,
-            #ff6c0b
+            #FF9940,
+            #FF6C0B
         );
 
     color: white;
@@ -1465,32 +1541,16 @@ svg {
 
 
 /* =========================================================
-   ÚLTIMOS LANÇAMENTOS — CARD BRANCO
+   LANÇAMENTOS
    ========================================================= */
 
 .transactions-panel {
     background:
         linear-gradient(
             145deg,
-            #ffffff 0%,
-            #edf4f0 100%
+            #EFFAF4,
+            #D9EFE4
         );
-
-    border: 1px solid rgba(7,134,91,.10);
-
-    box-shadow: var(--shadow-light);
-}
-
-.transactions-panel .panel-header h3 {
-    color: #10231b;
-}
-
-.transactions-panel .panel-header p {
-    color: #718078;
-}
-
-.transactions-panel .text-button {
-    color: #087e58;
 }
 
 .transaction-list {
@@ -1511,7 +1571,9 @@ svg {
 
     gap: 10px;
 
-    border-bottom: 1px solid rgba(14,55,40,.09);
+    border-bottom:
+        1px solid
+        rgba(16,55,40,.09);
 }
 
 .transaction-item:last-child {
@@ -1522,10 +1584,10 @@ svg {
     width: 40px;
     height: 40px;
 
+    border-radius: 13px;
+
     display: grid;
     place-items: center;
-
-    border-radius: 13px;
 }
 
 .transaction-icon svg {
@@ -1536,27 +1598,27 @@ svg {
 }
 
 .supermarket {
-    color: #f36e0d;
+    color: #EF710E;
 
-    background: #fff0e4;
+    background: #FFE6D1;
 }
 
 .salary-icon {
-    color: #087e58;
+    color: #087E58;
 
-    background: #dcf4e9;
+    background: #CDEDDD;
 }
 
 .gas-icon {
-    color: #c9820b;
+    color: #C9820B;
 
-    background: #fff3d8;
+    background: #F9E8BD;
 }
 
 .internet-icon {
-    color: #e25c52;
+    color: #DF5C52;
 
-    background: #ffe8e5;
+    background: #F8DCD8;
 }
 
 .transaction-description {
@@ -1568,16 +1630,16 @@ svg {
     gap: 3px;
 }
 
-.transactions-panel .transaction-description strong {
-    color: #17271f;
+.transaction-description strong {
+    color: #10271E;
 
     font-size: 8px;
 }
 
-.transactions-panel .transaction-description span {
+.transaction-description span {
     overflow: hidden;
 
-    color: #718078;
+    color: #6A7E74;
 
     font-size: 7px;
 
@@ -1592,11 +1654,11 @@ svg {
 }
 
 .expense-value {
-    color: #e65f55;
+    color: #D9564D;
 }
 
 .income-value {
-    color: #07865b;
+    color: #07865B;
 }
 
 
@@ -1608,13 +1670,13 @@ svg {
     background:
         radial-gradient(
             circle at 100% 100%,
-            rgba(255,120,23,.07),
+            rgba(255,122,24,.06),
             transparent 35%
         ),
         linear-gradient(
             145deg,
-            #182a22,
-            #111e18
+            #EFFAF4,
+            #D9EFE4
         );
 }
 
@@ -1627,19 +1689,22 @@ svg {
 
     overflow: hidden;
 
-    border: 1px solid rgba(255,255,255,.07);
+    border:
+        1px solid
+        rgba(7,134,91,.10);
+
     border-radius: 15px;
 
     background:
         radial-gradient(
             circle at 50% 100%,
-            rgba(255,120,23,.11),
+            rgba(255,122,24,.09),
             transparent 50%
         ),
         linear-gradient(
-            135deg,
-            #1b3026,
-            #111b17
+            145deg,
+            #DDF2E7,
+            #CBE7D8
         );
 }
 
@@ -1652,16 +1717,18 @@ svg {
     width: 45px;
     height: 45px;
 
+    border-radius: 50%;
+
     display: grid;
     place-items: center;
 
-    border-radius: 50%;
+    background:
+        rgba(255,122,24,.16);
 
-    background: rgba(255,120,23,.15);
+    color: #E96A0C;
 
-    color: #ff9944;
-
-    transform: translate(-50%,-50%);
+    transform:
+        translate(-50%,-50%);
 }
 
 .goal-icon svg {
@@ -1677,7 +1744,7 @@ svg {
 }
 
 .goal-title span {
-    color: #778980;
+    color: #6A8075;
 
     font-size: 6px;
     font-weight: 700;
@@ -1686,13 +1753,13 @@ svg {
 .goal-title h4 {
     margin-top: 4px;
 
-    color: white;
+    color: #10271E;
 
     font-size: 12px;
 }
 
 .goal-title > strong {
-    color: #54e0aa;
+    color: #07865B;
 
     font-size: 15px;
 }
@@ -1707,13 +1774,13 @@ svg {
 }
 
 .goal-money strong {
-    color: white;
+    color: #10271E;
 
     font-size: 14px;
 }
 
 .goal-money span {
-    color: #788a82;
+    color: #6C8177;
 
     font-size: 7px;
 }
@@ -1727,7 +1794,7 @@ svg {
 
     border-radius: 20px;
 
-    background: rgba(255,255,255,.07);
+    background: #C7DED3;
 }
 
 .goal-progress div {
@@ -1739,8 +1806,8 @@ svg {
     background:
         linear-gradient(
             90deg,
-            #0ba56e,
-            #4ee0a8
+            #07865B,
+            #38CF92
         );
 }
 
@@ -1752,7 +1819,7 @@ svg {
 
     gap: 5px;
 
-    color: #80928a;
+    color: #647A70;
 
     font-size: 7px;
 }
@@ -1760,12 +1827,12 @@ svg {
 .goal-footer svg {
     width: 13px;
 
-    color: #4ddda5;
+    color: #07865B;
 }
 
 
 /* =========================================================
-   MENU MOBILE — ESCONDIDO NO DESKTOP
+   MOBILE NAV DESKTOP
    ========================================================= */
 
 .mobile-navigation {
@@ -1784,7 +1851,8 @@ svg {
     }
 
     .main-content {
-        width: calc(100% - 215px);
+        width:
+            calc(100% - 215px);
 
         margin-left: 215px;
 
@@ -1797,10 +1865,11 @@ svg {
     }
 
     .summary-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
-    .receive-card {
+    .summary-card:nth-child(3) {
         grid-column: 1 / -1;
     }
 }
@@ -1813,30 +1882,30 @@ svg {
 @media (max-width: 760px) {
 
     body {
-        padding-bottom: 96px;
+        padding-bottom: 95px;
 
         background:
             radial-gradient(
                 circle at 90% 0%,
-                rgba(27,195,130,.12),
+                rgba(27,195,130,.13),
                 transparent 30%
             ),
             linear-gradient(
                 180deg,
-                #0d1b15 0%,
-                #07110d 100%
+                #0D1B15 0%,
+                #07110D 100%
             );
     }
 
 
-    /* REMOVE SIDEBAR COMPLETAMENTE */
+    /* SIDEBAR */
 
     .sidebar {
         display: none !important;
     }
 
 
-    /* CONTEÚDO 100% */
+    /* CONTEÚDO */
 
     .main-content {
         width: 100% !important;
@@ -1852,9 +1921,7 @@ svg {
     }
 
 
-    /* =====================================================
-       HEADER MOBILE
-       ===================================================== */
+    /* HEADER */
 
     .header {
         margin-bottom: 22px;
@@ -1878,7 +1945,7 @@ svg {
     }
 
     .header p {
-        color: #93a69d;
+        color: #93A69D;
 
         font-size: 12px;
         line-height: 1.45;
@@ -1910,14 +1977,14 @@ svg {
             ),
             radial-gradient(
                 circle at 0% 100%,
-                rgba(255,120,23,.08),
+                rgba(255,122,24,.08),
                 transparent 38%
             ),
             linear-gradient(
                 140deg,
                 #055039 0%,
-                #087b57 47%,
-                #0da66f 100%
+                #087B57 47%,
+                #0DA66F 100%
             );
     }
 
@@ -1934,7 +2001,13 @@ svg {
         margin-top: 20px;
         margin-bottom: 22px;
 
-        font-size: clamp(36px,10.5vw,49px);
+        font-size:
+            clamp(
+                36px,
+                10.5vw,
+                49px
+            );
+
         line-height: 1;
 
         letter-spacing: -2px;
@@ -1965,7 +2038,7 @@ svg {
 
         margin-top: 12px;
 
-        color: #d4e7df;
+        color: #D4E7DF;
 
         font-size: 10px;
         line-height: 1.4;
@@ -2001,7 +2074,10 @@ svg {
         margin: 15px 0;
 
         grid-template-columns:
-            repeat(2,minmax(0,1fr));
+            repeat(
+                2,
+                minmax(0,1fr)
+            );
 
         gap: 12px;
     }
@@ -2014,9 +2090,16 @@ svg {
         gap: 10px;
 
         border-radius: 22px;
+
+        background:
+            linear-gradient(
+                145deg,
+                #EFFAF4,
+                #D9EFE4
+            );
     }
 
-    .summary-card.receive-card {
+    .summary-card:nth-child(3) {
         grid-column: 1 / -1;
 
         min-height: 115px;
@@ -2041,7 +2124,12 @@ svg {
     }
 
     .summary-content > strong {
-        font-size: clamp(14px,4vw,19px);
+        font-size:
+            clamp(
+                14px,
+                4vw,
+                19px
+            );
     }
 
     .summary-content small {
@@ -2073,6 +2161,13 @@ svg {
         padding: 20px;
 
         border-radius: 22px;
+
+        background:
+            linear-gradient(
+                145deg,
+                #EFFAF4,
+                #D9EFE4
+            );
     }
 
     .panel-header h3 {
@@ -2138,7 +2233,17 @@ svg {
        ===================================================== */
 
     .ai-card {
-        border-color: rgba(79,226,170,.15);
+        background:
+            radial-gradient(
+                circle at 100% 0%,
+                rgba(255,122,24,.09),
+                transparent 35%
+            ),
+            linear-gradient(
+                145deg,
+                #ECF9F2,
+                #D6EDDF
+            );
     }
 
     .ai-icon {
@@ -2173,29 +2278,19 @@ svg {
     }
 
     .ai-input {
-        padding: 8px 8px 8px 11px;
+        padding:
+            8px
+            8px
+            8px
+            11px;
 
         font-size: 9px;
     }
 
 
     /* =====================================================
-       LANÇAMENTOS BRANCO MOBILE
+       LANÇAMENTOS MOBILE
        ===================================================== */
-
-    .transactions-panel {
-        background:
-            linear-gradient(
-                145deg,
-                #ffffff 0%,
-                #edf4f0 100%
-            );
-
-        border: 1px solid rgba(7,134,91,.12);
-
-        box-shadow:
-            0 16px 38px rgba(0,0,0,.24);
-    }
 
     .transaction-item {
         min-height: 68px;
@@ -2211,15 +2306,11 @@ svg {
         height: 43px;
     }
 
-    .transactions-panel .transaction-description strong {
-        color: #10231b;
-
+    .transaction-description strong {
         font-size: 11px;
     }
 
-    .transactions-panel .transaction-description span {
-        color: #718078;
-
+    .transaction-description span {
         font-size: 9px;
     }
 
@@ -2267,7 +2358,7 @@ svg {
 
 
     /* =====================================================
-       MENU INFERIOR MOBILE
+       MENU INFERIOR
        ===================================================== */
 
     .mobile-navigation {
@@ -2284,7 +2375,10 @@ svg {
         padding:
             8px
             13px
-            calc(8px + env(safe-area-inset-bottom));
+            calc(
+                8px +
+                env(safe-area-inset-bottom)
+            );
 
         display: grid;
 
@@ -2308,7 +2402,8 @@ svg {
         -webkit-backdrop-filter: blur(18px);
 
         box-shadow:
-            0 -15px 40px rgba(0,0,0,.30);
+            0 -15px 40px
+            rgba(0,0,0,.30);
     }
 
     .mobile-navigation a {
@@ -2321,22 +2416,10 @@ svg {
 
         gap: 5px;
 
-        color: #a0b1a8;
+        color: #A0B1A8;
 
         font-size: 9px;
         font-weight: 500;
-    }
-
-    .mobile-navigation a .mobile-icon {
-        width: 35px;
-        height: 31px;
-
-        display: grid;
-        place-items: center;
-
-        border-radius: 10px;
-
-        background: rgba(255,255,255,.045);
     }
 
     .mobile-navigation a svg {
@@ -2347,33 +2430,23 @@ svg {
     }
 
     .mobile-navigation a.active {
-        color: white;
-    }
-
-    .mobile-navigation a.active .mobile-icon {
-        color: #54e5ad;
-
-        background:
-            rgba(45,210,144,.13);
-
-        box-shadow:
-            0 0 20px rgba(44,216,147,.08);
+        color: #5CE5B0;
     }
 
     .mobile-navigation a:nth-child(2) {
-        color: #d3ddd8;
+        color: #D3DDD8;
     }
 
     .mobile-navigation a:nth-child(4) {
-        color: #ffad58;
+        color: #FFAD58;
     }
 
     .mobile-navigation a:nth-child(5) {
-        color: #d3ddd8;
+        color: #D3DDD8;
     }
 
 
-    /* BOTÃO + CENTRAL */
+    /* BOTÃO CENTRAL */
 
     .mobile-add {
         position: relative;
@@ -2387,7 +2460,7 @@ svg {
 
         border:
             5px solid
-            #0b1712;
+            #0B1712;
 
         border-radius: 50%;
 
@@ -2399,13 +2472,15 @@ svg {
         background:
             linear-gradient(
                 145deg,
-                #ff9a3f,
-                #ff6e0d
+                #FF9A3F,
+                #FF6E0D
             );
 
         box-shadow:
-            0 10px 30px rgba(255,115,15,.35),
-            0 0 28px rgba(255,120,20,.18);
+            0 10px 30px
+            rgba(255,115,15,.35),
+            0 0 28px
+            rgba(255,120,20,.18);
     }
 
     .mobile-add svg {
@@ -2418,14 +2493,17 @@ svg {
 
 
 /* =========================================================
-   CELULARES MENORES
+   CELULARES PEQUENOS
    ========================================================= */
 
 @media (max-width: 390px) {
 
     .main-content {
-        padding-left: 13px !important;
-        padding-right: 13px !important;
+        padding-left:
+            13px !important;
+
+        padding-right:
+            13px !important;
     }
 
     .header h1 {
@@ -2491,373 +2569,5 @@ svg {
     .mobile-add {
         width: 59px;
         height: 59px;
-    }
-}
-/* =========================================================
-   CONTROLES — TODOS OS CARDS BRANCOS
-   Cole no FINAL do style.css
-   ========================================================= */
-
-
-/* CARDS DE RESUMO */
-
-.summary-card,
-.summary-card:nth-child(1),
-.summary-card:nth-child(2),
-.summary-card:nth-child(3) {
-    background: linear-gradient(
-        145deg,
-        #ffffff 0%,
-        #f3f7f5 100%
-    ) !important;
-
-    border: 1px solid rgba(8, 90, 63, .10) !important;
-
-    box-shadow:
-        0 15px 35px rgba(0,0,0,.22) !important;
-}
-
-
-/* TEXTOS DOS CARDS DE RESUMO */
-
-.summary-card .summary-content > span {
-    color: #697a72 !important;
-}
-
-.summary-card .summary-content > strong {
-    color: #10231b !important;
-}
-
-.summary-card .summary-content small {
-    color: #75867e !important;
-}
-
-.summary-card .positive-text {
-    color: #07865b !important;
-}
-
-.summary-card .negative-text {
-    color: #e75f54 !important;
-}
-
-.summary-card .card-more {
-    color: #7a8b83 !important;
-}
-
-
-/* =========================================================
-   TODOS OS PAINÉIS GRANDES BRANCOS
-   ========================================================= */
-
-.panel,
-.spending-panel,
-.transactions-panel,
-.goal-panel {
-    background: linear-gradient(
-        145deg,
-        #ffffff 0%,
-        #f1f6f3 100%
-    ) !important;
-
-    border: 1px solid rgba(8, 90, 63, .10) !important;
-
-    box-shadow:
-        0 16px 38px rgba(0,0,0,.23) !important;
-}
-
-
-/* TÍTULOS */
-
-.panel .panel-header h3 {
-    color: #10231b !important;
-}
-
-.panel .panel-header p {
-    color: #718078 !important;
-}
-
-.panel .text-button {
-    color: #087e58 !important;
-}
-
-
-/* =========================================================
-   GASTOS DO MÊS
-   ========================================================= */
-
-.spending-panel {
-    color: #10231b !important;
-}
-
-.donut-chart {
-    box-shadow:
-        0 10px 25px rgba(16,35,27,.12) !important;
-}
-
-.donut-chart::before {
-    background: #ffffff !important;
-}
-
-.donut-inner strong {
-    color: #10231b !important;
-}
-
-.donut-inner span {
-    color: #718078 !important;
-}
-
-.category-name {
-    color: #53675e !important;
-}
-
-.category-row strong {
-    color: #10231b !important;
-}
-
-.category-row > span {
-    color: #718078 !important;
-}
-
-
-/* =========================================================
-   CONTROLES IA — BRANCO
-   ========================================================= */
-
-.ai-card {
-    background:
-        radial-gradient(
-            circle at 100% 0%,
-            rgba(255,120,23,.08),
-            transparent 35%
-        ),
-        radial-gradient(
-            circle at 0% 100%,
-            rgba(8,134,91,.08),
-            transparent 40%
-        ),
-        linear-gradient(
-            145deg,
-            #ffffff 0%,
-            #edf5f1 100%
-        ) !important;
-
-    border: 1px solid rgba(8,134,91,.12) !important;
-
-    box-shadow:
-        0 16px 38px rgba(0,0,0,.23) !important;
-
-    color: #10231b !important;
-}
-
-
-/* IA — TEXTOS */
-
-.ai-brand strong {
-    color: #10231b !important;
-}
-
-.ai-brand span {
-    color: #718078 !important;
-}
-
-.ai-small {
-    color: #087e58 !important;
-}
-
-.ai-content h3 {
-    color: #10231b !important;
-}
-
-
-/* BOTÕES DE SUGESTÃO IA */
-
-.ai-suggestions button {
-    background: #ffffff !important;
-
-    border: 1px solid rgba(8,90,63,.12) !important;
-
-    color: #40564c !important;
-
-    box-shadow:
-        0 5px 15px rgba(15,60,43,.05);
-}
-
-.ai-suggestions button svg {
-    color: #07865b !important;
-}
-
-
-/* INPUT IA */
-
-.ai-input {
-    background: #ffffff !important;
-
-    border: 1px solid rgba(8,90,63,.13) !important;
-
-    color: #718078 !important;
-
-    box-shadow:
-        inset 0 1px 3px rgba(0,0,0,.03);
-}
-
-.ai-input > div > svg {
-    color: #07865b !important;
-}
-
-
-/* =========================================================
-   ÚLTIMOS LANÇAMENTOS
-   ========================================================= */
-
-.transactions-panel {
-    color: #10231b !important;
-}
-
-.transactions-panel .transaction-item {
-    border-bottom:
-        1px solid rgba(16,35,27,.08) !important;
-}
-
-.transactions-panel .transaction-description strong {
-    color: #10231b !important;
-}
-
-.transactions-panel .transaction-description span {
-    color: #718078 !important;
-}
-
-
-/* =========================================================
-   META
-   ========================================================= */
-
-.goal-panel {
-    color: #10231b !important;
-}
-
-.goal-visual {
-    background:
-        radial-gradient(
-            circle at 50% 100%,
-            rgba(255,120,23,.10),
-            transparent 50%
-        ),
-        linear-gradient(
-            145deg,
-            #f7faf8,
-            #e8f1ed
-        ) !important;
-
-    border:
-        1px solid rgba(8,90,63,.08) !important;
-}
-
-.goal-title span {
-    color: #718078 !important;
-}
-
-.goal-title h4 {
-    color: #10231b !important;
-}
-
-.goal-title > strong {
-    color: #07865b !important;
-}
-
-.goal-money strong {
-    color: #10231b !important;
-}
-
-.goal-money span {
-    color: #718078 !important;
-}
-
-.goal-progress {
-    background: #dce7e2 !important;
-}
-
-.goal-footer {
-    color: #718078 !important;
-}
-
-
-/* =========================================================
-   ÍCONES DOS CARDS
-   ========================================================= */
-
-.income-icon {
-    color: #087e58 !important;
-
-    background: #dcf4e9 !important;
-}
-
-.expense-icon {
-    color: #e85f55 !important;
-
-    background: #ffe7e4 !important;
-}
-
-.receive-icon {
-    color: #ef710e !important;
-
-    background: #ffead8 !important;
-}
-
-
-/* =========================================================
-   LANÇAMENTOS — ÍCONES
-   ========================================================= */
-
-.supermarket {
-    color: #ef710e !important;
-    background: #fff0e3 !important;
-}
-
-.salary-icon {
-    color: #07865b !important;
-    background: #dcf4e9 !important;
-}
-
-.gas-icon {
-    color: #c9820b !important;
-    background: #fff3d8 !important;
-}
-
-.internet-icon {
-    color: #e25c52 !important;
-    background: #ffe8e5 !important;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 760px) {
-
-    .summary-card,
-    .summary-card:nth-child(1),
-    .summary-card:nth-child(2),
-    .summary-card:nth-child(3),
-    .panel,
-    .spending-panel,
-    .transactions-panel,
-    .goal-panel,
-    .ai-card {
-
-        background:
-            linear-gradient(
-                145deg,
-                #ffffff 0%,
-                #f1f6f3 100%
-            ) !important;
-
-        border:
-            1px solid
-            rgba(8,90,63,.10) !important;
-
-        box-shadow:
-            0 14px 32px
-            rgba(0,0,0,.25) !important;
     }
 }
