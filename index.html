@@ -3,35 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#021c15">
+  <meta name="theme-color" content="#071b15">
 
   <title>ControleS — Dashboard</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
 
-  <!-- SEU CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <!-- =========================
-       SIDEBAR
+       SIDEBAR DESKTOP
   ========================== -->
-
   <aside class="sidebar">
 
     <div class="brand-area">
-      <a class="brand" href="#">
-        Controle<span>S</span>
-      </a>
-
+      <a class="brand" href="#">Controle<span>S</span></a>
       <p>Seu dinheiro sob controle.</p>
     </div>
 
@@ -83,17 +77,13 @@
         <span class="menu-icon">
           <i data-lucide="sparkles"></i>
         </span>
-
         <span>ControleS IA</span>
         <small>PRO</small>
       </a>
 
     </nav>
 
-    <!-- PREMIUM -->
-
     <div class="premium-card">
-
       <div class="premium-icon">
         <i data-lucide="crown"></i>
       </div>
@@ -105,10 +95,7 @@
       </p>
 
       <button>Conhecer Premium</button>
-
     </div>
-
-    <!-- PERFIL -->
 
     <div class="sidebar-profile">
 
@@ -129,16 +116,14 @@
 
 
   <!-- =========================
-       CONTEÚDO
+       CONTEÚDO PRINCIPAL
   ========================== -->
-
   <main class="main-content">
 
     <!-- HEADER -->
-
     <header class="header">
 
-      <div>
+      <div class="header-copy">
 
         <span class="header-date">
           DOMINGO, 28 DE SETEMBRO
@@ -148,9 +133,7 @@
           Olá, Tadeu <span class="hello">👋</span>
         </h1>
 
-        <p>
-          Acompanhe sua vida financeira em um só lugar.
-        </p>
+        <p>Acompanhe sua vida financeira em um só lugar.</p>
 
       </div>
 
@@ -162,7 +145,6 @@
 
         <button class="header-icon-button notification">
           <i data-lucide="bell"></i>
-          <span></span>
         </button>
 
         <button class="new-transaction">
@@ -178,19 +160,16 @@
     <!-- =========================
          SALDO
     ========================== -->
-
     <section class="balance-card">
 
       <div class="balance-info">
 
         <div class="balance-title">
-
           <span>Saldo disponível</span>
 
           <button>
             <i data-lucide="eye"></i>
           </button>
-
         </div>
 
         <h2>R$ 2.480,50</h2>
@@ -202,9 +181,7 @@
             12,4%
           </span>
 
-          <small>
-            em relação ao mês anterior
-          </small>
+          <small>em relação ao mês anterior</small>
 
         </div>
 
@@ -218,30 +195,6 @@
       <div class="balance-chart">
 
         <svg viewBox="0 0 500 150" preserveAspectRatio="none">
-
-          <defs>
-
-            <linearGradient
-              id="balanceGradient"
-              x1="0"
-              y1="0"
-              x2="0"
-              y2="1"
-            >
-              <stop
-                offset="0%"
-                stop-color="#31d889"
-                stop-opacity=".30"
-              />
-
-              <stop
-                offset="100%"
-                stop-color="#31d889"
-                stop-opacity="0"
-              />
-            </linearGradient>
-
-          </defs>
 
           <path
             class="chart-fill"
@@ -275,19 +228,13 @@
 
       </div>
 
-      <div class="balance-decoration decoration-one"></div>
-      <div class="balance-decoration decoration-two"></div>
-
     </section>
 
 
     <!-- =========================
          RESUMO
     ========================== -->
-
     <section class="summary-grid">
-
-      <!-- RECEITAS -->
 
       <article class="summary-card">
 
@@ -296,26 +243,17 @@
         </div>
 
         <div class="summary-content">
-
           <span>Receitas</span>
-
           <strong>R$ 4.230,00</strong>
 
           <small class="positive-text">
             <i data-lucide="trending-up"></i>
             8,2% este mês
           </small>
-
         </div>
-
-        <button class="card-more">
-          <i data-lucide="ellipsis"></i>
-        </button>
 
       </article>
 
-
-      <!-- DESPESAS -->
 
       <article class="summary-card">
 
@@ -324,46 +262,29 @@
         </div>
 
         <div class="summary-content">
-
           <span>Despesas</span>
-
           <strong>R$ 1.749,50</strong>
 
           <small class="negative-text">
             <i data-lucide="trending-up"></i>
             3,1% este mês
           </small>
-
         </div>
-
-        <button class="card-more">
-          <i data-lucide="ellipsis"></i>
-        </button>
 
       </article>
 
 
-      <!-- A RECEBER -->
-
-      <article class="summary-card">
+      <article class="summary-card receive-card">
 
         <div class="summary-icon receive-icon">
           <i data-lucide="clock-3"></i>
         </div>
 
         <div class="summary-content">
-
           <span>A receber</span>
-
           <strong>R$ 850,00</strong>
-
           <small>2 pagamentos pendentes</small>
-
         </div>
-
-        <button class="card-more">
-          <i data-lucide="ellipsis"></i>
-        </button>
 
       </article>
 
@@ -371,13 +292,11 @@
 
 
     <!-- =========================
-         GRID PRINCIPAL
+         DASHBOARD
     ========================== -->
-
     <section class="dashboard-grid">
 
       <!-- GASTOS -->
-
       <article class="panel spending-panel">
 
         <div class="panel-header">
@@ -412,7 +331,6 @@
                 <span class="dot food-dot"></span>
                 Alimentação
               </div>
-
               <strong>R$ 489,90</strong>
               <span>28%</span>
             </div>
@@ -422,7 +340,6 @@
                 <span class="dot transport-dot"></span>
                 Transporte
               </div>
-
               <strong>R$ 314,50</strong>
               <span>18%</span>
             </div>
@@ -432,7 +349,6 @@
                 <span class="dot home-dot"></span>
                 Moradia
               </div>
-
               <strong>R$ 261,00</strong>
               <span>15%</span>
             </div>
@@ -442,7 +358,6 @@
                 <span class="dot bill-dot"></span>
                 Contas
               </div>
-
               <strong>R$ 210,00</strong>
               <span>12%</span>
             </div>
@@ -452,7 +367,6 @@
                 <span class="dot other-dot"></span>
                 Outros
               </div>
-
               <strong>R$ 474,10</strong>
               <span>27%</span>
             </div>
@@ -464,13 +378,8 @@
       </article>
 
 
-      <!-- =========================
-           IA
-      ========================== -->
-
+      <!-- IA -->
       <article class="ai-card">
-
-        <div class="ai-glow"></div>
 
         <div class="ai-header">
 
@@ -487,21 +396,15 @@
 
           </div>
 
-          <span class="ai-premium">
-            PREMIUM
-          </span>
+          <span class="ai-premium">PREMIUM</span>
 
         </div>
 
         <div class="ai-content">
 
-          <span class="ai-small">
-            BOA NOITE, TADEU
-          </span>
+          <span class="ai-small">BOA NOITE, TADEU</span>
 
-          <h3>
-            Como posso ajudar com suas finanças?
-          </h3>
+          <h3>Como posso ajudar com suas finanças?</h3>
 
           <div class="ai-suggestions">
 
@@ -540,10 +443,7 @@
       </article>
 
 
-      <!-- =========================
-           LANÇAMENTOS
-      ========================== -->
-
+      <!-- LANÇAMENTOS -->
       <article class="panel transactions-panel">
 
         <div class="panel-header">
@@ -638,10 +538,7 @@
       </article>
 
 
-      <!-- =========================
-           META
-      ========================== -->
-
+      <!-- META -->
       <article class="panel goal-panel">
 
         <div class="panel-header">
@@ -663,8 +560,6 @@
           <div class="goal-icon">
             <i data-lucide="plane"></i>
           </div>
-
-          <div class="goal-decoration"></div>
 
         </div>
 
@@ -703,37 +598,42 @@
   <!-- =========================
        MENU MOBILE
   ========================== -->
-
   <nav class="mobile-navigation">
 
     <a href="#" class="active">
-      <i data-lucide="house"></i>
+      <span class="mobile-icon">
+        <i data-lucide="house"></i>
+      </span>
       <span>Início</span>
     </a>
 
     <a href="#">
-      <i data-lucide="arrow-left-right"></i>
+      <span class="mobile-icon">
+        <i data-lucide="arrow-left-right"></i>
+      </span>
       <span>Lançamentos</span>
     </a>
 
-    <button class="mobile-add">
+    <button class="mobile-add" aria-label="Novo lançamento">
       <i data-lucide="plus"></i>
     </button>
 
     <a href="#">
-      <i data-lucide="chart-no-axes-combined"></i>
+      <span class="mobile-icon">
+        <i data-lucide="chart-no-axes-combined"></i>
+      </span>
       <span>Relatórios</span>
     </a>
 
     <a href="#">
-      <i data-lucide="user-round"></i>
+      <span class="mobile-icon">
+        <i data-lucide="user-round"></i>
+      </span>
       <span>Perfil</span>
     </a>
 
   </nav>
 
-
-  <!-- ÍCONES -->
 
   <script src="https://unpkg.com/lucide@latest"></script>
 
