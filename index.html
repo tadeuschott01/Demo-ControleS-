@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <meta name="theme-color" content="#021c15">
 
   <title>ControleS — Dashboard</title>
@@ -17,9 +15,9 @@
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="app.css">
+  <!-- SEU CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
@@ -30,17 +28,12 @@
   <aside class="sidebar">
 
     <div class="brand-area">
-
       <a class="brand" href="#">
         Controle<span>S</span>
       </a>
 
-      <p>
-        Seu dinheiro sob controle.
-      </p>
-
+      <p>Seu dinheiro sob controle.</p>
     </div>
-
 
     <nav class="sidebar-menu">
 
@@ -48,70 +41,54 @@
         <span class="menu-icon">
           <i data-lucide="layout-dashboard"></i>
         </span>
-
         <span>Visão geral</span>
       </a>
-
 
       <a href="#">
         <span class="menu-icon">
           <i data-lucide="arrow-left-right"></i>
         </span>
-
         <span>Lançamentos</span>
       </a>
-
 
       <a href="#">
         <span class="menu-icon">
           <i data-lucide="calendar-clock"></i>
         </span>
-
         <span>A receber</span>
       </a>
-
 
       <a href="#">
         <span class="menu-icon">
           <i data-lucide="tags"></i>
         </span>
-
         <span>Categorias</span>
       </a>
-
 
       <a href="#">
         <span class="menu-icon">
           <i data-lucide="chart-no-axes-combined"></i>
         </span>
-
         <span>Relatórios</span>
       </a>
-
 
       <a href="#">
         <span class="menu-icon">
           <i data-lucide="target"></i>
         </span>
-
         <span>Metas</span>
       </a>
 
-
       <a href="#" class="ai-menu">
-
         <span class="menu-icon">
           <i data-lucide="sparkles"></i>
         </span>
 
         <span>ControleS IA</span>
-
         <small>PRO</small>
-
       </a>
 
     </nav>
-
 
     <!-- PREMIUM -->
 
@@ -121,39 +98,25 @@
         <i data-lucide="crown"></i>
       </div>
 
-      <strong>
-        ControleS Premium
-      </strong>
+      <strong>ControleS Premium</strong>
 
       <p>
         IA financeira, relatórios avançados e uma experiência sem anúncios.
       </p>
 
-      <button>
-        Conhecer Premium
-      </button>
+      <button>Conhecer Premium</button>
 
     </div>
-
 
     <!-- PERFIL -->
 
     <div class="sidebar-profile">
 
-      <div class="avatar">
-        TS
-      </div>
+      <div class="avatar">TS</div>
 
       <div class="profile-text">
-
-        <strong>
-          Tadeu
-        </strong>
-
-        <span>
-          Plano gratuito
-        </span>
-
+        <strong>Tadeu</strong>
+        <span>Plano gratuito</span>
       </div>
 
       <button class="more-button">
@@ -165,13 +128,11 @@
   </aside>
 
 
-
   <!-- =========================
        CONTEÚDO
   ========================== -->
 
   <main class="main-content">
-
 
     <!-- HEADER -->
 
@@ -184,8 +145,7 @@
         </span>
 
         <h1>
-          Olá, Tadeu
-          <span class="hello">👋</span>
+          Olá, Tadeu <span class="hello">👋</span>
         </h1>
 
         <p>
@@ -194,41 +154,25 @@
 
       </div>
 
-
       <div class="header-actions">
 
-        <button
-          class="header-icon-button"
-          aria-label="Alterar tema"
-        >
+        <button class="header-icon-button">
           <i data-lucide="moon"></i>
         </button>
 
-
-        <button
-          class="header-icon-button notification"
-          aria-label="Notificações"
-        >
+        <button class="header-icon-button notification">
           <i data-lucide="bell"></i>
-
           <span></span>
         </button>
 
-
         <button class="new-transaction">
-
           <i data-lucide="plus"></i>
-
-          <span>
-            Novo lançamento
-          </span>
-
+          <span>Novo lançamento</span>
         </button>
 
       </div>
 
     </header>
-
 
 
     <!-- =========================
@@ -237,14 +181,11 @@
 
     <section class="balance-card">
 
-
       <div class="balance-info">
 
         <div class="balance-title">
 
-          <span>
-            Saldo disponível
-          </span>
+          <span>Saldo disponível</span>
 
           <button>
             <i data-lucide="eye"></i>
@@ -252,20 +193,13 @@
 
         </div>
 
-
-        <h2>
-          R$ 2.480,50
-        </h2>
-
+        <h2>R$ 2.480,50</h2>
 
         <div class="balance-change">
 
           <span class="balance-positive">
-
             <i data-lucide="trending-up"></i>
-
             12,4%
-
           </span>
 
           <small>
@@ -276,24 +210,14 @@
 
       </div>
 
-
       <button class="month-selector">
-
         Setembro 2026
-
         <i data-lucide="chevron-down"></i>
-
       </button>
-
-
-      <!-- GRÁFICO -->
 
       <div class="balance-chart">
 
-        <svg
-          viewBox="0 0 500 150"
-          preserveAspectRatio="none"
-        >
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none">
 
           <defs>
 
@@ -304,7 +228,6 @@
               x2="0"
               y2="1"
             >
-
               <stop
                 offset="0%"
                 stop-color="#31d889"
@@ -316,11 +239,9 @@
                 stop-color="#31d889"
                 stop-opacity="0"
               />
-
             </linearGradient>
 
           </defs>
-
 
           <path
             class="chart-fill"
@@ -336,7 +257,6 @@
             L0 150 Z
             "
           />
-
 
           <path
             class="chart-stroke"
@@ -355,12 +275,10 @@
 
       </div>
 
-
       <div class="balance-decoration decoration-one"></div>
       <div class="balance-decoration decoration-two"></div>
 
     </section>
-
 
 
     <!-- =========================
@@ -368,7 +286,6 @@
     ========================== -->
 
     <section class="summary-grid">
-
 
       <!-- RECEITAS -->
 
@@ -380,20 +297,13 @@
 
         <div class="summary-content">
 
-          <span>
-            Receitas
-          </span>
+          <span>Receitas</span>
 
-          <strong>
-            R$ 4.230,00
-          </strong>
+          <strong>R$ 4.230,00</strong>
 
           <small class="positive-text">
-
             <i data-lucide="trending-up"></i>
-
             8,2% este mês
-
           </small>
 
         </div>
@@ -403,7 +313,6 @@
         </button>
 
       </article>
-
 
 
       <!-- DESPESAS -->
@@ -416,20 +325,13 @@
 
         <div class="summary-content">
 
-          <span>
-            Despesas
-          </span>
+          <span>Despesas</span>
 
-          <strong>
-            R$ 1.749,50
-          </strong>
+          <strong>R$ 1.749,50</strong>
 
           <small class="negative-text">
-
             <i data-lucide="trending-up"></i>
-
             3,1% este mês
-
           </small>
 
         </div>
@@ -439,7 +341,6 @@
         </button>
 
       </article>
-
 
 
       <!-- A RECEBER -->
@@ -452,17 +353,11 @@
 
         <div class="summary-content">
 
-          <span>
-            A receber
-          </span>
+          <span>A receber</span>
 
-          <strong>
-            R$ 850,00
-          </strong>
+          <strong>R$ 850,00</strong>
 
-          <small>
-            2 pagamentos pendentes
-          </small>
+          <small>2 pagamentos pendentes</small>
 
         </div>
 
@@ -475,13 +370,11 @@
     </section>
 
 
-
     <!-- =========================
-         DASHBOARD GRID
+         GRID PRINCIPAL
     ========================== -->
 
     <section class="dashboard-grid">
-
 
       <!-- GASTOS -->
 
@@ -490,159 +383,78 @@
         <div class="panel-header">
 
           <div>
-
-            <h3>
-              Gastos do mês
-            </h3>
-
-            <p>
-              Distribuição por categoria
-            </p>
-
+            <h3>Gastos do mês</h3>
+            <p>Distribuição por categoria</p>
           </div>
 
-
           <button class="text-button">
-
             Ver relatório
-
             <i data-lucide="arrow-up-right"></i>
-
           </button>
 
         </div>
 
-
         <div class="spending-body">
-
-
-          <!-- DONUT -->
 
           <div class="donut-chart">
 
             <div class="donut-inner">
-
-              <strong>
-                R$ 1.749
-              </strong>
-
-              <span>
-                Total gasto
-              </span>
-
+              <strong>R$ 1.749</strong>
+              <span>Total gasto</span>
             </div>
 
           </div>
 
-
-
-          <!-- CATEGORIAS -->
-
           <div class="categories-list">
 
-
             <div class="category-row">
-
               <div class="category-name">
-
                 <span class="dot food-dot"></span>
-
                 Alimentação
-
               </div>
 
-              <strong>
-                R$ 489,90
-              </strong>
-
-              <span>
-                28%
-              </span>
-
+              <strong>R$ 489,90</strong>
+              <span>28%</span>
             </div>
 
-
             <div class="category-row">
-
               <div class="category-name">
-
                 <span class="dot transport-dot"></span>
-
                 Transporte
-
               </div>
 
-              <strong>
-                R$ 314,50
-              </strong>
-
-              <span>
-                18%
-              </span>
-
+              <strong>R$ 314,50</strong>
+              <span>18%</span>
             </div>
 
-
             <div class="category-row">
-
               <div class="category-name">
-
                 <span class="dot home-dot"></span>
-
                 Moradia
-
               </div>
 
-              <strong>
-                R$ 261,00
-              </strong>
-
-              <span>
-                15%
-              </span>
-
+              <strong>R$ 261,00</strong>
+              <span>15%</span>
             </div>
 
-
             <div class="category-row">
-
               <div class="category-name">
-
                 <span class="dot bill-dot"></span>
-
                 Contas
-
               </div>
 
-              <strong>
-                R$ 210,00
-              </strong>
-
-              <span>
-                12%
-              </span>
-
+              <strong>R$ 210,00</strong>
+              <span>12%</span>
             </div>
 
-
             <div class="category-row">
-
               <div class="category-name">
-
                 <span class="dot other-dot"></span>
-
                 Outros
-
               </div>
 
-              <strong>
-                R$ 474,10
-              </strong>
-
-              <span>
-                27%
-              </span>
-
+              <strong>R$ 474,10</strong>
+              <span>27%</span>
             </div>
 
           </div>
@@ -652,15 +464,13 @@
       </article>
 
 
-
       <!-- =========================
-           CONTROLES IA
+           IA
       ========================== -->
 
       <article class="ai-card">
 
         <div class="ai-glow"></div>
-
 
         <div class="ai-header">
 
@@ -670,28 +480,18 @@
               <i data-lucide="sparkles"></i>
             </div>
 
-
             <div>
-
-              <strong>
-                ControleS IA
-              </strong>
-
-              <span>
-                Assistente financeiro
-              </span>
-
+              <strong>ControleS IA</strong>
+              <span>Assistente financeiro</span>
             </div>
 
           </div>
-
 
           <span class="ai-premium">
             PREMIUM
           </span>
 
         </div>
-
 
         <div class="ai-content">
 
@@ -703,26 +503,20 @@
             Como posso ajudar com suas finanças?
           </h3>
 
-
           <div class="ai-suggestions">
 
             <button>
               <i data-lucide="wallet"></i>
-
               Quanto gastei este mês?
             </button>
 
-
             <button>
               <i data-lucide="piggy-bank"></i>
-
               Onde posso economizar?
             </button>
 
-
             <button>
               <i data-lucide="chart-spline"></i>
-
               Resuma minhas finanças
             </button>
 
@@ -730,19 +524,12 @@
 
         </div>
 
-
         <div class="ai-input">
 
           <div>
-
             <i data-lucide="sparkles"></i>
-
-            <span>
-              Pergunte sobre suas finanças...
-            </span>
-
+            <span>Pergunte sobre suas finanças...</span>
           </div>
-
 
           <button>
             <i data-lucide="arrow-up"></i>
@@ -753,9 +540,8 @@
       </article>
 
 
-
       <!-- =========================
-           TRANSAÇÕES
+           LANÇAMENTOS
       ========================== -->
 
       <article class="panel transactions-panel">
@@ -763,55 +549,29 @@
         <div class="panel-header">
 
           <div>
-
-            <h3>
-              Últimos lançamentos
-            </h3>
-
-            <p>
-              Suas movimentações recentes
-            </p>
-
+            <h3>Últimos lançamentos</h3>
+            <p>Suas movimentações recentes</p>
           </div>
 
-
           <button class="text-button">
-
             Ver todos
-
             <i data-lucide="arrow-right"></i>
-
           </button>
 
         </div>
 
-
         <div class="transaction-list">
-
-
-          <!-- ITEM -->
 
           <div class="transaction-item">
 
             <div class="transaction-icon supermarket">
-
               <i data-lucide="shopping-cart"></i>
-
             </div>
-
 
             <div class="transaction-description">
-
-              <strong>
-                Supermercado
-              </strong>
-
-              <span>
-                Hoje, 14:32 · Alimentação
-              </span>
-
+              <strong>Supermercado</strong>
+              <span>Hoje, 14:32 · Alimentação</span>
             </div>
-
 
             <strong class="transaction-value expense-value">
               − R$ 120,50
@@ -820,30 +580,16 @@
           </div>
 
 
-
-          <!-- ITEM -->
-
           <div class="transaction-item">
 
             <div class="transaction-icon salary-icon">
-
               <i data-lucide="briefcase-business"></i>
-
             </div>
-
 
             <div class="transaction-description">
-
-              <strong>
-                Salário
-              </strong>
-
-              <span>
-                Hoje, 08:15 · Receita
-              </span>
-
+              <strong>Salário</strong>
+              <span>Hoje, 08:15 · Receita</span>
             </div>
-
 
             <strong class="transaction-value income-value">
               + R$ 2.500,00
@@ -852,30 +598,16 @@
           </div>
 
 
-
-          <!-- ITEM -->
-
           <div class="transaction-item">
 
             <div class="transaction-icon gas-icon">
-
               <i data-lucide="fuel"></i>
-
             </div>
-
 
             <div class="transaction-description">
-
-              <strong>
-                Combustível
-              </strong>
-
-              <span>
-                Ontem, 18:40 · Transporte
-              </span>
-
+              <strong>Combustível</strong>
+              <span>Ontem, 18:40 · Transporte</span>
             </div>
-
 
             <strong class="transaction-value expense-value">
               − R$ 80,00
@@ -884,30 +616,16 @@
           </div>
 
 
-
-          <!-- ITEM -->
-
           <div class="transaction-item">
 
             <div class="transaction-icon internet-icon">
-
               <i data-lucide="wifi"></i>
-
             </div>
-
 
             <div class="transaction-description">
-
-              <strong>
-                Internet
-              </strong>
-
-              <span>
-                26 Set · Contas
-              </span>
-
+              <strong>Internet</strong>
+              <span>26 Set · Contas</span>
             </div>
-
 
             <strong class="transaction-value expense-value">
               − R$ 99,90
@@ -920,102 +638,59 @@
       </article>
 
 
-
       <!-- =========================
            META
       ========================== -->
 
       <article class="panel goal-panel">
 
-
         <div class="panel-header">
 
           <div>
-
-            <h3>
-              Minha meta
-            </h3>
-
-            <p>
-              Continue evoluindo
-            </p>
-
+            <h3>Minha meta</h3>
+            <p>Continue evoluindo</p>
           </div>
 
-
           <button class="text-button">
-
             Ver metas
-
             <i data-lucide="arrow-right"></i>
-
           </button>
 
         </div>
 
-
         <div class="goal-visual">
 
           <div class="goal-icon">
-
             <i data-lucide="plane"></i>
-
           </div>
-
 
           <div class="goal-decoration"></div>
 
         </div>
 
-
         <div class="goal-title">
 
           <div>
-
-            <span>
-              META ATUAL
-            </span>
-
-            <h4>
-              Viagem 2027
-            </h4>
-
+            <span>META ATUAL</span>
+            <h4>Viagem 2027</h4>
           </div>
 
-
-          <strong>
-            56%
-          </strong>
+          <strong>56%</strong>
 
         </div>
-
 
         <div class="goal-money">
-
-          <strong>
-            R$ 2.800,00
-          </strong>
-
-          <span>
-            de R$ 5.000,00
-          </span>
-
+          <strong>R$ 2.800,00</strong>
+          <span>de R$ 5.000,00</span>
         </div>
-
 
         <div class="goal-progress">
-
           <div></div>
-
         </div>
 
-
         <p class="goal-footer">
-
           <i data-lucide="circle-check"></i>
-
           Faltam R$ 2.200,00 para sua meta
-
         </p>
 
       </article>
@@ -1025,69 +700,40 @@
   </main>
 
 
-
   <!-- =========================
-       MOBILE NAV
+       MENU MOBILE
   ========================== -->
 
   <nav class="mobile-navigation">
 
-
     <a href="#" class="active">
-
       <i data-lucide="house"></i>
-
-      <span>
-        Início
-      </span>
-
+      <span>Início</span>
     </a>
-
 
     <a href="#">
-
       <i data-lucide="arrow-left-right"></i>
-
-      <span>
-        Lançamentos
-      </span>
-
+      <span>Lançamentos</span>
     </a>
-
 
     <button class="mobile-add">
-
       <i data-lucide="plus"></i>
-
     </button>
 
-
     <a href="#">
-
       <i data-lucide="chart-no-axes-combined"></i>
-
-      <span>
-        Relatórios
-      </span>
-
+      <span>Relatórios</span>
     </a>
 
-
     <a href="#">
-
       <i data-lucide="user-round"></i>
-
-      <span>
-        Perfil
-      </span>
-
+      <span>Perfil</span>
     </a>
 
   </nav>
 
 
-
-  <!-- LUCIDE ICONS -->
+  <!-- ÍCONES -->
 
   <script src="https://unpkg.com/lucide@latest"></script>
 
