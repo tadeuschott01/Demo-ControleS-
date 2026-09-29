@@ -2137,3 +2137,75 @@ svg {
 
     border-radius: 20px;
 }
+/* TESTE — FUNDO PRETO PREMIUM */
+
+html,
+body {
+    background: #090D0B !important;
+}
+
+.main-content {
+    background:
+        radial-gradient(
+            circle at 85% 5%,
+            rgba(16, 145, 96, 0.16),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 10% 70%,
+            rgba(255, 122, 24, 0.07),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #101713 0%,
+            #090D0B 100%
+        ) !important;
+}
+
+/* Textos do topo para aparecerem no fundo preto */
+
+.header h1 {
+    color: #FFFFFF !important;
+}
+
+.header p {
+    color: #AAB8B1 !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+
+    html,
+    body {
+        background: #090D0B !important;
+    }
+
+    .main-content {
+        background:
+            radial-gradient(
+                circle at 90% 3%,
+                rgba(20, 166, 109, 0.17),
+                transparent 30%
+            ),
+            radial-gradient(
+                circle at 0% 65%,
+                rgba(255, 122, 24, 0.07),
+                transparent 28%
+            ),
+            linear-gradient(
+                180deg,
+                #111914 0%,
+                #090D0B 100%
+            ) !important;
+    }
+
+    .header h1 {
+        color: #FFFFFF !important;
+    }
+
+    .header p {
+        color: #9EADA6 !important;
+    }
+}
