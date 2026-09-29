@@ -2022,3 +2022,141 @@ body,
 
     border-radius: 20px;
 }
+
+/* =========================================================
+   CONTROLES — AJUSTE VERDE MAIS CLARO
+   ========================================================= */
+
+/* Fundo geral */
+html,
+body,
+.main-content {
+    background-color: #0b211a !important;
+}
+
+body {
+    background:
+        radial-gradient(
+            circle at 80% 0%,
+            rgba(30, 125, 91, .12),
+            transparent 32%
+        ),
+        #0b211a !important;
+}
+
+/* Cards */
+.summary-card,
+.panel {
+    background:
+        linear-gradient(
+            145deg,
+            #16372d,
+            #102b23
+        ) !important;
+
+    border-color: #245143 !important;
+}
+
+/* Card principal do saldo */
+.balance-card {
+    background:
+        linear-gradient(
+            135deg,
+            #063326 0%,
+            #07503b 55%,
+            #096247 100%
+        ) !important;
+
+    border-color: rgba(91, 196, 151, .22);
+}
+
+/* Card IA */
+.ai-card {
+    background:
+        linear-gradient(
+            145deg,
+            #07372a,
+            #0a513c
+        ) !important;
+}
+
+/* Campo da IA */
+.ai-input {
+    background: #173a30 !important;
+    border-color: #285849 !important;
+}
+
+/* Meta */
+.goal-visual {
+    background:
+        linear-gradient(
+            135deg,
+            #194537,
+            #123329
+        ) !important;
+}
+
+/* Menu inferior */
+.mobile-navigation {
+    background: rgba(11, 33, 26, .97) !important;
+    border-top-color: #245143 !important;
+}
+
+/* Botão central */
+.mobile-add {
+    border-color: #0b211a !important;
+}
+
+/* Ícones/botões escuros */
+.header-icon-button {
+    background: #16372d !important;
+    border-color: #245143 !important;
+}
+
+
+/* MOBILE */
+@media (max-width: 760px) {
+
+    html,
+    body {
+        background: #0b211a !important;
+    }
+
+    .main-content {
+        background:
+            radial-gradient(
+                circle at 80% 0%,
+                rgba(38, 139, 101, .12),
+                transparent 30%
+            ),
+            linear-gradient(
+                180deg,
+                #0b211a,
+                #0e291f
+            ) !important;
+    }
+
+    .summary-card,
+    .panel {
+        background:
+            linear-gradient(
+                145deg,
+                #16372d,
+                #102b23
+            ) !important;
+    }
+
+    .balance-card {
+        background:
+            linear-gradient(
+                135deg,
+                #063326,
+                #07503b 58%,
+                #096247
+            ) !important;
+    }
+
+    .mobile-navigation {
+        background: rgba(11, 33, 26, .97) !important;
+    }
+}
