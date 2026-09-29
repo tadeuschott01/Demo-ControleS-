@@ -1,6 +1,6 @@
 /* =========================================================
-   CONTROLES — DARK PREMIUM
-   PARTE 1/2
+   CONTROLES — EMERALD PREMIUM V5
+   CSS COMPLETO
    ========================================================= */
 
 * {
@@ -10,43 +10,55 @@
 }
 
 :root {
-    --bg: #071813;
-    --bg2: #091e18;
+    /* NOVA PALETA — MAIS CLARA */
+    --bg: #102b23;
+    --bg-secondary: #13352b;
 
-    --card: #0d261f;
-    --card2: #102d24;
+    --card: #183d32;
+    --card-light: #1c4739;
 
-    --green-deep: #02251b;
-    --green: #07523c;
-    --green-light: #39c98a;
+    --green-deep: #083b2d;
+    --green-dark: #0b4b38;
+    --green: #0e654a;
+    --green-light: #3ed397;
 
     --orange: #f47b20;
+    --orange-light: #ff984d;
 
-    --text: #f3f7f5;
-    --text2: #b4c4bd;
-    --muted: #758d84;
+    --text: #f5f8f6;
+    --text-secondary: #bdcec7;
+    --muted: #8fa79d;
 
-    --border: #193c31;
+    --border: #285648;
 
-    --red: #ed7568;
+    --positive: #4bdd9e;
+    --negative: #f07b70;
 
-    --shadow: 0 12px 30px rgba(0,0,0,.18);
+    --shadow: 0 12px 30px rgba(0,0,0,.14);
 }
 
 html {
+    width: 100%;
+    min-height: 100%;
+
     background: var(--bg);
 }
 
 body {
+    width: 100%;
     min-height: 100vh;
 
     background:
         radial-gradient(
             circle at 80% 0%,
-            rgba(15,100,72,.10),
-            transparent 30%
+            rgba(53, 175, 128, .10),
+            transparent 32%
         ),
-        var(--bg);
+        linear-gradient(
+            180deg,
+            #102b23 0%,
+            #13352b 100%
+        );
 
     color: var(--text);
 
@@ -58,6 +70,7 @@ body {
         sans-serif;
 
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 button,
@@ -68,6 +81,8 @@ select {
 
 button {
     cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 a {
@@ -81,7 +96,7 @@ svg {
 
 
 /* =========================================================
-   SIDEBAR DESKTOP
+   SIDEBAR
    ========================================================= */
 
 .sidebar {
@@ -98,11 +113,13 @@ svg {
     background:
         linear-gradient(
             180deg,
-            #03291f,
-            #011812
+            #0a4635 0%,
+            #073529 100%
         );
 
-    border-right: 1px solid rgba(255,255,255,.05);
+    border-right: 1px solid #1b5140;
+
+    color: white;
 
     display: flex;
     flex-direction: column;
@@ -110,13 +127,17 @@ svg {
     z-index: 100;
 }
 
+.brand-area {
+    padding: 0 10px;
+}
+
 .brand {
     color: white;
 
-    font-size: 25px;
+    font-size: 26px;
     font-weight: 800;
 
-    letter-spacing: -1px;
+    letter-spacing: -1.2px;
 }
 
 .brand span {
@@ -127,13 +148,15 @@ svg {
     margin-top: 5px;
     margin-bottom: 30px;
 
-    color: #6f9184;
+    color: #91afa3;
 
     font-size: 9px;
 }
 
 
-/* MENU */
+/* =========================================================
+   MENU SIDEBAR
+   ========================================================= */
 
 .sidebar-menu {
     display: flex;
@@ -149,7 +172,7 @@ svg {
 
     border-radius: 11px;
 
-    color: #88a096;
+    color: #a3bcb2;
 
     display: flex;
     align-items: center;
@@ -160,10 +183,16 @@ svg {
     font-weight: 600;
 }
 
-.sidebar-menu a.active {
-    color: white;
+.sidebar-menu a:hover {
+    background: rgba(255,255,255,.05);
 
-    background: #0a4635;
+    color: white;
+}
+
+.sidebar-menu a.active {
+    background: #126148;
+
+    color: white;
 }
 
 .menu-icon {
@@ -177,25 +206,46 @@ svg {
 .menu-icon svg {
     width: 17px;
     height: 17px;
+
+    stroke-width: 1.8;
+}
+
+.ai-menu small {
+    margin-left: auto;
+
+    padding: 3px 6px;
+
+    border-radius: 5px;
+
+    background: rgba(244,123,32,.15);
+
+    color: #ffa15c;
+
+    font-size: 7px;
+    font-weight: 800;
 }
 
 
-/* PREMIUM */
+/* =========================================================
+   PREMIUM
+   ========================================================= */
 
 .premium-card {
     margin-top: auto;
 
     padding: 16px;
 
-    border: 1px solid #164334;
+    border: 1px solid #28644f;
     border-radius: 15px;
 
     background:
         linear-gradient(
             145deg,
-            #083a2c,
-            #03271e
+            #12503d,
+            #0c4031
         );
+
+    box-shadow: var(--shadow);
 }
 
 .premium-icon {
@@ -206,12 +256,17 @@ svg {
 
     border-radius: 9px;
 
-    background: rgba(244,123,32,.12);
+    background: rgba(244,123,32,.13);
 
     color: var(--orange);
 
     display: grid;
     place-items: center;
+}
+
+.premium-icon svg {
+    width: 15px;
+    height: 15px;
 }
 
 .premium-card strong {
@@ -221,7 +276,7 @@ svg {
 .premium-card p {
     margin: 7px 0 13px;
 
-    color: #82a094;
+    color: #a1bdb2;
 
     font-size: 8px;
 
@@ -245,14 +300,16 @@ svg {
 }
 
 
-/* PERFIL */
+/* =========================================================
+   PERFIL
+   ========================================================= */
 
 .sidebar-profile {
     margin-top: 15px;
 
     padding-top: 15px;
 
-    border-top: 1px solid rgba(255,255,255,.06);
+    border-top: 1px solid rgba(255,255,255,.08);
 
     display: flex;
     align-items: center;
@@ -264,11 +321,13 @@ svg {
     width: 34px;
     height: 34px;
 
+    flex: 0 0 34px;
+
     border-radius: 50%;
 
-    background: #d8e7e1;
+    background: #dcebe5;
 
-    color: #073b2d;
+    color: #0a4c38;
 
     display: grid;
     place-items: center;
@@ -283,11 +342,13 @@ svg {
 }
 
 .profile-text strong {
+    color: white;
+
     font-size: 9px;
 }
 
 .profile-text span {
-    color: #718f84;
+    color: #91afa3;
 
     font-size: 7px;
 }
@@ -299,7 +360,7 @@ svg {
 
     background: transparent;
 
-    color: #779287;
+    color: #91afa3;
 }
 
 
@@ -310,13 +371,23 @@ svg {
 .main-content {
     width: calc(100% - 250px);
 
+    min-height: 100vh;
+
     margin-left: 250px;
 
     padding: 35px 4.5% 60px;
 
-    background: var(--bg);
-
-    min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at 80% 0%,
+            rgba(57, 187, 137, .08),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #102b23,
+            #13352b
+        );
 }
 
 
@@ -328,12 +399,12 @@ svg {
     margin-bottom: 24px;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header-date {
-    color: var(--muted);
+    color: #8da69c;
 
     font-size: 8px;
     font-weight: 700;
@@ -344,7 +415,7 @@ svg {
 .header h1 {
     margin: 5px 0;
 
-    color: var(--text);
+    color: #f5f8f6;
 
     font-size: 25px;
     font-weight: 750;
@@ -353,7 +424,7 @@ svg {
 }
 
 .header p {
-    color: var(--muted);
+    color: #96aaa2;
 
     font-size: 10px;
 }
@@ -365,19 +436,19 @@ svg {
 }
 
 .header-icon-button {
+    position: relative;
+
     width: 40px;
     height: 40px;
 
     padding: 0;
-
-    appearance: none;
 
     border: 1px solid var(--border);
     border-radius: 11px;
 
     background: var(--card);
 
-    color: #c5d6cf;
+    color: #d3e0db;
 
     display: grid;
     place-items: center;
@@ -388,15 +459,34 @@ svg {
     height: 17px;
 }
 
+.notification span {
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--orange);
+}
+
 .new-transaction {
     height: 40px;
 
     padding: 0 16px;
 
-    border: 0;
+    border: 1px solid #177458;
     border-radius: 11px;
 
-    background: #07503b;
+    background:
+        linear-gradient(
+            135deg,
+            #116b50,
+            #0d5842
+        );
 
     color: white;
 
@@ -407,6 +497,8 @@ svg {
 
     font-size: 10px;
     font-weight: 700;
+
+    box-shadow: var(--shadow);
 }
 
 .new-transaction svg {
@@ -416,7 +508,7 @@ svg {
 
 
 /* =========================================================
-   CARD PRINCIPAL
+   CARD SALDO
    ========================================================= */
 
 .balance-card {
@@ -428,21 +520,21 @@ svg {
 
     overflow: hidden;
 
-    border: 1px solid rgba(63,154,118,.16);
+    border: 1px solid rgba(103,205,162,.22);
     border-radius: 21px;
 
     background:
         linear-gradient(
             125deg,
-            #011c15 0%,
-            #033326 58%,
-            #07503b 100%
+            #084332 0%,
+            #0b5a42 58%,
+            #107052 100%
         );
 
     color: white;
 
     box-shadow:
-        0 18px 40px rgba(0,0,0,.20);
+        0 18px 40px rgba(0,0,0,.17);
 }
 
 .balance-info {
@@ -452,7 +544,7 @@ svg {
 }
 
 .balance-title {
-    color: #8eaa9f;
+    color: #b0c9bf;
 
     display: flex;
     align-items: center;
@@ -471,9 +563,9 @@ svg {
     border: 0;
     border-radius: 7px;
 
-    background: transparent;
+    background: rgba(255,255,255,.05);
 
-    color: #91aea3;
+    color: #bdd2ca;
 
     display: grid;
     place-items: center;
@@ -486,6 +578,8 @@ svg {
 
 .balance-card h2 {
     margin: 11px 0 14px;
+
+    color: white;
 
     font-size: 35px;
     font-weight: 750;
@@ -505,9 +599,9 @@ svg {
 
     border-radius: 7px;
 
-    background: rgba(37,204,127,.10);
+    background: rgba(63,229,158,.13);
 
-    color: #50dc9a;
+    color: #75edb7;
 
     display: flex;
     align-items: center;
@@ -519,7 +613,7 @@ svg {
 }
 
 .balance-change small {
-    color: #78998d;
+    color: #a0bbb0;
 
     font-size: 8px;
 }
@@ -536,12 +630,12 @@ svg {
 
     padding: 0 11px;
 
-    border: 1px solid rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.12);
     border-radius: 9px;
 
-    background: rgba(255,255,255,.045);
+    background: rgba(255,255,255,.07);
 
-    color: #aac1b8;
+    color: #d0ded8;
 
     display: flex;
     align-items: center;
@@ -552,7 +646,9 @@ svg {
 }
 
 
-/* GRÁFICO */
+/* =========================================================
+   GRÁFICO SALDO
+   ========================================================= */
 
 .balance-chart {
     position: absolute;
@@ -572,14 +668,15 @@ svg {
 }
 
 .chart-fill {
-    fill: rgba(42,204,129,.08) !important;
+    fill: rgba(91,226,164,.10) !important;
+
     stroke: none !important;
 }
 
 .chart-stroke {
     fill: none !important;
 
-    stroke: #37d28b !important;
+    stroke: #63e4a8 !important;
 
     stroke-width: 2.3 !important;
 
@@ -589,7 +686,7 @@ svg {
 
 
 /* =========================================================
-   CARDS RESUMO
+   RESUMO
    ========================================================= */
 
 .summary-grid {
@@ -597,7 +694,7 @@ svg {
 
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
 
     gap: 13px;
 }
@@ -616,8 +713,8 @@ svg {
     background:
         linear-gradient(
             145deg,
-            #102c24,
-            #0b211b
+            #1b4438,
+            #15382e
         );
 
     display: flex;
@@ -646,21 +743,21 @@ svg {
 }
 
 .income-icon {
-    background: rgba(39,198,125,.12);
+    background: rgba(65,222,153,.14);
 
-    color: #45d895;
+    color: #63e3a7;
 }
 
 .expense-icon {
-    background: rgba(234,105,91,.12);
+    background: rgba(240,123,112,.14);
 
-    color: #ef786d;
+    color: #ff9287;
 }
 
 .receive-icon {
-    background: rgba(244,123,32,.12);
+    background: rgba(244,123,32,.14);
 
-    color: #fa9144;
+    color: #ffa15e;
 }
 
 .summary-content {
@@ -671,7 +768,7 @@ svg {
 }
 
 .summary-content > span {
-    color: #829a91;
+    color: #9db3aa;
 
     font-size: 8px;
 }
@@ -679,7 +776,7 @@ svg {
 .summary-content > strong {
     margin: 4px 0;
 
-    color: #f4f8f6;
+    color: #f5f8f6;
 
     font-size: 16px;
 
@@ -687,17 +784,17 @@ svg {
 }
 
 .summary-content small {
-    color: #789087;
+    color: #91a79e;
 
     font-size: 7px;
 }
 
 .positive-text {
-    color: #43d391 !important;
+    color: #63e3a7 !important;
 }
 
 .negative-text {
-    color: #ed7568 !important;
+    color: #ff8b80 !important;
 }
 
 .card-more {
@@ -709,29 +806,33 @@ svg {
     width: 26px;
     height: 26px;
 
+    padding: 0;
+
     border: 0;
 
     background: transparent;
 
-    color: #728d82;
+    color: #8fa79d;
 }
 
 
 /* =========================================================
-   PAINÉIS
+   DASHBOARD
    ========================================================= */
 
 .dashboard-grid {
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1.55fr)
-        minmax(290px, .82fr);
+        minmax(0,1.55fr)
+        minmax(290px,.82fr);
 
     gap: 14px;
 }
 
 .panel {
+    min-width: 0;
+
     padding: 20px;
 
     border: 1px solid var(--border);
@@ -740,9 +841,11 @@ svg {
     background:
         linear-gradient(
             145deg,
-            #102c24,
-            #0b211b
+            #1b4438,
+            #15382e
         );
+
+    color: var(--text);
 
     box-shadow: var(--shadow);
 }
@@ -751,28 +854,32 @@ svg {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
+    gap: 10px;
 }
 
 .panel-header h3 {
     margin-bottom: 4px;
 
-    color: var(--text);
+    color: #f5f8f6;
 
     font-size: 12px;
 }
 
 .panel-header p {
-    color: var(--muted);
+    color: #91a79e;
 
     font-size: 8px;
 }
 
 .text-button {
+    padding: 0;
+
     border: 0;
 
     background: transparent;
 
-    color: #49ce96;
+    color: #66dfa8;
 
     font-size: 8px;
     font-weight: 700;
@@ -780,7 +887,7 @@ svg {
 
 
 /* =========================================================
-   GRÁFICO GASTOS
+   GASTOS
    ========================================================= */
 
 .spending-body {
@@ -805,10 +912,10 @@ svg {
     background:
         conic-gradient(
             #f47b20 0 28%,
-            #319ccc 28% 46%,
-            #7964d4 46% 61%,
-            #22b6a8 61% 73%,
-            #29483e 73% 100%
+            #42a9d6 28% 46%,
+            #8c77df 46% 61%,
+            #36c4b4 61% 73%,
+            #42695b 73% 100%
         );
 
     display: grid;
@@ -825,7 +932,7 @@ svg {
 
     border-radius: 50%;
 
-    background: #0d261f;
+    background: #183d32;
 }
 
 .donut-inner {
@@ -845,7 +952,7 @@ svg {
 }
 
 .donut-inner span {
-    color: #7d968c;
+    color: #95aca3;
 
     font-size: 7px;
 }
@@ -874,7 +981,7 @@ svg {
 }
 
 .category-name {
-    color: #afc1ba;
+    color: #c0d0ca;
 
     display: flex;
     align-items: center;
@@ -883,11 +990,11 @@ svg {
 }
 
 .category-row strong {
-    color: #eef5f2;
+    color: #f0f6f3;
 }
 
 .category-row > span {
-    color: #718b81;
+    color: #91a79e;
 }
 
 .dot {
@@ -898,10 +1005,10 @@ svg {
 }
 
 .food-dot { background: #f47b20; }
-.transport-dot { background: #319ccc; }
-.home-dot { background: #7964d4; }
-.bill-dot { background: #22b6a8; }
-.other-dot { background: #45655a; }
+.transport-dot { background: #42a9d6; }
+.home-dot { background: #8c77df; }
+.bill-dot { background: #36c4b4; }
+.other-dot { background: #54796c; }
 
 
 /* =========================================================
@@ -909,16 +1016,20 @@ svg {
    ========================================================= */
 
 .ai-card {
+    position: relative;
+
     padding: 20px;
 
-    border: 1px solid #174333;
+    overflow: hidden;
+
+    border: 1px solid #28644f;
     border-radius: 17px;
 
     background:
         linear-gradient(
             145deg,
-            #011c15,
-            #07382a
+            #0b4b38,
+            #116149
         );
 
     color: white;
@@ -928,8 +1039,8 @@ svg {
 
 .ai-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .ai-brand {
@@ -945,12 +1056,17 @@ svg {
 
     border-radius: 10px;
 
-    background: #0b5941;
+    background: #177457;
 
-    color: #51dd9a;
+    color: #78ecb8;
 
     display: grid;
     place-items: center;
+}
+
+.ai-icon svg {
+    width: 17px;
+    height: 17px;
 }
 
 .ai-brand strong {
@@ -962,7 +1078,7 @@ svg {
 
     margin-top: 3px;
 
-    color: #789b8e;
+    color: #a0bdb1;
 
     font-size: 7px;
 }
@@ -972,9 +1088,9 @@ svg {
 
     border-radius: 5px;
 
-    background: rgba(244,123,32,.12);
+    background: rgba(244,123,32,.14);
 
-    color: #ff994d;
+    color: #ffac6e;
 
     font-size: 6px;
     font-weight: 800;
@@ -985,7 +1101,7 @@ svg {
 }
 
 .ai-small {
-    color: #6f9486;
+    color: #a0b9af;
 
     font-size: 6px;
 }
@@ -1008,12 +1124,12 @@ svg {
 .ai-suggestions button {
     padding: 6px 8px;
 
-    border: 1px solid rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.11);
     border-radius: 20px;
 
-    background: rgba(255,255,255,.04);
+    background: rgba(255,255,255,.06);
 
-    color: #a5beb4;
+    color: #c2d5cd;
 
     font-size: 7px;
 }
@@ -1023,12 +1139,12 @@ svg {
 
     padding: 7px 7px 7px 10px;
 
-    border: 1px solid #1c4638;
+    border: 1px solid #36715d;
     border-radius: 10px;
 
-    background: #102c24;
+    background: #1a4638;
 
-    color: #7c978c;
+    color: #a2b8af;
 
     display: flex;
     align-items: center;
@@ -1041,21 +1157,18 @@ svg {
     width: 29px;
     height: 29px;
 
+    padding: 0;
+
     border: 0;
     border-radius: 8px;
 
-    background: #0b6246;
+    background: #137053;
 
     color: white;
 
     display: grid;
     place-items: center;
 }
-
-/* =========================================================
-   CONTROLES — DARK PREMIUM
-   PARTE 2/2
-   ========================================================= */
 
 
 /* =========================================================
@@ -1073,10 +1186,14 @@ svg {
 .transaction-item {
     min-height: 56px;
 
-    border-bottom: 1px solid #19382e;
+    border-bottom: 1px solid #285246;
 
     display: grid;
-    grid-template-columns: 36px minmax(0, 1fr) auto;
+
+    grid-template-columns:
+        36px
+        minmax(0,1fr)
+        auto;
 
     align-items: center;
 
@@ -1103,23 +1220,23 @@ svg {
 }
 
 .supermarket {
-    background: rgba(244,123,32,.12);
-    color: #f58e43;
+    background: rgba(244,123,32,.14);
+    color: #ffa05b;
 }
 
 .salary-icon {
-    background: rgba(38,202,126,.12);
-    color: #45d895;
+    background: rgba(67,211,145,.14);
+    color: #63e3a7;
 }
 
 .gas-icon {
-    background: rgba(49,156,204,.13);
-    color: #5bb9e3;
+    background: rgba(66,169,214,.14);
+    color: #73c5e9;
 }
 
 .internet-icon {
-    background: rgba(121,100,212,.14);
-    color: #9c8bec;
+    background: rgba(140,119,223,.15);
+    color: #aa99ed;
 }
 
 .transaction-description {
@@ -1132,7 +1249,7 @@ svg {
 }
 
 .transaction-description strong {
-    color: #edf4f1;
+    color: #f2f7f4;
 
     font-size: 8px;
 }
@@ -1140,7 +1257,7 @@ svg {
 .transaction-description span {
     overflow: hidden;
 
-    color: #718b81;
+    color: #91a79e;
 
     font-size: 7px;
 
@@ -1156,11 +1273,11 @@ svg {
 }
 
 .expense-value {
-    color: var(--red);
+    color: #ff8b80;
 }
 
 .income-value {
-    color: #43d391;
+    color: #63e3a7;
 }
 
 
@@ -1177,14 +1294,14 @@ svg {
 
     overflow: hidden;
 
-    border: 1px solid #1a4033;
+    border: 1px solid #326153;
     border-radius: 13px;
 
     background:
         linear-gradient(
             130deg,
-            #12382d,
-            #0b251e
+            #245747,
+            #1a4437
         );
 }
 
@@ -1199,32 +1316,19 @@ svg {
 
     border-radius: 50%;
 
-    background: #173e32;
+    background: #2b6250;
 
-    color: #58dca1;
+    color: #79e7b7;
 
     display: grid;
     place-items: center;
 
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
 }
 
 .goal-icon svg {
     width: 18px;
     height: 18px;
-}
-
-.goal-decoration {
-    position: absolute;
-
-    top: -100px;
-    right: -45px;
-
-    width: 175px;
-    height: 175px;
-
-    border: 1px solid rgba(82,212,157,.08);
-    border-radius: 50%;
 }
 
 .goal-title {
@@ -1239,24 +1343,22 @@ svg {
 }
 
 .goal-title span {
-    color: #718d82;
+    color: #91a79e;
 
     font-size: 6px;
     font-weight: 700;
-
-    letter-spacing: .8px;
 }
 
 .goal-title h4 {
     margin-top: 3px;
 
-    color: #f1f6f3;
+    color: #f3f7f5;
 
     font-size: 11px;
 }
 
 .goal-title > strong {
-    color: #4ed399;
+    color: #65dfa9;
 
     font-size: 11px;
 }
@@ -1271,13 +1373,13 @@ svg {
 }
 
 .goal-money strong {
-    color: #f1f6f3;
+    color: #f3f7f5;
 
     font-size: 9px;
 }
 
 .goal-money span {
-    color: #718b81;
+    color: #91a79e;
 
     font-size: 7px;
 }
@@ -1291,7 +1393,7 @@ svg {
 
     border-radius: 10px;
 
-    background: #193a2f;
+    background: #285447;
 }
 
 .goal-progress div {
@@ -1303,13 +1405,13 @@ svg {
     background:
         linear-gradient(
             90deg,
-            #0c8d5e,
-            #35ce8b
+            #18a671,
+            #54dfa3
         );
 }
 
 .goal-footer {
-    color: #718b81;
+    color: #91a79e;
 
     display: flex;
     align-items: center;
@@ -1319,16 +1421,9 @@ svg {
     font-size: 6px;
 }
 
-.goal-footer svg {
-    width: 10px;
-    height: 10px;
-
-    color: #3ed18c;
-}
-
 
 /* =========================================================
-   MENU MOBILE
+   MOBILE NAV
    ========================================================= */
 
 .mobile-navigation {
@@ -1371,24 +1466,18 @@ svg {
     body {
         width: 100%;
 
-        background: #071813;
-
         overflow-x: hidden;
+
+        background: #102b23 !important;
     }
 
     body {
         display: block;
     }
 
-
-    /* ESCONDE COMPLETAMENTE SIDEBAR */
-
     .sidebar {
         display: none !important;
     }
-
-
-    /* CONTEÚDO */
 
     .main-content {
         width: 100% !important;
@@ -1404,28 +1493,22 @@ svg {
 
         background:
             radial-gradient(
-                circle at 80% 0%,
-                rgba(18,105,75,.09),
+                circle at 85% 0%,
+                rgba(72, 201, 151, .10),
                 transparent 28%
             ),
             linear-gradient(
                 180deg,
-                #071813,
-                #091e18
-            );
+                #102b23 0%,
+                #14382d 100%
+            ) !important;
     }
 
 
-    /* =====================================================
-       CABEÇALHO
-       ===================================================== */
+    /* HEADER */
 
     .header {
         margin-bottom: 22px;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
 
         gap: 12px;
     }
@@ -1437,10 +1520,7 @@ svg {
     .header h1 {
         margin: 0 0 5px;
 
-        color: #f4f8f6;
-
         font-size: 26px;
-        font-weight: 750;
 
         letter-spacing: -1.1px;
     }
@@ -1448,7 +1528,7 @@ svg {
     .header p {
         max-width: 270px;
 
-        color: #7b948a;
+        color: #99aea6;
 
         font-size: 10px;
 
@@ -1469,20 +1549,16 @@ svg {
 
         padding: 0;
 
-        border: 1px solid #0a6046;
         border-radius: 14px;
+
+        justify-content: center;
 
         background:
             linear-gradient(
                 145deg,
-                #0a5a42,
-                #053d2e
+                #147354,
+                #0d5c45
             );
-
-        justify-content: center;
-
-        box-shadow:
-            0 10px 25px rgba(0,0,0,.18);
     }
 
     .new-transaction span {
@@ -1495,9 +1571,7 @@ svg {
     }
 
 
-    /* =====================================================
-       CARD SALDO
-       ===================================================== */
+    /* SALDO */
 
     .balance-card {
         min-height: 225px;
@@ -1509,30 +1583,16 @@ svg {
         background:
             linear-gradient(
                 135deg,
-                #011c15 0%,
-                #033426 58%,
-                #07503b 100%
-            );
-
-        box-shadow:
-            0 18px 40px rgba(0,0,0,.22);
-    }
-
-    .balance-title {
-        font-size: 10px;
-    }
-
-    .balance-title button {
-        background: transparent;
+                #084332 0%,
+                #0b5a42 58%,
+                #107052 100%
+            ) !important;
     }
 
     .balance-card h2 {
         margin: 13px 0 15px;
 
         font-size: 32px;
-        font-weight: 750;
-
-        letter-spacing: -1.5px;
     }
 
     .month-selector {
@@ -1541,37 +1601,17 @@ svg {
 
         height: 39px;
 
-        padding: 0 11px;
-
         border-radius: 11px;
-
-        background: rgba(255,255,255,.045);
-
-        font-size: 8px;
     }
 
     .balance-change {
         max-width: 170px;
-
-        margin-top: 3px;
 
         display: flex;
         flex-direction: column;
         align-items: flex-start;
 
         gap: 8px;
-    }
-
-    .balance-positive {
-        padding: 6px 8px;
-
-        border-radius: 8px;
-
-        font-size: 8px;
-    }
-
-    .balance-change small {
-        font-size: 8px;
     }
 
     .balance-chart {
@@ -1581,19 +1621,17 @@ svg {
         width: 54%;
         height: 92px;
 
-        opacity: .75;
+        opacity: .8;
     }
 
 
-    /* =====================================================
-       CARDS RECEITA / DESPESA
-       ===================================================== */
+    /* RESUMO */
 
     .summary-grid {
         margin: 12px 0;
 
         grid-template-columns:
-            repeat(2, minmax(0,1fr));
+            repeat(2,minmax(0,1fr));
 
         gap: 10px;
     }
@@ -1603,20 +1641,21 @@ svg {
 
         padding: 14px 12px;
 
-        border: 1px solid #193c31;
+        border-color: #2a5a4a;
+
         border-radius: 18px;
 
         background:
             linear-gradient(
                 145deg,
-                #102c24,
-                #0b211b
-            );
+                #1c473a,
+                #173c31
+            ) !important;
 
         gap: 10px;
 
         box-shadow:
-            0 10px 28px rgba(0,0,0,.16);
+            0 10px 25px rgba(0,0,0,.13);
     }
 
     .summary-card:nth-child(3) {
@@ -1634,27 +1673,8 @@ svg {
         border-radius: 13px;
     }
 
-    .summary-icon svg {
-        width: 18px;
-        height: 18px;
-    }
-
-    .summary-content > span {
-        font-size: 8px;
-    }
-
     .summary-content > strong {
-        margin: 4px 0;
-
-        color: #f4f8f6;
-
         font-size: 14px;
-
-        letter-spacing: -.3px;
-    }
-
-    .summary-content small {
-        font-size: 7px;
     }
 
     .card-more {
@@ -1662,9 +1682,7 @@ svg {
     }
 
 
-    /* =====================================================
-       DASHBOARD
-       ===================================================== */
+    /* PAINÉIS */
 
     .dashboard-grid {
         grid-template-columns: 1fr;
@@ -1680,41 +1698,22 @@ svg {
     }
 
     .panel {
-        border-color: #193c31;
+        border-color: #2a5a4a;
 
         background:
             linear-gradient(
                 145deg,
-                #102c24,
-                #0b211b
-            );
-
-        box-shadow:
-            0 10px 28px rgba(0,0,0,.15);
+                #1c473a,
+                #173c31
+            ) !important;
     }
 
     .panel-header h3 {
-        color: #f2f7f4;
-
         font-size: 13px;
     }
 
-    .panel-header p {
-        margin-top: 3px;
 
-        font-size: 8px;
-    }
-
-    .text-button {
-        color: #4dd39a;
-
-        font-size: 8px;
-    }
-
-
-    /* =====================================================
-       GASTOS DO MÊS
-       ===================================================== */
+    /* GASTOS */
 
     .spending-body {
         margin-top: 22px;
@@ -1733,73 +1732,27 @@ svg {
         width: 76px;
         height: 76px;
 
-        background: #0d261f;
-    }
-
-    .donut-inner strong {
-        font-size: 12px;
+        background: #183d32;
     }
 
     .categories-list {
         gap: 10px;
     }
 
-    .category-row {
-        gap: 7px;
 
-        font-size: 7px;
-    }
-
-
-    /* =====================================================
-       IA
-       ===================================================== */
+    /* IA */
 
     .ai-card {
-        border-color: #174333;
-
         background:
             linear-gradient(
                 145deg,
-                #011c15,
-                #07382a
-            );
-
-        box-shadow:
-            0 12px 30px rgba(0,0,0,.18);
-    }
-
-    .ai-content h3 {
-        max-width: 240px;
-
-        font-size: 14px;
-    }
-
-    .ai-input {
-        background: #102c24;
+                #0b4b38,
+                #116149
+            ) !important;
     }
 
 
-    /* =====================================================
-       TRANSAÇÕES
-       ===================================================== */
-
-    .transaction-item {
-        min-height: 58px;
-    }
-
-    .transaction-description strong {
-        font-size: 8px;
-    }
-
-    .transaction-description span {
-        font-size: 7px;
-    }
-
-
-    /* =====================================================
-       MENU INFERIOR
-       ===================================================== */
+    /* MOBILE NAV */
 
     .mobile-navigation {
         position: fixed;
@@ -1812,31 +1765,29 @@ svg {
 
         height: 76px;
 
-        padding:
-            7px
-            8px
-            10px;
+        padding: 7px 8px 10px;
 
-        border-top: 1px solid #193a30;
+        border-top: 1px solid #285648;
 
         background:
-            rgba(5,22,17,.96);
+            rgba(16,43,35,.97) !important;
 
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
 
         display: flex !important;
+
         align-items: center;
         justify-content: space-around;
 
         box-shadow:
-            0 -10px 35px rgba(0,0,0,.25);
+            0 -10px 30px rgba(0,0,0,.18);
     }
 
     .mobile-navigation a {
         min-width: 52px;
 
-        color: #708a80;
+        color: #8da69c;
 
         display: flex;
         flex-direction: column;
@@ -1845,18 +1796,15 @@ svg {
         gap: 5px;
 
         font-size: 7px;
-        font-weight: 500;
     }
 
     .mobile-navigation a svg {
         width: 19px;
         height: 19px;
-
-        stroke-width: 1.8;
     }
 
     .mobile-navigation a.active {
-        color: #4fd49a;
+        color: #63dfa9;
     }
 
     .mobile-add {
@@ -1867,15 +1815,13 @@ svg {
 
         padding: 0;
 
-        appearance: none;
-
-        border: 4px solid #071813;
+        border: 4px solid #102b23;
         border-radius: 50%;
 
         background:
             linear-gradient(
                 145deg,
-                #ff8a32,
+                #ff8c35,
                 #ed6d10
             );
 
@@ -1885,8 +1831,7 @@ svg {
         place-items: center;
 
         box-shadow:
-            0 10px 28px
-            rgba(244,123,32,.30);
+            0 10px 28px rgba(244,123,32,.30);
     }
 
     .mobile-add svg {
@@ -1897,7 +1842,7 @@ svg {
 
 
 /* =========================================================
-   CELULARES MENORES
+   CELULAR PEQUENO
    ========================================================= */
 
 @media (max-width: 480px) {
@@ -1925,14 +1870,10 @@ svg {
         font-size: 30px;
     }
 
-    .month-selector {
-        right: 15px;
-    }
-
     .balance-chart {
         width: 54%;
 
-        opacity: .65;
+        opacity: .72;
     }
 
     .summary-card {
@@ -1959,49 +1900,6 @@ svg {
     .donut-chart {
         margin: 0 auto;
     }
-
-    .categories-list {
-        margin-top: 5px;
-    }
-}
-
-
-/* =========================================================
-   SEGURANÇA CONTRA ESTILOS PADRÃO DO NAVEGADOR
-   ========================================================= */
-
-button {
-    -webkit-appearance: none;
-    appearance: none;
-
-    outline: none;
-}
-
-.more-button,
-.card-more,
-.balance-title button,
-.text-button {
-    border: 0;
-}
-
-
-/* =========================================================
-   GARANTIA DARK
-   ========================================================= */
-
-body,
-.main-content {
-    background-color: #071813;
-}
-
-.summary-card,
-.panel {
-    color: #f3f7f5;
-}
-
-.summary-content > strong,
-.panel h3 {
-    color: #f3f7f5;
 }
 
 
@@ -2014,149 +1912,11 @@ body,
 }
 
 ::-webkit-scrollbar-track {
-    background: #071813;
+    background: #102b23;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #1d493a;
+    background: #36715d;
 
     border-radius: 20px;
-}
-
-/* =========================================================
-   CONTROLES — AJUSTE VERDE MAIS CLARO
-   ========================================================= */
-
-/* Fundo geral */
-html,
-body,
-.main-content {
-    background-color: #0b211a !important;
-}
-
-body {
-    background:
-        radial-gradient(
-            circle at 80% 0%,
-            rgba(30, 125, 91, .12),
-            transparent 32%
-        ),
-        #0b211a !important;
-}
-
-/* Cards */
-.summary-card,
-.panel {
-    background:
-        linear-gradient(
-            145deg,
-            #16372d,
-            #102b23
-        ) !important;
-
-    border-color: #245143 !important;
-}
-
-/* Card principal do saldo */
-.balance-card {
-    background:
-        linear-gradient(
-            135deg,
-            #063326 0%,
-            #07503b 55%,
-            #096247 100%
-        ) !important;
-
-    border-color: rgba(91, 196, 151, .22);
-}
-
-/* Card IA */
-.ai-card {
-    background:
-        linear-gradient(
-            145deg,
-            #07372a,
-            #0a513c
-        ) !important;
-}
-
-/* Campo da IA */
-.ai-input {
-    background: #173a30 !important;
-    border-color: #285849 !important;
-}
-
-/* Meta */
-.goal-visual {
-    background:
-        linear-gradient(
-            135deg,
-            #194537,
-            #123329
-        ) !important;
-}
-
-/* Menu inferior */
-.mobile-navigation {
-    background: rgba(11, 33, 26, .97) !important;
-    border-top-color: #245143 !important;
-}
-
-/* Botão central */
-.mobile-add {
-    border-color: #0b211a !important;
-}
-
-/* Ícones/botões escuros */
-.header-icon-button {
-    background: #16372d !important;
-    border-color: #245143 !important;
-}
-
-
-/* MOBILE */
-@media (max-width: 760px) {
-
-    html,
-    body {
-        background: #0b211a !important;
-    }
-
-    .main-content {
-        background:
-            radial-gradient(
-                circle at 80% 0%,
-                rgba(38, 139, 101, .12),
-                transparent 30%
-            ),
-            linear-gradient(
-                180deg,
-                #0b211a,
-                #0e291f
-            ) !important;
-    }
-
-    .summary-card,
-    .panel {
-        background:
-            linear-gradient(
-                145deg,
-                #16372d,
-                #102b23
-            ) !important;
-    }
-
-    .balance-card {
-        background:
-            linear-gradient(
-                135deg,
-                #063326,
-                #07503b 58%,
-                #096247
-            ) !important;
-    }
-
-    .mobile-navigation {
-        background: rgba(11, 33, 26, .97) !important;
-    }
 }
