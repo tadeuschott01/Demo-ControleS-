@@ -1,6 +1,11 @@
 /* =========================================================
-   CONTROLES — DARK PREMIUM 3.0
-   VERDE + PRETO + LARANJA
+   CONTROLES — PREMIUM DARK + WHITE 4.0
+   Preto + Verde Esmeralda + Branco + Laranja
+   ========================================================= */
+
+
+/* =========================================================
+   RESET / VARIÁVEIS
    ========================================================= */
 
 * {
@@ -11,14 +16,19 @@
 
 :root {
     --bg: #07110d;
-    --bg-2: #091812;
+    --bg-2: #0a1712;
 
     --surface: #101d17;
-    --surface-2: #14251d;
-    --surface-3: #183027;
+    --surface-2: #16271f;
+    --surface-3: #1a3026;
 
-    --green-dark: #064d38;
+    --white: #ffffff;
+    --white-soft: #f4f8f6;
+    --white-green: #edf5f1;
+
+    --green-dark: #054c37;
     --green: #07865b;
+    --green-2: #0aa16c;
     --green-bright: #18bd7e;
     --green-light: #50e3aa;
 
@@ -28,15 +38,23 @@
     --red: #ff7468;
     --yellow: #ffb84b;
 
-    --white: #ffffff;
     --text: #f5faf7;
     --soft: #a2b4ac;
     --muted: #74877e;
 
+    --dark-text: #10231b;
+    --dark-soft: #66786f;
+
     --border: rgba(255,255,255,.09);
 
     --shadow: 0 14px 35px rgba(0,0,0,.28);
+    --shadow-light: 0 14px 35px rgba(0,0,0,.20);
 }
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
 
 html {
     width: 100%;
@@ -47,22 +65,31 @@ html {
 body {
     width: 100%;
     min-height: 100vh;
-
     overflow-x: hidden;
 
-    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
 
     color: var(--text);
 
     background:
         radial-gradient(
-            circle at 80% 0%,
-            rgba(20,185,122,.10),
-            transparent 28%
+            circle at 88% 0%,
+            rgba(24,189,126,.11),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 0% 65%,
+            rgba(255,120,23,.04),
+            transparent 27%
         ),
         linear-gradient(
             180deg,
-            #0c1712 0%,
+            #0d1914 0%,
             #07110d 100%
         );
 
@@ -77,6 +104,8 @@ select {
 
 button {
     cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 a {
@@ -95,6 +124,7 @@ svg {
 
 .sidebar {
     position: fixed;
+
     top: 0;
     bottom: 0;
     left: 0;
@@ -111,29 +141,34 @@ svg {
     background:
         radial-gradient(
             circle at 0 0,
-            rgba(22,190,125,.16),
-            transparent 28%
+            rgba(22,190,125,.17),
+            transparent 30%
         ),
         linear-gradient(
             180deg,
-            #092118,
+            #092119,
             #06120e
         );
 
     border-right: 1px solid rgba(255,255,255,.07);
 }
 
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
 .brand-area {
     padding: 0 10px;
 }
 
 .brand {
+    color: white;
+
     font-size: 26px;
     font-weight: 800;
 
     letter-spacing: -1px;
-
-    color: white;
 }
 
 .brand span {
@@ -144,17 +179,20 @@ svg {
     margin-top: 5px;
     margin-bottom: 30px;
 
-    font-size: 9px;
-
     color: #82988e;
+
+    font-size: 9px;
 }
 
 
-/* MENU */
+/* =========================================================
+   MENU LATERAL
+   ========================================================= */
 
 .sidebar-menu {
     display: flex;
     flex-direction: column;
+
     gap: 6px;
 }
 
@@ -167,6 +205,7 @@ svg {
 
     display: flex;
     align-items: center;
+
     gap: 10px;
 
     color: #94a89f;
@@ -179,6 +218,7 @@ svg {
 
 .sidebar-menu a:hover {
     color: white;
+
     background: rgba(255,255,255,.05);
 }
 
@@ -193,8 +233,12 @@ svg {
         );
 
     box-shadow:
-        0 10px 25px rgba(0,0,0,.20);
+        0 10px 25px rgba(0,0,0,.20),
+        inset 0 1px 0 rgba(255,255,255,.10);
 }
+
+
+/* ÍCONES SIDEBAR */
 
 .menu-icon {
     width: 34px;
@@ -215,6 +259,7 @@ svg {
 .menu-icon svg {
     width: 18px;
     height: 18px;
+
     stroke-width: 2.1;
 }
 
@@ -258,14 +303,16 @@ svg {
 }
 
 
-/* PREMIUM */
+/* =========================================================
+   PREMIUM SIDEBAR
+   ========================================================= */
 
 .premium-card {
     margin-top: auto;
 
     padding: 16px;
 
-    border: 1px solid var(--border);
+    border: 1px solid rgba(255,255,255,.09);
     border-radius: 18px;
 
     background:
@@ -301,9 +348,12 @@ svg {
 
 .premium-icon svg {
     width: 19px;
+    height: 19px;
 }
 
 .premium-card strong {
+    color: white;
+
     font-size: 11px;
 }
 
@@ -336,11 +386,14 @@ svg {
     font-size: 9px;
     font-weight: 700;
 
-    box-shadow: 0 8px 22px rgba(255,110,12,.20);
+    box-shadow:
+        0 8px 22px rgba(255,110,12,.20);
 }
 
 
-/* PERFIL */
+/* =========================================================
+   PERFIL SIDEBAR
+   ========================================================= */
 
 .sidebar-profile {
     margin-top: 15px;
@@ -348,6 +401,7 @@ svg {
 
     display: flex;
     align-items: center;
+
     gap: 9px;
 
     border-top: 1px solid rgba(255,255,255,.08);
@@ -378,11 +432,14 @@ svg {
 }
 
 .profile-text strong {
+    color: white;
+
     font-size: 9px;
 }
 
 .profile-text span {
     color: #81958c;
+
     font-size: 7px;
 }
 
@@ -390,6 +447,7 @@ svg {
     margin-left: auto;
 
     border: 0;
+
     background: transparent;
 
     color: #8ba097;
@@ -397,11 +455,12 @@ svg {
 
 
 /* =========================================================
-   MAIN
+   CONTEÚDO PRINCIPAL
    ========================================================= */
 
 .main-content {
     width: calc(100% - 250px);
+
     min-height: 100vh;
 
     margin-left: 250px;
@@ -446,6 +505,7 @@ svg {
 
 .header p {
     color: #9caea6;
+
     font-size: 10px;
 }
 
@@ -462,7 +522,7 @@ svg {
 
     padding: 0;
 
-    border: 1px solid var(--border);
+    border: 1px solid rgba(255,255,255,.10);
     border-radius: 14px;
 
     display: grid;
@@ -470,7 +530,14 @@ svg {
 
     color: #55e0aa;
 
-    background: #13231c;
+    background:
+        linear-gradient(
+            145deg,
+            #182920,
+            #112019
+        );
+
+    box-shadow: var(--shadow);
 }
 
 .header-icon-button svg {
@@ -488,6 +555,7 @@ svg {
 
     display: flex;
     align-items: center;
+
     gap: 8px;
 
     background:
@@ -506,9 +574,14 @@ svg {
         0 10px 26px rgba(255,111,14,.25);
 }
 
+.new-transaction svg {
+    width: 18px;
+    height: 18px;
+}
+
 
 /* =========================================================
-   BALANCE
+   CARD SALDO
    ========================================================= */
 
 .balance-card {
@@ -530,6 +603,11 @@ svg {
             circle at 95% 5%,
             rgba(68,232,166,.27),
             transparent 39%
+        ),
+        radial-gradient(
+            circle at 0% 100%,
+            rgba(255,255,255,.06),
+            transparent 35%
         ),
         linear-gradient(
             135deg,
@@ -553,7 +631,7 @@ svg {
     top: -225px;
     right: -80px;
 
-    border: 1px solid rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.09);
     border-radius: 50%;
 }
 
@@ -568,12 +646,13 @@ svg {
     bottom: -210px;
     left: 8%;
 
-    border: 1px solid rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.07);
     border-radius: 50%;
 }
 
 .balance-info {
     position: relative;
+
     z-index: 5;
 }
 
@@ -583,7 +662,7 @@ svg {
 
     gap: 8px;
 
-    color: #c9ddd5;
+    color: #d5e9e0;
 
     font-size: 10px;
 }
@@ -597,16 +676,17 @@ svg {
     display: grid;
     place-items: center;
 
-    border: 1px solid rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.11);
     border-radius: 10px;
 
-    background: rgba(255,255,255,.09);
+    background: rgba(255,255,255,.11);
 
-    color: #8ae9c0;
+    color: white;
 }
 
 .balance-title svg {
     width: 15px;
+    height: 15px;
 }
 
 .balance-card h2 {
@@ -637,16 +717,20 @@ svg {
 
     border-radius: 11px;
 
-    background: rgba(63,230,159,.17);
+    background: rgba(255,255,255,.13);
 
-    color: #78efb8;
+    color: white;
 
     font-size: 8px;
     font-weight: 700;
 }
 
+.balance-positive svg {
+    width: 14px;
+}
+
 .balance-change small {
-    color: #c2d6ce;
+    color: #d5e5de;
 
     font-size: 8px;
 }
@@ -668,15 +752,25 @@ svg {
 
     gap: 9px;
 
-    border: 1px solid rgba(255,255,255,.17);
+    border: 1px solid rgba(255,255,255,.20);
     border-radius: 13px;
 
-    color: #edf8f3;
+    color: white;
 
-    background: rgba(255,255,255,.09);
+    background: rgba(255,255,255,.11);
 
     font-size: 8px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
+
+.month-selector svg {
+    width: 14px;
+}
+
+
+/* GRÁFICO SALDO */
 
 .balance-chart {
     position: absolute;
@@ -696,22 +790,23 @@ svg {
 }
 
 .chart-fill {
-    fill: rgba(79,231,169,.13);
+    fill: rgba(255,255,255,.08);
 }
 
 .chart-stroke {
     fill: none;
 
-    stroke: #65e5ae;
+    stroke: rgba(255,255,255,.88);
 
-    stroke-width: 2.7;
+    stroke-width: 2.5;
 
     stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 
 /* =========================================================
-   SUMMARY
+   RESUMO
    ========================================================= */
 
 .summary-grid {
@@ -719,7 +814,7 @@ svg {
 
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
 
     gap: 14px;
 }
@@ -735,18 +830,77 @@ svg {
 
     gap: 13px;
 
-    border: 1px solid var(--border);
+    border: 1px solid rgba(255,255,255,.09);
     border-radius: 21px;
 
     background:
         linear-gradient(
             145deg,
-            #17271f,
-            #101a16
+            #182a22,
+            #111e18
         );
 
     box-shadow: var(--shadow);
 }
+
+
+/* PRIMEIRO CARD — RECEITAS BRANCO */
+
+.summary-card:nth-child(1) {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #edf5f1 100%
+        );
+
+    border: 1px solid rgba(7,134,91,.12);
+
+    box-shadow: var(--shadow-light);
+}
+
+.summary-card:nth-child(1) .summary-content > span {
+    color: #718078;
+}
+
+.summary-card:nth-child(1) .summary-content > strong {
+    color: #10231b;
+}
+
+.summary-card:nth-child(1) .positive-text {
+    color: #07865b !important;
+}
+
+
+/* TERCEIRO CARD — A RECEBER BRANCO */
+
+.summary-card:nth-child(3) {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #f3f6f4 100%
+        );
+
+    border: 1px solid rgba(255,120,23,.13);
+
+    box-shadow: var(--shadow-light);
+}
+
+.summary-card:nth-child(3) .summary-content > span {
+    color: #718078;
+}
+
+.summary-card:nth-child(3) .summary-content > strong {
+    color: #10231b;
+}
+
+.summary-card:nth-child(3) .summary-content small {
+    color: #718078;
+}
+
+
+/* ÍCONES */
 
 .summary-icon {
     width: 48px;
@@ -768,18 +922,37 @@ svg {
 }
 
 .income-icon {
-    color: #50e2aa;
-    background: rgba(30,195,127,.15);
+    color: #087f58;
+
+    background:
+        linear-gradient(
+            145deg,
+            #dff7ed,
+            #cceee1
+        );
+
+    box-shadow:
+        0 8px 20px rgba(7,134,91,.12);
 }
 
 .expense-icon {
     color: #ff796d;
+
     background: rgba(255,105,91,.14);
 }
 
 .receive-icon {
-    color: #ff9b43;
-    background: rgba(255,140,44,.15);
+    color: #f36e0d;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff0e3,
+            #ffe3cc
+        );
+
+    box-shadow:
+        0 8px 20px rgba(255,120,23,.10);
 }
 
 .summary-content {
@@ -830,7 +1003,7 @@ svg {
 
 
 /* =========================================================
-   DASHBOARD GRID
+   DASHBOARD
    ========================================================= */
 
 .dashboard-grid {
@@ -849,14 +1022,14 @@ svg {
 
     padding: 21px;
 
-    border: 1px solid var(--border);
+    border: 1px solid rgba(255,255,255,.09);
     border-radius: 21px;
 
     background:
         linear-gradient(
             145deg,
-            #17271f,
-            #101a16
+            #182a22,
+            #111e18
         );
 
     box-shadow: var(--shadow);
@@ -873,9 +1046,9 @@ svg {
 .panel-header h3 {
     margin-bottom: 4px;
 
-    font-size: 13px;
-
     color: white;
+
+    font-size: 13px;
 }
 
 .panel-header p {
@@ -885,18 +1058,21 @@ svg {
 }
 
 .text-button {
+    padding: 0;
+
     border: 0;
+
     background: transparent;
 
     color: #4ce0a6;
-
-    font-size: 8px;
-    font-weight: 700;
 
     display: flex;
     align-items: center;
 
     gap: 4px;
+
+    font-size: 8px;
+    font-weight: 700;
 }
 
 .text-button svg {
@@ -907,6 +1083,20 @@ svg {
 /* =========================================================
    GASTOS
    ========================================================= */
+
+.spending-panel {
+    background:
+        radial-gradient(
+            circle at 0% 100%,
+            rgba(24,189,126,.06),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #182a22,
+            #111e18
+        );
+}
 
 .spending-body {
     margin-top: 22px;
@@ -938,6 +1128,9 @@ svg {
             #ff7468 61% 73%,
             #41554c 73% 100%
         );
+
+    box-shadow:
+        0 10px 28px rgba(0,0,0,.22);
 }
 
 .donut-chart::before {
@@ -1044,7 +1237,7 @@ svg {
 
 
 /* =========================================================
-   IA
+   CONTROLES IA
    ========================================================= */
 
 .ai-card {
@@ -1052,16 +1245,23 @@ svg {
 
     overflow: hidden;
 
+    border-color: rgba(72,224,166,.12);
+
     background:
         radial-gradient(
             circle at 100% 0%,
-            rgba(255,120,23,.11),
+            rgba(255,120,23,.12),
             transparent 38%
+        ),
+        radial-gradient(
+            circle at 0% 100%,
+            rgba(24,189,126,.11),
+            transparent 42%
         ),
         linear-gradient(
             145deg,
-            #182920,
-            #101914
+            #183027,
+            #101a15
         );
 }
 
@@ -1070,17 +1270,15 @@ svg {
 
     position: absolute;
 
-    width: 180px;
-    height: 180px;
+    width: 190px;
+    height: 190px;
 
-    top: -100px;
+    top: -115px;
     right: -90px;
 
     border-radius: 50%;
 
-    background: rgba(25,193,127,.07);
-
-    filter: blur(15px);
+    background: rgba(255,255,255,.035);
 }
 
 .ai-header {
@@ -1124,9 +1322,12 @@ svg {
 
 .ai-icon svg {
     width: 20px;
+    height: 20px;
 }
 
 .ai-brand strong {
+    color: white;
+
     font-size: 11px;
 }
 
@@ -1155,6 +1356,7 @@ svg {
 
 .ai-content {
     position: relative;
+
     z-index: 2;
 
     margin-top: 20px;
@@ -1172,7 +1374,6 @@ svg {
     color: white;
 
     font-size: 14px;
-
     line-height: 1.4;
 }
 
@@ -1191,22 +1392,26 @@ svg {
 
     gap: 5px;
 
-    border: 1px solid rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.10);
     border-radius: 20px;
 
-    background: rgba(255,255,255,.04);
+    background: rgba(255,255,255,.05);
 
-    color: #c6d4ce;
+    color: #d1ddd7;
 
     font-size: 7px;
 }
 
 .ai-suggestions button svg {
     width: 14px;
+    height: 14px;
+
+    color: #5be1ad;
 }
 
 .ai-input {
     position: relative;
+
     z-index: 2;
 
     margin-top: 16px;
@@ -1217,12 +1422,12 @@ svg {
     align-items: center;
     justify-content: space-between;
 
-    border: 1px solid rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.10);
     border-radius: 12px;
 
-    background: rgba(255,255,255,.04);
+    background: rgba(255,255,255,.055);
 
-    color: #7d8e87;
+    color: #92a59c;
 
     font-size: 7px;
 }
@@ -1260,8 +1465,33 @@ svg {
 
 
 /* =========================================================
-   TRANSAÇÕES
+   ÚLTIMOS LANÇAMENTOS — CARD BRANCO
    ========================================================= */
+
+.transactions-panel {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #edf4f0 100%
+        );
+
+    border: 1px solid rgba(7,134,91,.10);
+
+    box-shadow: var(--shadow-light);
+}
+
+.transactions-panel .panel-header h3 {
+    color: #10231b;
+}
+
+.transactions-panel .panel-header p {
+    color: #718078;
+}
+
+.transactions-panel .text-button {
+    color: #087e58;
+}
 
 .transaction-list {
     margin-top: 10px;
@@ -1281,7 +1511,7 @@ svg {
 
     gap: 10px;
 
-    border-bottom: 1px solid rgba(255,255,255,.07);
+    border-bottom: 1px solid rgba(14,55,40,.09);
 }
 
 .transaction-item:last-child {
@@ -1301,26 +1531,32 @@ svg {
 .transaction-icon svg {
     width: 18px;
     height: 18px;
+
+    stroke-width: 2.1;
 }
 
 .supermarket {
-    color: #ff9944;
-    background: rgba(255,120,23,.14);
+    color: #f36e0d;
+
+    background: #fff0e4;
 }
 
 .salary-icon {
-    color: #4de1a7;
-    background: rgba(30,195,127,.14);
+    color: #087e58;
+
+    background: #dcf4e9;
 }
 
 .gas-icon {
-    color: #ffb84b;
-    background: rgba(255,184,75,.14);
+    color: #c9820b;
+
+    background: #fff3d8;
 }
 
 .internet-icon {
-    color: #ff796d;
-    background: rgba(255,116,104,.14);
+    color: #e25c52;
+
+    background: #ffe8e5;
 }
 
 .transaction-description {
@@ -1332,16 +1568,16 @@ svg {
     gap: 3px;
 }
 
-.transaction-description strong {
-    color: #f3f7f5;
+.transactions-panel .transaction-description strong {
+    color: #17271f;
 
     font-size: 8px;
 }
 
-.transaction-description span {
+.transactions-panel .transaction-description span {
     overflow: hidden;
 
-    color: #74877e;
+    color: #718078;
 
     font-size: 7px;
 
@@ -1356,17 +1592,31 @@ svg {
 }
 
 .expense-value {
-    color: #ff796d;
+    color: #e65f55;
 }
 
 .income-value {
-    color: #4de1a7;
+    color: #07865b;
 }
 
 
 /* =========================================================
    META
    ========================================================= */
+
+.goal-panel {
+    background:
+        radial-gradient(
+            circle at 100% 100%,
+            rgba(255,120,23,.07),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #182a22,
+            #111e18
+        );
+}
 
 .goal-visual {
     position: relative;
@@ -1383,12 +1633,12 @@ svg {
     background:
         radial-gradient(
             circle at 50% 100%,
-            rgba(255,120,23,.10),
+            rgba(255,120,23,.11),
             transparent 50%
         ),
         linear-gradient(
             135deg,
-            #1a2b22,
+            #1b3026,
             #111b17
         );
 }
@@ -1515,7 +1765,7 @@ svg {
 
 
 /* =========================================================
-   MENU MOBILE
+   MENU MOBILE — ESCONDIDO NO DESKTOP
    ========================================================= */
 
 .mobile-navigation {
@@ -1535,6 +1785,7 @@ svg {
 
     .main-content {
         width: calc(100% - 215px);
+
         margin-left: 215px;
 
         padding-left: 25px;
@@ -1566,8 +1817,8 @@ svg {
 
         background:
             radial-gradient(
-                circle at 80% 0%,
-                rgba(27,195,130,.11),
+                circle at 90% 0%,
+                rgba(27,195,130,.12),
                 transparent 30%
             ),
             linear-gradient(
@@ -1577,9 +1828,15 @@ svg {
             );
     }
 
+
+    /* REMOVE SIDEBAR COMPLETAMENTE */
+
     .sidebar {
         display: none !important;
     }
+
+
+    /* CONTEÚDO 100% */
 
     .main-content {
         width: 100% !important;
@@ -1595,7 +1852,9 @@ svg {
     }
 
 
-    /* HEADER */
+    /* =====================================================
+       HEADER MOBILE
+       ===================================================== */
 
     .header {
         margin-bottom: 22px;
@@ -1610,6 +1869,8 @@ svg {
     .header h1 {
         margin: 0 0 7px;
 
+        color: white;
+
         font-size: 30px;
         line-height: 1.1;
 
@@ -1617,24 +1878,20 @@ svg {
     }
 
     .header p {
-        max-width: 100%;
-
         color: #93a69d;
 
         font-size: 12px;
         line-height: 1.45;
     }
 
-    /*
-       Os botões de cima somem no celular.
-       O + permanece SOMENTE no menu inferior.
-    */
     .header-actions {
         display: none !important;
     }
 
 
-    /* SALDO */
+    /* =====================================================
+       SALDO MOBILE
+       ===================================================== */
 
     .balance-card {
         width: 100%;
@@ -1648,8 +1905,13 @@ svg {
         background:
             radial-gradient(
                 circle at 100% 0%,
-                rgba(77,234,172,.25),
-                transparent 42%
+                rgba(255,255,255,.10),
+                transparent 40%
+            ),
+            radial-gradient(
+                circle at 0% 100%,
+                rgba(255,120,23,.08),
+                transparent 38%
             ),
             linear-gradient(
                 140deg,
@@ -1672,8 +1934,7 @@ svg {
         margin-top: 20px;
         margin-bottom: 22px;
 
-        font-size: clamp(36px, 10.5vw, 49px);
-
+        font-size: clamp(36px,10.5vw,49px);
         line-height: 1;
 
         letter-spacing: -2px;
@@ -1683,6 +1944,7 @@ svg {
 
     .balance-change {
         position: relative;
+
         z-index: 5;
 
         max-width: 180px;
@@ -1702,6 +1964,8 @@ svg {
         display: block;
 
         margin-top: 12px;
+
+        color: #d4e7df;
 
         font-size: 10px;
         line-height: 1.4;
@@ -1729,12 +1993,15 @@ svg {
     }
 
 
-    /* RESUMO */
+    /* =====================================================
+       RESUMO MOBILE
+       ===================================================== */
 
     .summary-grid {
         margin: 15px 0;
 
-        grid-template-columns: repeat(2,minmax(0,1fr));
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
 
         gap: 12px;
     }
@@ -1747,13 +2014,6 @@ svg {
         gap: 10px;
 
         border-radius: 22px;
-
-        background:
-            linear-gradient(
-                145deg,
-                #17291f,
-                #101b16
-            );
     }
 
     .summary-card.receive-card {
@@ -1791,12 +2051,15 @@ svg {
     }
 
 
-    /* DASHBOARD */
+    /* =====================================================
+       DASHBOARD MOBILE
+       ===================================================== */
 
     .dashboard-grid {
         width: 100%;
 
-        grid-template-columns: minmax(0,1fr);
+        grid-template-columns:
+            minmax(0,1fr);
 
         gap: 14px;
     }
@@ -1804,6 +2067,7 @@ svg {
     .panel,
     .ai-card {
         width: 100%;
+
         min-width: 0;
 
         padding: 20px;
@@ -1826,7 +2090,9 @@ svg {
     }
 
 
-    /* GASTOS */
+    /* =====================================================
+       GASTOS MOBILE
+       ===================================================== */
 
     .spending-body {
         margin-top: 24px;
@@ -1867,7 +2133,13 @@ svg {
     }
 
 
-    /* IA */
+    /* =====================================================
+       IA MOBILE
+       ===================================================== */
+
+    .ai-card {
+        border-color: rgba(79,226,170,.15);
+    }
 
     .ai-icon {
         width: 45px;
@@ -1907,7 +2179,23 @@ svg {
     }
 
 
-    /* TRANSAÇÕES */
+    /* =====================================================
+       LANÇAMENTOS BRANCO MOBILE
+       ===================================================== */
+
+    .transactions-panel {
+        background:
+            linear-gradient(
+                145deg,
+                #ffffff 0%,
+                #edf4f0 100%
+            );
+
+        border: 1px solid rgba(7,134,91,.12);
+
+        box-shadow:
+            0 16px 38px rgba(0,0,0,.24);
+    }
 
     .transaction-item {
         min-height: 68px;
@@ -1923,11 +2211,15 @@ svg {
         height: 43px;
     }
 
-    .transaction-description strong {
+    .transactions-panel .transaction-description strong {
+        color: #10231b;
+
         font-size: 11px;
     }
 
-    .transaction-description span {
+    .transactions-panel .transaction-description span {
+        color: #718078;
+
         font-size: 9px;
     }
 
@@ -1936,7 +2228,9 @@ svg {
     }
 
 
-    /* META */
+    /* =====================================================
+       META MOBILE
+       ===================================================== */
 
     .goal-visual {
         height: 110px;
@@ -1973,7 +2267,7 @@ svg {
 
 
     /* =====================================================
-       NAVEGAÇÃO MOBILE
+       MENU INFERIOR MOBILE
        ===================================================== */
 
     .mobile-navigation {
@@ -2003,7 +2297,9 @@ svg {
 
         align-items: center;
 
-        border-top: 1px solid rgba(255,255,255,.09);
+        border-top:
+            1px solid
+            rgba(255,255,255,.10);
 
         background:
             rgba(8,19,15,.96);
@@ -2012,7 +2308,7 @@ svg {
         -webkit-backdrop-filter: blur(18px);
 
         box-shadow:
-            0 -15px 40px rgba(0,0,0,.28);
+            0 -15px 40px rgba(0,0,0,.30);
     }
 
     .mobile-navigation a {
@@ -2025,22 +2321,22 @@ svg {
 
         gap: 5px;
 
-        color: #82968c;
+        color: #a0b1a8;
 
         font-size: 9px;
         font-weight: 500;
     }
 
     .mobile-navigation a .mobile-icon {
-        width: 34px;
-        height: 30px;
+        width: 35px;
+        height: 31px;
 
         display: grid;
         place-items: center;
 
         border-radius: 10px;
 
-        transition: .2s ease;
+        background: rgba(255,255,255,.045);
     }
 
     .mobile-navigation a svg {
@@ -2051,50 +2347,33 @@ svg {
     }
 
     .mobile-navigation a.active {
-        color: #50e2aa;
+        color: white;
     }
 
     .mobile-navigation a.active .mobile-icon {
         color: #54e5ad;
 
         background:
-            rgba(45,210,144,.11);
+            rgba(45,210,144,.13);
 
         box-shadow:
             0 0 20px rgba(44,216,147,.08);
     }
 
-    /*
-       Ícones inativos com MAIS contraste.
-       Não ficam mais "sumidos".
-    */
-
     .mobile-navigation a:nth-child(2) {
-        color: #c2cec8;
+        color: #d3ddd8;
     }
 
     .mobile-navigation a:nth-child(4) {
-        color: #ffb057;
+        color: #ffad58;
     }
 
     .mobile-navigation a:nth-child(5) {
-        color: #b8c8c0;
-    }
-
-    .mobile-navigation a:nth-child(2) .mobile-icon {
-        background: rgba(255,255,255,.055);
-    }
-
-    .mobile-navigation a:nth-child(4) .mobile-icon {
-        background: rgba(255,130,31,.09);
-    }
-
-    .mobile-navigation a:nth-child(5) .mobile-icon {
-        background: rgba(255,255,255,.055);
+        color: #d3ddd8;
     }
 
 
-    /* BOTÃO + */
+    /* BOTÃO + CENTRAL */
 
     .mobile-add {
         position: relative;
@@ -2133,13 +2412,13 @@ svg {
         width: 28px;
         height: 28px;
 
-        stroke-width: 2;
+        stroke-width: 2.2;
     }
 }
 
 
 /* =========================================================
-   CELULARES PEQUENOS
+   CELULARES MENORES
    ========================================================= */
 
 @media (max-width: 390px) {
