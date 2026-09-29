@@ -1,6 +1,6 @@
 /* =========================================================
-   CONTROLES — CLEAN PREMIUM
-   VERDE CLARO + VERDE ESMERALDA + LARANJA
+   CONTROLES — PREMIUM GREEN
+   Verde sofisticado + verde-gelo + laranja
    ========================================================= */
 
 * {
@@ -10,37 +10,37 @@
 }
 
 :root {
-    --bg: #eef5f1;
-    --bg-soft: #f4f8f6;
+    --bg: #dceae4;
+    --bg-soft: #e9f2ee;
 
-    --card: #fbfdfc;
-    --card-soft: #f5f9f7;
+    --card: #f6faf8;
+    --card-soft: #e8f2ed;
 
-    --green-950: #082d23;
-    --green-900: #0b3d2e;
-    --green-800: #0d523d;
-    --green-700: #12684d;
-    --green-600: #18805e;
-    --green-500: #24a276;
+    --green-950: #082f25;
+    --green-900: #0c4031;
+    --green-800: #11523e;
+    --green-700: #17664d;
+    --green-600: #1e7b5b;
+    --green-500: #29936d;
+    --green-400: #52ad88;
+    --green-light: #8acbb0;
 
-    --orange: #f58220;
-    --orange-dark: #df6c0d;
-    --orange-soft: #fff1e5;
+    --orange: #f47b20;
+    --orange-dark: #dc650d;
+    --orange-light: #ff9c4d;
+    --orange-soft: #fff0e3;
 
-    --text: #10251e;
-    --text-soft: #536b62;
-    --muted: #879990;
+    --text: #102a21;
+    --text-secondary: #506a60;
+    --muted: #82978e;
 
-    --border: #dbe7e1;
+    --border: #c8ddd4;
 
-    --positive: #159766;
-    --negative: #db675b;
+    --positive: #218b62;
+    --negative: #d96b60;
 
-    --shadow:
-        0 10px 30px rgba(16, 55, 42, .07);
-
-    --shadow-strong:
-        0 18px 45px rgba(12, 70, 51, .12);
+    --shadow: 0 12px 32px rgba(10, 57, 43, .09);
+    --shadow-strong: 0 20px 45px rgba(10, 57, 43, .15);
 }
 
 
@@ -51,26 +51,24 @@
 html {
     width: 100%;
     min-height: 100%;
-
     background: var(--bg);
 }
 
 body {
     width: 100%;
     min-height: 100vh;
-
     overflow-x: hidden;
 
     background:
         radial-gradient(
             circle at 90% 0%,
-            rgba(32, 157, 111, .08),
-            transparent 28%
+            rgba(41, 147, 109, .13),
+            transparent 32%
         ),
         linear-gradient(
             180deg,
-            #f5f9f7 0%,
-            #edf5f1 100%
+            #eaf3ef 0%,
+            #d8e8e1 100%
         );
 
     color: var(--text);
@@ -93,7 +91,6 @@ select {
 
 button {
     cursor: pointer;
-
     appearance: none;
     -webkit-appearance: none;
 }
@@ -114,7 +111,6 @@ svg {
 
 .sidebar {
     position: fixed;
-
     top: 0;
     left: 0;
     bottom: 0;
@@ -122,17 +118,21 @@ svg {
     z-index: 100;
 
     width: 250px;
-
     padding: 30px 20px;
 
     background:
+        radial-gradient(
+            circle at 10% 0%,
+            rgba(56, 165, 123, .20),
+            transparent 30%
+        ),
         linear-gradient(
             180deg,
-            #0b4937,
-            #073629
+            #0c4938,
+            #092f25
         );
 
-    border-right: 1px solid rgba(255,255,255,.07);
+    border-right: 1px solid rgba(255,255,255,.08);
 
     color: white;
 
@@ -146,11 +146,9 @@ svg {
 
 .brand {
     color: white;
-
     font-size: 26px;
     font-weight: 800;
-
-    letter-spacing: -1.2px;
+    letter-spacing: -1px;
 }
 
 .brand span {
@@ -161,44 +159,41 @@ svg {
     margin-top: 5px;
     margin-bottom: 30px;
 
-    color: #9cb9ae;
-
+    color: #a9c1b7;
     font-size: 9px;
 }
 
 
 /* =========================================================
-   MENU LATERAL
+   MENU
    ========================================================= */
 
 .sidebar-menu {
     display: flex;
     flex-direction: column;
-
     gap: 5px;
 }
 
 .sidebar-menu a {
     min-height: 44px;
-
     padding: 7px 10px;
 
-    border-radius: 11px;
+    border-radius: 12px;
 
-    color: #b4cbc2;
+    color: #b6cbc3;
 
     display: flex;
     align-items: center;
-
     gap: 10px;
 
     font-size: 12px;
     font-weight: 600;
+
+    transition: .2s ease;
 }
 
 .sidebar-menu a:hover {
     background: rgba(255,255,255,.06);
-
     color: white;
 }
 
@@ -206,11 +201,14 @@ svg {
     background:
         linear-gradient(
             135deg,
-            #137052,
-            #0f5c45
+            #1b7658,
+            #125b45
         );
 
     color: white;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.08);
 }
 
 .menu-icon {
@@ -224,8 +222,6 @@ svg {
 .menu-icon svg {
     width: 17px;
     height: 17px;
-
-    stroke-width: 1.8;
 }
 
 .ai-menu small {
@@ -233,11 +229,11 @@ svg {
 
     padding: 3px 6px;
 
-    border-radius: 5px;
+    border-radius: 6px;
 
-    background: rgba(245,130,32,.17);
+    background: rgba(244,123,32,.17);
 
-    color: #ffae68;
+    color: #ffad69;
 
     font-size: 7px;
     font-weight: 800;
@@ -250,70 +246,68 @@ svg {
 
 .premium-card {
     margin-top: auto;
-
     padding: 16px;
 
-    border: 1px solid rgba(255,255,255,.09);
-    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 16px;
 
     background:
         linear-gradient(
             145deg,
-            #11523f,
-            #0d4233
+            #176148,
+            #104937
         );
 
-    box-shadow: 0 12px 25px rgba(0,0,0,.12);
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.13);
 }
 
 .premium-icon {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
 
     margin-bottom: 10px;
 
-    border-radius: 9px;
+    border-radius: 10px;
 
-    background: rgba(245,130,32,.16);
+    background: rgba(244,123,32,.16);
 
-    color: #ff9b48;
+    color: #ff9d50;
 
     display: grid;
     place-items: center;
 }
 
 .premium-icon svg {
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
 }
 
 .premium-card strong {
+    color: white;
     font-size: 11px;
 }
 
 .premium-card p {
     margin: 7px 0 13px;
 
-    color: #abc2b9;
-
+    color: #b6ccc3;
     font-size: 8px;
-
     line-height: 1.5;
 }
 
 .premium-card button {
     width: 100%;
-
     padding: 9px;
 
     border: 0;
-    border-radius: 8px;
+    border-radius: 9px;
 
     background:
         linear-gradient(
             135deg,
-            #ff9138,
-            #f47a18
+            #ff9341,
+            #f47718
         );
 
     color: white;
@@ -322,37 +316,33 @@ svg {
     font-weight: 700;
 
     box-shadow:
-        0 7px 18px rgba(245,130,32,.22);
+        0 8px 18px rgba(244,123,32,.24);
 }
 
 
 /* =========================================================
-   PERFIL SIDEBAR
+   PERFIL
    ========================================================= */
 
 .sidebar-profile {
     margin-top: 15px;
-
     padding-top: 15px;
 
-    border-top: 1px solid rgba(255,255,255,.08);
+    border-top: 1px solid rgba(255,255,255,.09);
 
     display: flex;
     align-items: center;
-
     gap: 9px;
 }
 
 .avatar {
     width: 34px;
     height: 34px;
-
     flex: 0 0 34px;
 
     border-radius: 50%;
 
-    background: #eaf5f0;
-
+    background: #e8f4ef;
     color: var(--green-800);
 
     display: grid;
@@ -369,50 +359,43 @@ svg {
 
 .profile-text strong {
     color: white;
-
     font-size: 9px;
 }
 
 .profile-text span {
-    color: #9eb8ae;
-
+    color: #a6bdb4;
     font-size: 7px;
 }
 
 .more-button {
     margin-left: auto;
-
     border: 0;
-
     background: transparent;
-
-    color: #9eb8ae;
+    color: #a6bdb4;
 }
 
 
 /* =========================================================
-   CONTEÚDO PRINCIPAL
+   CONTEÚDO
    ========================================================= */
 
 .main-content {
     width: calc(100% - 250px);
-
     min-height: 100vh;
 
     margin-left: 250px;
-
     padding: 35px 4.5% 60px;
 
     background:
         radial-gradient(
-            circle at 85% 0%,
-            rgba(24, 128, 94, .07),
-            transparent 30%
+            circle at 90% 0%,
+            rgba(31, 126, 93, .11),
+            transparent 32%
         ),
         linear-gradient(
             180deg,
-            #f6faf8,
-            #eef5f1
+            #eaf3ef 0%,
+            #d9e9e2 100%
         );
 }
 
@@ -434,7 +417,6 @@ svg {
 
     font-size: 8px;
     font-weight: 700;
-
     letter-spacing: 1px;
 }
 
@@ -443,36 +425,31 @@ svg {
 
     color: var(--green-950);
 
-    font-size: 25px;
-    font-weight: 780;
-
-    letter-spacing: -1px;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -1.2px;
 }
 
 .header p {
-    color: var(--text-soft);
-
+    color: var(--text-secondary);
     font-size: 10px;
 }
 
 .header-actions {
     display: flex;
-
     gap: 8px;
 }
 
 .header-icon-button {
-    position: relative;
-
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
 
     padding: 0;
 
     border: 1px solid var(--border);
-    border-radius: 11px;
+    border-radius: 13px;
 
-    background: rgba(255,255,255,.82);
+    background: rgba(255,255,255,.75);
 
     color: var(--green-800);
 
@@ -487,88 +464,87 @@ svg {
     height: 17px;
 }
 
-.notification span {
-    position: absolute;
-
-    top: 8px;
-    right: 8px;
-
-    width: 5px;
-    height: 5px;
-
-    border-radius: 50%;
-
-    background: var(--orange);
-}
-
 .new-transaction {
-    height: 40px;
-
-    padding: 0 16px;
+    height: 42px;
+    padding: 0 17px;
 
     border: 0;
-    border-radius: 11px;
+    border-radius: 13px;
 
     background:
         linear-gradient(
-            135deg,
-            #ff9138,
-            #f47a18
+            145deg,
+            #ff9440,
+            #f37013
         );
 
     color: white;
 
     display: flex;
     align-items: center;
-
     gap: 7px;
 
     font-size: 10px;
     font-weight: 700;
 
     box-shadow:
-        0 10px 22px rgba(245,130,32,.22);
+        0 10px 25px rgba(244,123,32,.27);
 }
 
 .new-transaction svg {
-    width: 16px;
-    height: 16px;
+    width: 17px;
+    height: 17px;
 }
 
 
 /* =========================================================
-   CARD PRINCIPAL — SALDO
+   SALDO
    ========================================================= */
 
 .balance-card {
     position: relative;
 
-    min-height: 205px;
+    min-height: 210px;
 
     padding: 30px 34px;
 
     overflow: hidden;
 
-    border: 1px solid rgba(255,255,255,.10);
-    border-radius: 22px;
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 24px;
 
     background:
         radial-gradient(
-            circle at 85% 15%,
-            rgba(39,171,126,.26),
+            circle at 88% 10%,
+            rgba(76,190,143,.31),
             transparent 38%
         ),
         linear-gradient(
             135deg,
-            #073e2f 0%,
-            #0b5b43 54%,
-            #0e7454 100%
+            #0b4535 0%,
+            #126047 48%,
+            #1b7959 100%
         );
 
     color: white;
 
     box-shadow:
-        0 18px 40px rgba(9,75,54,.18);
+        0 20px 45px rgba(9,61,45,.18);
+}
+
+.balance-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 340px;
+    height: 340px;
+
+    top: -210px;
+    right: -100px;
+
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 50%;
 }
 
 .balance-card::after {
@@ -576,45 +552,43 @@ svg {
 
     position: absolute;
 
-    width: 270px;
-    height: 270px;
+    width: 260px;
+    height: 260px;
 
-    right: -120px;
-    bottom: -150px;
+    bottom: -170px;
+    left: 15%;
 
-    border: 1px solid rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.05);
     border-radius: 50%;
 }
 
 .balance-info {
     position: relative;
-
     z-index: 4;
 }
 
 .balance-title {
-    color: #b7d0c6;
+    color: #c0d8ce;
 
     display: flex;
     align-items: center;
-
     gap: 7px;
 
     font-size: 10px;
 }
 
 .balance-title button {
-    width: 25px;
-    height: 25px;
+    width: 27px;
+    height: 27px;
 
     padding: 0;
 
     border: 0;
-    border-radius: 7px;
+    border-radius: 8px;
 
-    background: rgba(255,255,255,.07);
+    background: rgba(255,255,255,.08);
 
-    color: #d4e5de;
+    color: #dcebe5;
 
     display: grid;
     place-items: center;
@@ -626,35 +600,33 @@ svg {
 }
 
 .balance-card h2 {
-    margin: 11px 0 14px;
+    margin: 12px 0 15px;
 
     color: white;
 
-    font-size: 35px;
-    font-weight: 780;
+    font-size: 36px;
+    font-weight: 800;
 
-    letter-spacing: -1.5px;
+    letter-spacing: -1.6px;
 }
 
 .balance-change {
     display: flex;
     align-items: center;
-
     gap: 7px;
 }
 
 .balance-positive {
-    padding: 6px 8px;
+    padding: 7px 9px;
 
-    border-radius: 8px;
+    border-radius: 9px;
 
-    background: rgba(65,220,154,.15);
+    background: rgba(75,225,160,.16);
 
-    color: #74e8b2;
+    color: #77e9b5;
 
     display: flex;
     align-items: center;
-
     gap: 4px;
 
     font-size: 8px;
@@ -662,36 +634,35 @@ svg {
 }
 
 .balance-change small {
-    color: #aec8bd;
-
+    color: #bdd1c9;
     font-size: 8px;
 }
 
 .month-selector {
     position: absolute;
 
-    top: 22px;
+    top: 23px;
     right: 24px;
 
     z-index: 5;
 
-    height: 36px;
-
+    height: 38px;
     padding: 0 12px;
 
-    border: 1px solid rgba(255,255,255,.14);
-    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 11px;
 
-    background: rgba(255,255,255,.07);
+    background: rgba(255,255,255,.08);
 
-    color: #d8e7e1;
+    color: #e0ece7;
 
     display: flex;
     align-items: center;
-
-    gap: 7px;
+    gap: 8px;
 
     font-size: 8px;
+
+    backdrop-filter: blur(8px);
 }
 
 
@@ -717,34 +688,30 @@ svg {
 }
 
 .chart-fill {
-    fill: rgba(78,220,160,.10) !important;
-
+    fill: rgba(81,221,162,.11) !important;
     stroke: none !important;
 }
 
 .chart-stroke {
     fill: none !important;
 
-    stroke: #4ed59d !important;
+    stroke: #60dca6 !important;
 
-    stroke-width: 2.4 !important;
-
+    stroke-width: 2.5 !important;
     stroke-linecap: round;
     stroke-linejoin: round;
 }
 
 
 /* =========================================================
-   RESUMO
+   CARDS RESUMO
    ========================================================= */
 
 .summary-grid {
-    margin: 14px 0;
+    margin: 15px 0;
 
     display: grid;
-
     grid-template-columns: repeat(3,1fr);
-
     gap: 13px;
 }
 
@@ -752,61 +719,58 @@ svg {
     position: relative;
 
     min-width: 0;
-    min-height: 96px;
+    min-height: 100px;
 
     padding: 17px;
 
-    border: 1px solid var(--border);
-    border-radius: 17px;
+    border: 1px solid #c9ddd4;
+    border-radius: 20px;
 
     background:
         linear-gradient(
             145deg,
-            rgba(255,255,255,.98),
-            rgba(247,251,249,.98)
+            #f9fcfa 0%,
+            #e7f1ec 100%
         );
 
     display: flex;
     align-items: center;
-
     gap: 12px;
 
-    box-shadow: var(--shadow);
+    box-shadow:
+        0 10px 30px rgba(13,64,49,.08);
 }
 
 .summary-icon {
-    flex: 0 0 42px;
+    flex: 0 0 43px;
 
-    width: 42px;
-    height: 42px;
+    width: 43px;
+    height: 43px;
 
-    border-radius: 13px;
+    border-radius: 14px;
 
     display: grid;
     place-items: center;
 }
 
 .summary-icon svg {
-    width: 18px;
-    height: 18px;
+    width: 19px;
+    height: 19px;
 }
 
 .income-icon {
-    background: #e5f7ef;
-
-    color: #159766;
+    background: #dff3ea;
+    color: #188b62;
 }
 
 .expense-icon {
-    background: #fff0ed;
-
-    color: #dc675c;
+    background: #f9e6e2;
+    color: #d9685d;
 }
 
 .receive-icon {
-    background: var(--orange-soft);
-
-    color: var(--orange);
+    background: #ffead8;
+    color: #ef771b;
 }
 
 .summary-content {
@@ -817,8 +781,7 @@ svg {
 }
 
 .summary-content > span {
-    color: #74877f;
-
+    color: #71877e;
     font-size: 8px;
 }
 
@@ -834,16 +797,15 @@ svg {
 
 .summary-content small {
     color: var(--muted);
-
     font-size: 7px;
 }
 
 .positive-text {
-    color: #159766 !important;
+    color: #188b62 !important;
 }
 
 .negative-text {
-    color: #d96358 !important;
+    color: #d9685d !important;
 }
 
 .card-more {
@@ -855,13 +817,10 @@ svg {
     width: 26px;
     height: 26px;
 
-    padding: 0;
-
     border: 0;
-
     background: transparent;
 
-    color: #91a29b;
+    color: #82988f;
 }
 
 
@@ -884,19 +843,20 @@ svg {
 
     padding: 20px;
 
-    border: 1px solid var(--border);
-    border-radius: 18px;
+    border: 1px solid #c9ddd4;
+    border-radius: 20px;
 
     background:
         linear-gradient(
             145deg,
-            #ffffff,
-            #f7faf8
+            #f9fcfa,
+            #e9f2ee
         );
 
     color: var(--text);
 
-    box-shadow: var(--shadow);
+    box-shadow:
+        0 10px 30px rgba(13,64,49,.08);
 }
 
 .panel-header {
@@ -911,13 +871,11 @@ svg {
     margin-bottom: 4px;
 
     color: var(--green-950);
-
     font-size: 12px;
 }
 
 .panel-header p {
     color: var(--muted);
-
     font-size: 8px;
 }
 
@@ -925,7 +883,6 @@ svg {
     padding: 0;
 
     border: 0;
-
     background: transparent;
 
     color: var(--green-700);
@@ -960,15 +917,18 @@ svg {
 
     background:
         conic-gradient(
-            #f58220 0 28%,
-            #35a5d3 28% 46%,
-            #8271d9 46% 61%,
-            #2ab8a5 61% 73%,
-            #dce7e2 73% 100%
+            #f47b20 0 28%,
+            #38a4cc 28% 46%,
+            #7d70d2 46% 61%,
+            #34b49c 61% 73%,
+            #bfd4cb 73% 100%
         );
 
     display: grid;
     place-items: center;
+
+    box-shadow:
+        0 8px 20px rgba(10,70,50,.08);
 }
 
 .donut-chart::before {
@@ -981,12 +941,11 @@ svg {
 
     border-radius: 50%;
 
-    background: white;
+    background: #f3f8f5;
 }
 
 .donut-inner {
     position: relative;
-
     z-index: 2;
 
     text-align: center;
@@ -996,13 +955,11 @@ svg {
     display: block;
 
     color: var(--green-950);
-
     font-size: 14px;
 }
 
 .donut-inner span {
     color: var(--muted);
-
     font-size: 7px;
 }
 
@@ -1010,7 +967,6 @@ svg {
     flex: 1;
 
     display: grid;
-
     gap: 12px;
 }
 
@@ -1023,14 +979,13 @@ svg {
         30px;
 
     align-items: center;
-
     gap: 10px;
 
     font-size: 8px;
 }
 
 .category-name {
-    color: var(--text-soft);
+    color: var(--text-secondary);
 
     display: flex;
     align-items: center;
@@ -1053,11 +1008,25 @@ svg {
     border-radius: 50%;
 }
 
-.food-dot { background: #f58220; }
-.transport-dot { background: #35a5d3; }
-.home-dot { background: #8271d9; }
-.bill-dot { background: #2ab8a5; }
-.other-dot { background: #b6c7c0; }
+.food-dot {
+    background: #f47b20;
+}
+
+.transport-dot {
+    background: #38a4cc;
+}
+
+.home-dot {
+    background: #7d70d2;
+}
+
+.bill-dot {
+    background: #34b49c;
+}
+
+.other-dot {
+    background: #9eb9ae;
+}
 
 
 /* =========================================================
@@ -1071,19 +1040,25 @@ svg {
 
     overflow: hidden;
 
-    border: 1px solid #cfe2da;
-    border-radius: 18px;
+    border: 1px solid #bad7cb;
+    border-radius: 20px;
 
     background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(47,157,116,.14),
+            transparent 35%
+        ),
         linear-gradient(
             145deg,
-            #edf8f3,
-            #e5f3ed
+            #e0efe8,
+            #d3e7de
         );
 
     color: var(--text);
 
-    box-shadow: var(--shadow);
+    box-shadow:
+        0 10px 30px rgba(13,64,49,.08);
 }
 
 .ai-header {
@@ -1095,21 +1070,20 @@ svg {
 .ai-brand {
     display: flex;
     align-items: center;
-
     gap: 9px;
 }
 
 .ai-icon {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
 
-    border-radius: 11px;
+    border-radius: 12px;
 
     background:
         linear-gradient(
             145deg,
-            #0f7153,
-            #0b5c44
+            #1b7959,
+            #115740
         );
 
     color: white;
@@ -1118,7 +1092,7 @@ svg {
     place-items: center;
 
     box-shadow:
-        0 7px 16px rgba(13,104,77,.18);
+        0 8px 18px rgba(17,87,64,.20);
 }
 
 .ai-icon svg {
@@ -1128,7 +1102,6 @@ svg {
 
 .ai-brand strong {
     color: var(--green-950);
-
     font-size: 11px;
 }
 
@@ -1138,18 +1111,17 @@ svg {
     margin-top: 3px;
 
     color: var(--muted);
-
     font-size: 7px;
 }
 
 .ai-premium {
     padding: 4px 7px;
 
-    border-radius: 6px;
+    border-radius: 7px;
 
-    background: var(--orange-soft);
+    background: #ffe7d2;
 
-    color: var(--orange-dark);
+    color: #d9610b;
 
     font-size: 6px;
     font-weight: 800;
@@ -1161,7 +1133,6 @@ svg {
 
 .ai-small {
     color: var(--muted);
-
     font-size: 6px;
 }
 
@@ -1171,7 +1142,6 @@ svg {
     color: var(--green-950);
 
     font-size: 13px;
-
     line-height: 1.4;
 }
 
@@ -1185,10 +1155,10 @@ svg {
 .ai-suggestions button {
     padding: 6px 8px;
 
-    border: 1px solid #d1e4dc;
+    border: 1px solid #c6ddd3;
     border-radius: 20px;
 
-    background: rgba(255,255,255,.72);
+    background: rgba(255,255,255,.62);
 
     color: var(--green-800);
 
@@ -1200,12 +1170,12 @@ svg {
 
     padding: 7px 7px 7px 10px;
 
-    border: 1px solid #d2e4dc;
-    border-radius: 10px;
+    border: 1px solid #c5dbd2;
+    border-radius: 11px;
 
-    background: white;
+    background: rgba(255,255,255,.76);
 
-    color: #8a9c94;
+    color: #7f948b;
 
     display: flex;
     align-items: center;
@@ -1215,19 +1185,17 @@ svg {
 }
 
 .ai-input button {
-    width: 29px;
-    height: 29px;
-
-    padding: 0;
+    width: 30px;
+    height: 30px;
 
     border: 0;
-    border-radius: 8px;
+    border-radius: 9px;
 
     background:
         linear-gradient(
             145deg,
-            #ff9138,
-            #f47a18
+            #ff9440,
+            #f37013
         );
 
     color: white;
@@ -1252,7 +1220,7 @@ svg {
 .transaction-item {
     min-height: 56px;
 
-    border-bottom: 1px solid #e4ece8;
+    border-bottom: 1px solid #d7e5df;
 
     display: grid;
 
@@ -1262,7 +1230,6 @@ svg {
         auto;
 
     align-items: center;
-
     gap: 10px;
 }
 
@@ -1271,10 +1238,10 @@ svg {
 }
 
 .transaction-icon {
-    width: 34px;
-    height: 34px;
+    width: 35px;
+    height: 35px;
 
-    border-radius: 10px;
+    border-radius: 11px;
 
     display: grid;
     place-items: center;
@@ -1286,27 +1253,23 @@ svg {
 }
 
 .supermarket {
-    background: var(--orange-soft);
-
-    color: var(--orange);
+    background: #ffead8;
+    color: #ef771b;
 }
 
 .salary-icon {
-    background: #e5f7ef;
-
-    color: #159766;
+    background: #dff3ea;
+    color: #188b62;
 }
 
 .gas-icon {
-    background: #e7f5fb;
-
-    color: #349dcc;
+    background: #e1f1f7;
+    color: #3599c0;
 }
 
 .internet-icon {
-    background: #efecfb;
-
-    color: #7665d1;
+    background: #ece9f8;
+    color: #7567ca;
 }
 
 .transaction-description {
@@ -1314,13 +1277,11 @@ svg {
 
     display: flex;
     flex-direction: column;
-
     gap: 3px;
 }
 
 .transaction-description strong {
     color: var(--text);
-
     font-size: 8px;
 }
 
@@ -1328,7 +1289,6 @@ svg {
     overflow: hidden;
 
     color: var(--muted);
-
     font-size: 7px;
 
     text-overflow: ellipsis;
@@ -1364,14 +1324,14 @@ svg {
 
     overflow: hidden;
 
-    border: 1px solid #d6e6df;
-    border-radius: 13px;
+    border: 1px solid #c7ddd4;
+    border-radius: 14px;
 
     background:
         linear-gradient(
             130deg,
-            #edf7f3,
-            #f7faf8
+            #dcece5,
+            #edf5f1
         );
 }
 
@@ -1386,9 +1346,9 @@ svg {
 
     border-radius: 50%;
 
-    background: #e1f4eb;
+    background: #cae7da;
 
-    color: var(--green-600);
+    color: var(--green-700);
 
     display: grid;
     place-items: center;
@@ -1423,13 +1383,11 @@ svg {
     margin-top: 3px;
 
     color: var(--text);
-
     font-size: 11px;
 }
 
 .goal-title > strong {
-    color: var(--green-600);
-
+    color: var(--green-700);
     font-size: 11px;
 }
 
@@ -1444,13 +1402,11 @@ svg {
 
 .goal-money strong {
     color: var(--text);
-
     font-size: 9px;
 }
 
 .goal-money span {
     color: var(--muted);
-
     font-size: 7px;
 }
 
@@ -1463,7 +1419,7 @@ svg {
 
     border-radius: 10px;
 
-    background: #e1ebe6;
+    background: #ccddd6;
 }
 
 .goal-progress div {
@@ -1475,8 +1431,8 @@ svg {
     background:
         linear-gradient(
             90deg,
-            #159766,
-            #42cf91
+            #1a8962,
+            #4acb93
         );
 }
 
@@ -1493,7 +1449,7 @@ svg {
 
 
 /* =========================================================
-   MENU MOBILE
+   MOBILE NAV
    ========================================================= */
 
 .mobile-navigation {
@@ -1538,11 +1494,7 @@ svg {
 
         overflow-x: hidden;
 
-        background: #eef5f1 !important;
-    }
-
-    body {
-        display: block;
+        background: #dceae4 !important;
     }
 
     .sidebar {
@@ -1550,11 +1502,10 @@ svg {
     }
 
 
-    /* FUNDO */
+    /* FUNDO PREMIUM VERDE MÉDIO */
 
     .main-content {
         width: 100% !important;
-
         min-height: 100vh;
 
         margin: 0 !important;
@@ -1567,13 +1518,13 @@ svg {
         background:
             radial-gradient(
                 circle at 90% 0%,
-                rgba(22,128,92,.08),
-                transparent 27%
+                rgba(30,123,91,.14),
+                transparent 30%
             ),
             linear-gradient(
                 180deg,
-                #f6faf8 0%,
-                #edf5f1 100%
+                #e3efe9 0%,
+                #d4e5dd 100%
             ) !important;
     }
 
@@ -1582,7 +1533,6 @@ svg {
 
     .header {
         margin-bottom: 22px;
-
         gap: 12px;
     }
 
@@ -1593,21 +1543,20 @@ svg {
     .header h1 {
         margin: 0 0 5px;
 
-        color: #0b3025;
+        color: #0a3528;
 
         font-size: 26px;
-        font-weight: 780;
+        font-weight: 800;
 
-        letter-spacing: -1.1px;
+        letter-spacing: -1.2px;
     }
 
     .header p {
         max-width: 270px;
 
-        color: #71857c;
+        color: #5e776d;
 
         font-size: 10px;
-
         line-height: 1.4;
     }
 
@@ -1620,25 +1569,25 @@ svg {
     }
 
     .new-transaction {
-        width: 50px;
-        height: 50px;
+        width: 51px;
+        height: 51px;
 
         padding: 0;
 
         border: 0;
-        border-radius: 15px;
+        border-radius: 16px;
 
         background:
             linear-gradient(
                 145deg,
-                #ff943d,
-                #f47718
+                #ff9644,
+                #f37013
             );
 
         justify-content: center;
 
         box-shadow:
-            0 10px 24px rgba(245,130,32,.25);
+            0 12px 27px rgba(244,123,32,.30);
     }
 
     .new-transaction span {
@@ -1658,38 +1607,46 @@ svg {
 
         padding: 28px 22px;
 
-        border-radius: 22px;
+        border: 1px solid rgba(255,255,255,.17);
+        border-radius: 24px;
 
         background:
             radial-gradient(
-                circle at 90% 10%,
-                rgba(54,185,136,.25),
+                circle at 90% 8%,
+                rgba(79,193,146,.32),
                 transparent 40%
             ),
             linear-gradient(
                 135deg,
-                #073e2f 0%,
-                #0b5b43 56%,
-                #0e7454 100%
+                #0b4535 0%,
+                #126047 50%,
+                #1b7959 100%
             ) !important;
 
         box-shadow:
-            0 18px 38px rgba(10,80,58,.18);
+            0 18px 40px rgba(9,61,45,.18);
+    }
+
+    .balance-title {
+        color: #c2d8cf;
     }
 
     .balance-card h2 {
         margin: 13px 0 15px;
 
         font-size: 32px;
+        font-weight: 800;
     }
 
     .month-selector {
         top: 20px;
         right: 18px;
 
-        height: 39px;
+        height: 40px;
 
-        border-radius: 11px;
+        border-radius: 12px;
+
+        background: rgba(255,255,255,.09);
     }
 
     .balance-change {
@@ -1711,11 +1668,11 @@ svg {
         width: 54%;
         height: 92px;
 
-        opacity: .82;
+        opacity: .88;
     }
 
 
-    /* RESUMO */
+    /* CARDS */
 
     .summary-grid {
         margin: 13px 0;
@@ -1731,20 +1688,20 @@ svg {
 
         padding: 14px 12px;
 
-        border: 1px solid #dbe7e1;
-        border-radius: 19px;
+        border: 1px solid #c3d9d0;
+        border-radius: 20px;
 
         background:
             linear-gradient(
                 145deg,
-                #ffffff,
-                #f7faf8
+                #f7faf9 0%,
+                #e4efea 100%
             ) !important;
 
         gap: 10px;
 
         box-shadow:
-            0 9px 25px rgba(17,72,53,.07);
+            0 10px 26px rgba(12,66,48,.09);
     }
 
     .summary-card:nth-child(3) {
@@ -1754,24 +1711,23 @@ svg {
     }
 
     .summary-icon {
-        flex: 0 0 42px;
+        flex: 0 0 43px;
 
-        width: 42px;
-        height: 42px;
+        width: 43px;
+        height: 43px;
 
-        border-radius: 13px;
+        border-radius: 14px;
     }
 
     .summary-content > span {
-        color: #7b8e86;
-
+        color: #6c8379;
         font-size: 8px;
     }
 
     .summary-content > strong {
         margin: 4px 0;
 
-        color: #102a21;
+        color: #0b3025;
 
         font-size: 14px;
     }
@@ -1789,42 +1745,38 @@ svg {
 
     .dashboard-grid {
         grid-template-columns: 1fr;
-
         gap: 11px;
     }
 
     .panel,
     .ai-card {
         padding: 18px;
-
-        border-radius: 19px;
+        border-radius: 20px;
     }
 
     .panel {
-        border: 1px solid #dbe7e1;
+        border: 1px solid #c3d9d0;
 
         background:
             linear-gradient(
                 145deg,
-                #ffffff,
-                #f7faf8
+                #f7faf9,
+                #e4efea
             ) !important;
 
         box-shadow:
-            0 9px 25px rgba(17,72,53,.07);
+            0 10px 26px rgba(12,66,48,.09);
     }
 
     .panel-header h3 {
-        color: #102a21;
-
+        color: #0b3025;
         font-size: 13px;
     }
 
     .panel-header p {
         margin-top: 3px;
 
-        color: #899b93;
-
+        color: #7b9188;
         font-size: 8px;
     }
 
@@ -1833,7 +1785,6 @@ svg {
 
     .spending-body {
         margin-top: 22px;
-
         gap: 22px;
     }
 
@@ -1848,7 +1799,7 @@ svg {
         width: 76px;
         height: 76px;
 
-        background: white;
+        background: #edf5f1;
     }
 
     .donut-inner strong {
@@ -1863,27 +1814,27 @@ svg {
     /* IA */
 
     .ai-card {
-        border: 1px solid #cfe4db;
+        border: 1px solid #bad6ca;
 
         background:
+            radial-gradient(
+                circle at 100% 0%,
+                rgba(32,135,98,.13),
+                transparent 35%
+            ),
             linear-gradient(
                 145deg,
-                #eef8f4,
-                #e5f3ed
+                #deeee7,
+                #cee3da
             ) !important;
 
         box-shadow:
-            0 9px 25px rgba(17,72,53,.07);
+            0 10px 26px rgba(12,66,48,.09);
     }
 
     .ai-content h3 {
         max-width: 240px;
-
         font-size: 14px;
-    }
-
-    .ai-input {
-        background: white;
     }
 
 
@@ -1905,17 +1856,17 @@ svg {
 
         z-index: 999;
 
-        height: 76px;
+        height: 78px;
 
         padding:
             7px
             8px
             10px;
 
-        border-top: 1px solid #dce7e2;
+        border-top: 1px solid rgba(15,82,61,.12);
 
         background:
-            rgba(250,252,251,.96) !important;
+            rgba(232,242,237,.96) !important;
 
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
@@ -1925,13 +1876,13 @@ svg {
         justify-content: space-around;
 
         box-shadow:
-            0 -8px 30px rgba(15,65,47,.08);
+            0 -10px 30px rgba(10,62,45,.10);
     }
 
     .mobile-navigation a {
         min-width: 52px;
 
-        color: #85978f;
+        color: #72877e;
 
         display: flex;
         flex-direction: column;
@@ -1944,32 +1895,32 @@ svg {
     }
 
     .mobile-navigation a svg {
-        width: 19px;
-        height: 19px;
+        width: 20px;
+        height: 20px;
 
         stroke-width: 1.8;
     }
 
     .mobile-navigation a.active {
-        color: #116a4e;
+        color: #12664c;
     }
 
     .mobile-add {
-        width: 56px;
-        height: 56px;
+        width: 58px;
+        height: 58px;
 
-        margin-top: -31px;
+        margin-top: -32px;
 
         padding: 0;
 
-        border: 4px solid #f4f8f6;
+        border: 4px solid #e1ede7;
         border-radius: 50%;
 
         background:
             linear-gradient(
                 145deg,
-                #ff943d,
-                #f47718
+                #ff9644,
+                #f37013
             );
 
         color: white;
@@ -1978,12 +1929,12 @@ svg {
         place-items: center;
 
         box-shadow:
-            0 10px 27px rgba(245,130,32,.30);
+            0 12px 30px rgba(244,123,32,.34);
     }
 
     .mobile-add svg {
-        width: 22px;
-        height: 22px;
+        width: 23px;
+        height: 23px;
     }
 }
 
@@ -2009,7 +1960,6 @@ svg {
 
     .balance-card {
         min-height: 220px;
-
         padding: 26px 20px;
     }
 
@@ -2030,10 +1980,10 @@ svg {
     }
 
     .summary-icon {
-        flex: 0 0 39px;
+        flex: 0 0 40px;
 
-        width: 39px;
-        height: 39px;
+        width: 40px;
+        height: 40px;
     }
 
     .summary-content > strong {
@@ -2042,7 +1992,6 @@ svg {
 
     .spending-body {
         flex-direction: column;
-
         align-items: stretch;
     }
 
@@ -2057,7 +2006,7 @@ svg {
 
 
 /* =========================================================
-   BOTÕES
+   CORREÇÕES
    ========================================================= */
 
 .more-button,
@@ -2077,11 +2026,10 @@ svg {
 }
 
 ::-webkit-scrollbar-track {
-    background: #edf5f1;
+    background: #dceae4;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #a7c4b8;
-
+    background: #8fb5a5;
     border-radius: 20px;
 }
