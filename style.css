@@ -1,11 +1,6 @@
 /* =========================================================
-   CONTROLES — PREMIUM MINT 5.0
-   Dark + Verde Esmeralda + Verde Menta + Laranja
-   ========================================================= */
-
-
-/* =========================================================
-   RESET
+   CONTROLES — PREMIUM MINT 6.0
+   Dark + Esmeralda + Menta + Laranja
    ========================================================= */
 
 * {
@@ -15,19 +10,15 @@
 }
 
 :root {
-
     --bg: #07110D;
     --bg-soft: #0B1813;
 
-    --sidebar: #071B14;
+    --mint-50: #D6EADF;
+    --mint-100: #C4DFD1;
+    --mint-200: #B7D6C6;
 
-    --mint-50: #EFFAF4;
-    --mint-100: #E7F6EE;
-    --mint-200: #D9EFE4;
-    --mint-300: #CBE7D8;
-
-    --green-950: #063B2C;
-    --green-900: #07523C;
+    --green-950: #043B2B;
+    --green-900: #05523B;
     --green-800: #076B4C;
     --green-700: #07865B;
     --green-600: #0A9D69;
@@ -48,11 +39,8 @@
 
     --white: #FFFFFF;
 
-    --shadow:
-        0 15px 35px rgba(0,0,0,.22);
-
-    --shadow-strong:
-        0 22px 48px rgba(0,0,0,.32);
+    --shadow: 0 15px 35px rgba(0,0,0,.22);
+    --shadow-strong: 0 22px 48px rgba(0,0,0,.32);
 }
 
 
@@ -63,14 +51,12 @@
 html {
     width: 100%;
     min-height: 100%;
-
     background: var(--bg);
 }
 
 body {
     width: 100%;
     min-height: 100vh;
-
     overflow-x: hidden;
 
     font-family:
@@ -110,7 +96,6 @@ select {
 
 button {
     cursor: pointer;
-
     appearance: none;
     -webkit-appearance: none;
 }
@@ -131,7 +116,6 @@ svg {
 
 .sidebar {
     position: fixed;
-
     top: 0;
     left: 0;
     bottom: 0;
@@ -139,7 +123,6 @@ svg {
     z-index: 100;
 
     width: 250px;
-
     padding: 30px 20px;
 
     display: flex;
@@ -157,9 +140,7 @@ svg {
             #06120E
         );
 
-    border-right:
-        1px solid
-        rgba(255,255,255,.07);
+    border-right: 1px solid rgba(255,255,255,.07);
 }
 
 
@@ -173,10 +154,8 @@ svg {
 
 .brand {
     color: white;
-
     font-size: 27px;
     font-weight: 800;
-
     letter-spacing: -1.2px;
 }
 
@@ -189,7 +168,6 @@ svg {
     margin-bottom: 30px;
 
     color: #839A90;
-
     font-size: 9px;
 }
 
@@ -201,20 +179,17 @@ svg {
 .sidebar-menu {
     display: flex;
     flex-direction: column;
-
     gap: 6px;
 }
 
 .sidebar-menu a {
     min-height: 48px;
-
     padding: 7px 10px;
 
     border-radius: 14px;
 
     display: flex;
     align-items: center;
-
     gap: 10px;
 
     color: #94A99F;
@@ -222,18 +197,12 @@ svg {
     font-size: 12px;
     font-weight: 600;
 
-    transition:
-        background .2s ease,
-        color .2s ease,
-        transform .2s ease;
+    transition: .2s ease;
 }
 
 .sidebar-menu a:hover {
     color: white;
-
-    background:
-        rgba(255,255,255,.055);
-
+    background: rgba(255,255,255,.055);
     transform: translateX(2px);
 }
 
@@ -260,7 +229,6 @@ svg {
 .menu-icon {
     width: 34px;
     height: 34px;
-
     flex: 0 0 34px;
 
     border-radius: 11px;
@@ -268,16 +236,13 @@ svg {
     display: grid;
     place-items: center;
 
-    background:
-        rgba(255,255,255,.05);
-
+    background: rgba(255,255,255,.05);
     color: #B2C5BC;
 }
 
 .menu-icon svg {
     width: 18px;
     height: 18px;
-
     stroke-width: 2.1;
 }
 
@@ -307,14 +272,11 @@ svg {
 
 .ai-menu small {
     margin-left: auto;
-
     padding: 3px 6px;
 
     border-radius: 6px;
 
-    background:
-        rgba(255,122,24,.17);
-
+    background: rgba(255,122,24,.17);
     color: #FF9B4B;
 
     font-size: 7px;
@@ -328,13 +290,9 @@ svg {
 
 .premium-card {
     margin-top: auto;
-
     padding: 16px;
 
-    border:
-        1px solid
-        rgba(255,255,255,.09);
-
+    border: 1px solid rgba(255,255,255,.09);
     border-radius: 18px;
 
     background:
@@ -363,9 +321,7 @@ svg {
     display: grid;
     place-items: center;
 
-    background:
-        rgba(255,122,24,.15);
-
+    background: rgba(255,122,24,.15);
     color: #FF9D4B;
 }
 
@@ -376,7 +332,6 @@ svg {
 
 .premium-card strong {
     color: white;
-
     font-size: 11px;
 }
 
@@ -391,7 +346,6 @@ svg {
 
 .premium-card button {
     width: 100%;
-
     padding: 10px;
 
     border: 0;
@@ -409,9 +363,7 @@ svg {
     font-size: 9px;
     font-weight: 700;
 
-    box-shadow:
-        0 8px 22px
-        rgba(255,110,12,.20);
+    box-shadow: 0 8px 22px rgba(255,110,12,.20);
 }
 
 
@@ -425,18 +377,14 @@ svg {
 
     display: flex;
     align-items: center;
-
     gap: 9px;
 
-    border-top:
-        1px solid
-        rgba(255,255,255,.08);
+    border-top: 1px solid rgba(255,255,255,.08);
 }
 
 .avatar {
     width: 36px;
     height: 36px;
-
     flex: 0 0 36px;
 
     border-radius: 50%;
@@ -464,23 +412,18 @@ svg {
 
 .profile-text strong {
     color: white;
-
     font-size: 9px;
 }
 
 .profile-text span {
     color: #81958C;
-
     font-size: 7px;
 }
 
 .more-button {
     margin-left: auto;
-
     border: 0;
-
     background: transparent;
-
     color: #8BA097;
 }
 
@@ -491,15 +434,11 @@ svg {
 
 .main-content {
     width: calc(100% - 250px);
-
     min-height: 100vh;
 
     margin-left: 250px;
 
-    padding:
-        35px
-        4.5%
-        70px;
+    padding: 35px 4.5% 70px;
 }
 
 
@@ -539,27 +478,21 @@ svg {
 
 .header p {
     color: #9CAEA6;
-
     font-size: 10px;
 }
 
 .header-actions {
     display: flex;
     align-items: center;
-
     gap: 8px;
 }
 
 .header-icon-button {
     width: 44px;
     height: 44px;
-
     padding: 0;
 
-    border:
-        1px solid
-        rgba(255,255,255,.10);
-
+    border: 1px solid rgba(255,255,255,.10);
     border-radius: 14px;
 
     display: grid;
@@ -584,7 +517,6 @@ svg {
 
 .new-transaction {
     height: 44px;
-
     padding: 0 18px;
 
     border: 0;
@@ -592,7 +524,6 @@ svg {
 
     display: flex;
     align-items: center;
-
     gap: 8px;
 
     background:
@@ -607,9 +538,7 @@ svg {
     font-size: 10px;
     font-weight: 700;
 
-    box-shadow:
-        0 10px 26px
-        rgba(255,111,14,.25);
+    box-shadow: 0 10px 26px rgba(255,111,14,.25);
 }
 
 .new-transaction svg {
@@ -631,10 +560,7 @@ svg {
 
     overflow: hidden;
 
-    border:
-        1px solid
-        rgba(94,232,174,.16);
-
+    border: 1px solid rgba(94,232,174,.16);
     border-radius: 26px;
 
     color: white;
@@ -671,10 +597,7 @@ svg {
     top: -225px;
     right: -80px;
 
-    border:
-        1px solid
-        rgba(255,255,255,.09);
-
+    border: 1px solid rgba(255,255,255,.09);
     border-radius: 50%;
 }
 
@@ -689,48 +612,36 @@ svg {
     bottom: -210px;
     left: 8%;
 
-    border:
-        1px solid
-        rgba(255,255,255,.07);
-
+    border: 1px solid rgba(255,255,255,.07);
     border-radius: 50%;
 }
 
 .balance-info {
     position: relative;
-
     z-index: 5;
 }
 
 .balance-title {
     display: flex;
     align-items: center;
-
     gap: 8px;
 
     color: #D5E9E0;
-
     font-size: 10px;
 }
 
 .balance-title button {
     width: 30px;
     height: 30px;
-
     padding: 0;
 
-    border:
-        1px solid
-        rgba(255,255,255,.11);
-
+    border: 1px solid rgba(255,255,255,.11);
     border-radius: 10px;
 
     display: grid;
     place-items: center;
 
-    background:
-        rgba(255,255,255,.11);
-
+    background: rgba(255,255,255,.11);
     color: white;
 }
 
@@ -753,7 +664,6 @@ svg {
 .balance-change {
     display: flex;
     align-items: center;
-
     gap: 8px;
 }
 
@@ -764,12 +674,9 @@ svg {
 
     display: flex;
     align-items: center;
-
     gap: 5px;
 
-    background:
-        rgba(255,255,255,.13);
-
+    background: rgba(255,255,255,.13);
     color: white;
 
     font-size: 8px;
@@ -782,7 +689,6 @@ svg {
 
 .balance-change small {
     color: #D5E5DE;
-
     font-size: 8px;
 }
 
@@ -795,24 +701,17 @@ svg {
     z-index: 6;
 
     height: 42px;
-
     padding: 0 14px;
 
-    border:
-        1px solid
-        rgba(255,255,255,.20);
-
+    border: 1px solid rgba(255,255,255,.20);
     border-radius: 13px;
 
     display: flex;
     align-items: center;
-
     gap: 9px;
 
     color: white;
-
-    background:
-        rgba(255,255,255,.11);
+    background: rgba(255,255,255,.11);
 
     font-size: 8px;
 
@@ -847,18 +746,15 @@ svg {
 }
 
 .chart-fill {
-    fill:
-        rgba(255,255,255,.08) !important;
+    fill: rgba(255,255,255,.08) !important;
 }
 
 .chart-stroke {
     fill: none !important;
 
-    stroke:
-        rgba(255,255,255,.88) !important;
+    stroke: rgba(255,255,255,.88) !important;
 
     stroke-width: 2.5 !important;
-
     stroke-linecap: round;
     stroke-linejoin: round;
 }
@@ -873,14 +769,10 @@ svg {
 
     display: grid;
 
-    grid-template-columns:
-        repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
 
     gap: 14px;
 }
-
-
-/* TODOS OS CARDS VERDE MENTA */
 
 .summary-card {
     position: relative;
@@ -892,20 +784,16 @@ svg {
 
     display: flex;
     align-items: center;
-
     gap: 13px;
 
-    border:
-        1px solid
-        rgba(7,134,91,.13);
-
+    border: 1px solid rgba(7,134,91,.16);
     border-radius: 21px;
 
     background:
         linear-gradient(
             145deg,
-            #EFFAF4 0%,
-            #D9EFE4 100%
+            #D6EADF 0%,
+            #C4DFD1 100%
         );
 
     box-shadow:
@@ -951,13 +839,9 @@ svg {
     background:
         linear-gradient(
             145deg,
-            #CDEEDF,
-            #BEE5D3
+            #B7E2CE,
+            #A6D8C0
         );
-
-    box-shadow:
-        0 8px 20px
-        rgba(7,134,91,.10);
 }
 
 .expense-icon {
@@ -966,8 +850,8 @@ svg {
     background:
         linear-gradient(
             145deg,
-            #FFE5E1,
-            #FBD8D4
+            #F6D4D0,
+            #EEC7C2
         );
 }
 
@@ -977,13 +861,10 @@ svg {
     background:
         linear-gradient(
             145deg,
-            #FFEAD8,
-            #FFDDC1
+            #F5D7BE,
+            #EBC9A9
         );
 }
-
-
-/* TEXTOS RESUMO */
 
 .summary-content {
     min-width: 0;
@@ -993,8 +874,7 @@ svg {
 }
 
 .summary-content > span {
-    color: #647A70;
-
+    color: #526C60;
     font-size: 8px;
 }
 
@@ -1009,8 +889,7 @@ svg {
 }
 
 .summary-content small {
-    color: #71857C;
-
+    color: #637A6F;
     font-size: 7px;
 }
 
@@ -1028,7 +907,7 @@ svg {
 }
 
 .negative-text {
-    color: #DE5B51 !important;
+    color: #D95950 !important;
 }
 
 .card-more {
@@ -1044,12 +923,12 @@ svg {
 
     background: transparent;
 
-    color: #72877D;
+    color: #60786D;
 }
 
 
 /* =========================================================
-   DASHBOARD GRID
+   DASHBOARD
    ========================================================= */
 
 .dashboard-grid {
@@ -1064,7 +943,7 @@ svg {
 
 
 /* =========================================================
-   TODOS OS PAINÉIS VERDE CLARO
+   PAINÉIS VERDE MENTA
    ========================================================= */
 
 .panel,
@@ -1073,17 +952,14 @@ svg {
 
     padding: 21px;
 
-    border:
-        1px solid
-        rgba(7,134,91,.13);
-
+    border: 1px solid rgba(7,134,91,.16);
     border-radius: 22px;
 
     background:
         linear-gradient(
             145deg,
-            #EFFAF4 0%,
-            #D9EFE4 100%
+            #D6EADF 0%,
+            #C4DFD1 100%
         );
 
     color: var(--dark-text);
@@ -1110,8 +986,7 @@ svg {
 }
 
 .panel-header p {
-    color: #687E73;
-
+    color: #5C7468;
     font-size: 8px;
 }
 
@@ -1126,7 +1001,6 @@ svg {
 
     display: flex;
     align-items: center;
-
     gap: 4px;
 
     font-size: 8px;
@@ -1146,13 +1020,13 @@ svg {
     background:
         radial-gradient(
             circle at 0% 100%,
-            rgba(7,134,91,.07),
+            rgba(7,134,91,.08),
             transparent 38%
         ),
         linear-gradient(
             145deg,
-            #EFFAF4,
-            #D9EFE4
+            #D6EADF,
+            #C4DFD1
         );
 }
 
@@ -1184,7 +1058,7 @@ svg {
             #18B77B 28% 46%,
             #FFB84B 46% 61%,
             #FF7468 61% 73%,
-            #80988D 73% 100%
+            #668277 73% 100%
         );
 
     box-shadow:
@@ -1202,7 +1076,7 @@ svg {
 
     border-radius: 50%;
 
-    background: #EAF7F0;
+    background: #CFE5D9;
 }
 
 .donut-inner {
@@ -1222,7 +1096,7 @@ svg {
 }
 
 .donut-inner span {
-    color: #6A7F75;
+    color: #587065;
 
     font-size: 7px;
 }
@@ -1256,7 +1130,7 @@ svg {
 
     gap: 7px;
 
-    color: #536A5F;
+    color: #496357;
 }
 
 .category-row strong {
@@ -1264,7 +1138,7 @@ svg {
 }
 
 .category-row > span {
-    color: #6F8379;
+    color: #5C7468;
 }
 
 .dot {
@@ -1291,12 +1165,12 @@ svg {
 }
 
 .other-dot {
-    background: #789086;
+    background: #668277;
 }
 
 
 /* =========================================================
-   CONTROLES IA — MENTA PREMIUM
+   CONTROLES IA
    ========================================================= */
 
 .ai-card {
@@ -1312,13 +1186,13 @@ svg {
         ),
         radial-gradient(
             circle at 0% 100%,
-            rgba(7,134,91,.09),
+            rgba(7,134,91,.10),
             transparent 40%
         ),
         linear-gradient(
             145deg,
-            #ECF9F2 0%,
-            #D6EDDF 100%
+            #D3E8DC 0%,
+            #BDDACA 100%
         );
 }
 
@@ -1335,9 +1209,7 @@ svg {
 
     border-radius: 50%;
 
-    border:
-        1px solid
-        rgba(7,134,91,.08);
+    border: 1px solid rgba(7,134,91,.10);
 }
 
 .ai-header {
@@ -1387,7 +1259,6 @@ svg {
 
 .ai-brand strong {
     color: #10271E;
-
     font-size: 11px;
 }
 
@@ -1396,7 +1267,7 @@ svg {
 
     margin-top: 3px;
 
-    color: #657A70;
+    color: #526C60;
 
     font-size: 7px;
 }
@@ -1406,10 +1277,8 @@ svg {
 
     border-radius: 7px;
 
-    background:
-        rgba(255,122,24,.15);
-
-    color: #E6630A;
+    background: rgba(255,122,24,.18);
+    color: #D85B05;
 
     font-size: 6px;
     font-weight: 800;
@@ -1449,10 +1318,7 @@ svg {
 .ai-suggestions button {
     padding: 7px 9px;
 
-    border:
-        1px solid
-        rgba(7,134,91,.13);
-
+    border: 1px solid rgba(7,134,91,.16);
     border-radius: 20px;
 
     display: flex;
@@ -1460,10 +1326,8 @@ svg {
 
     gap: 5px;
 
-    background:
-        rgba(255,255,255,.48);
-
-    color: #36564A;
+    background: rgba(255,255,255,.28);
+    color: #294A3C;
 
     font-size: 7px;
 }
@@ -1482,26 +1346,17 @@ svg {
 
     margin-top: 16px;
 
-    padding:
-        7px
-        7px
-        7px
-        11px;
+    padding: 7px 7px 7px 11px;
 
-    border:
-        1px solid
-        rgba(7,134,91,.14);
-
+    border: 1px solid rgba(7,134,91,.17);
     border-radius: 12px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    background:
-        rgba(255,255,255,.52);
-
-    color: #667B71;
+    background: rgba(255,255,255,.28);
+    color: #526C60;
 
     font-size: 7px;
 }
@@ -1515,7 +1370,6 @@ svg {
 
 .ai-input > div > svg {
     width: 14px;
-
     color: #07865B;
 }
 
@@ -1548,8 +1402,8 @@ svg {
     background:
         linear-gradient(
             145deg,
-            #EFFAF4,
-            #D9EFE4
+            #D6EADF,
+            #C4DFD1
         );
 }
 
@@ -1573,7 +1427,7 @@ svg {
 
     border-bottom:
         1px solid
-        rgba(16,55,40,.09);
+        rgba(16,55,40,.10);
 }
 
 .transaction-item:last-child {
@@ -1599,26 +1453,22 @@ svg {
 
 .supermarket {
     color: #EF710E;
-
-    background: #FFE6D1;
+    background: #EBC9AA;
 }
 
 .salary-icon {
     color: #087E58;
-
-    background: #CDEDDD;
+    background: #A9D8C1;
 }
 
 .gas-icon {
-    color: #C9820B;
-
-    background: #F9E8BD;
+    color: #B97708;
+    background: #E5D09C;
 }
 
 .internet-icon {
-    color: #DF5C52;
-
-    background: #F8DCD8;
+    color: #D7564D;
+    background: #E6C1BD;
 }
 
 .transaction-description {
@@ -1632,14 +1482,13 @@ svg {
 
 .transaction-description strong {
     color: #10271E;
-
     font-size: 8px;
 }
 
 .transaction-description span {
     overflow: hidden;
 
-    color: #6A7E74;
+    color: #587065;
 
     font-size: 7px;
 
@@ -1649,7 +1498,6 @@ svg {
 
 .transaction-value {
     font-size: 8px;
-
     white-space: nowrap;
 }
 
@@ -1670,13 +1518,13 @@ svg {
     background:
         radial-gradient(
             circle at 100% 100%,
-            rgba(255,122,24,.06),
+            rgba(255,122,24,.07),
             transparent 35%
         ),
         linear-gradient(
             145deg,
-            #EFFAF4,
-            #D9EFE4
+            #D6EADF,
+            #C4DFD1
         );
 }
 
@@ -1689,22 +1537,19 @@ svg {
 
     overflow: hidden;
 
-    border:
-        1px solid
-        rgba(7,134,91,.10);
-
+    border: 1px solid rgba(7,134,91,.13);
     border-radius: 15px;
 
     background:
         radial-gradient(
             circle at 50% 100%,
-            rgba(255,122,24,.09),
+            rgba(255,122,24,.10),
             transparent 50%
         ),
         linear-gradient(
             145deg,
-            #DDF2E7,
-            #CBE7D8
+            #C4DFD1,
+            #B4D4C3
         );
 }
 
@@ -1722,13 +1567,10 @@ svg {
     display: grid;
     place-items: center;
 
-    background:
-        rgba(255,122,24,.16);
-
+    background: rgba(255,122,24,.18);
     color: #E96A0C;
 
-    transform:
-        translate(-50%,-50%);
+    transform: translate(-50%,-50%);
 }
 
 .goal-icon svg {
@@ -1744,7 +1586,7 @@ svg {
 }
 
 .goal-title span {
-    color: #6A8075;
+    color: #587065;
 
     font-size: 6px;
     font-weight: 700;
@@ -1760,7 +1602,6 @@ svg {
 
 .goal-title > strong {
     color: #07865B;
-
     font-size: 15px;
 }
 
@@ -1775,13 +1616,11 @@ svg {
 
 .goal-money strong {
     color: #10271E;
-
     font-size: 14px;
 }
 
 .goal-money span {
-    color: #6C8177;
-
+    color: #587065;
     font-size: 7px;
 }
 
@@ -1794,7 +1633,7 @@ svg {
 
     border-radius: 20px;
 
-    background: #C7DED3;
+    background: #AFCDBD;
 }
 
 .goal-progress div {
@@ -1819,20 +1658,19 @@ svg {
 
     gap: 5px;
 
-    color: #647A70;
+    color: #526C60;
 
     font-size: 7px;
 }
 
 .goal-footer svg {
     width: 13px;
-
     color: #07865B;
 }
 
 
 /* =========================================================
-   MOBILE NAV DESKTOP
+   MENU MOBILE — DESKTOP
    ========================================================= */
 
 .mobile-navigation {
@@ -1851,8 +1689,7 @@ svg {
     }
 
     .main-content {
-        width:
-            calc(100% - 215px);
+        width: calc(100% - 215px);
 
         margin-left: 215px;
 
@@ -1897,19 +1734,12 @@ svg {
             );
     }
 
-
-    /* SIDEBAR */
-
     .sidebar {
         display: none !important;
     }
 
-
-    /* CONTEÚDO */
-
     .main-content {
         width: 100% !important;
-
         min-height: 100vh;
 
         margin-left: 0 !important;
@@ -1925,7 +1755,6 @@ svg {
 
     .header {
         margin-bottom: 22px;
-
         display: block;
     }
 
@@ -1962,7 +1791,6 @@ svg {
 
     .balance-card {
         width: 100%;
-
         min-height: 300px;
 
         padding: 29px 24px;
@@ -2067,7 +1895,7 @@ svg {
 
 
     /* =====================================================
-       RESUMO MOBILE
+       CARDS RESUMO MOBILE
        ===================================================== */
 
     .summary-grid {
@@ -2094,8 +1922,8 @@ svg {
         background:
             linear-gradient(
                 145deg,
-                #EFFAF4,
-                #D9EFE4
+                #D6EADF 0%,
+                #C4DFD1 100%
             );
     }
 
@@ -2134,7 +1962,6 @@ svg {
 
     .summary-content small {
         font-size: 9px;
-
         line-height: 1.3;
     }
 
@@ -2165,8 +1992,8 @@ svg {
         background:
             linear-gradient(
                 145deg,
-                #EFFAF4,
-                #D9EFE4
+                #D6EADF 0%,
+                #C4DFD1 100%
             );
     }
 
@@ -2189,6 +2016,15 @@ svg {
        GASTOS MOBILE
        ===================================================== */
 
+    .spending-panel {
+        background:
+            linear-gradient(
+                145deg,
+                #D6EADF,
+                #C4DFD1
+            );
+    }
+
     .spending-body {
         margin-top: 24px;
 
@@ -2207,6 +2043,8 @@ svg {
     .donut-chart::before {
         width: 112px;
         height: 112px;
+
+        background: #CFE5D9;
     }
 
     .donut-inner strong {
@@ -2241,8 +2079,8 @@ svg {
             ),
             linear-gradient(
                 145deg,
-                #ECF9F2,
-                #D6EDDF
+                #D3E8DC,
+                #BDDACA
             );
     }
 
@@ -2292,6 +2130,15 @@ svg {
        LANÇAMENTOS MOBILE
        ===================================================== */
 
+    .transactions-panel {
+        background:
+            linear-gradient(
+                145deg,
+                #D6EADF,
+                #C4DFD1
+            );
+    }
+
     .transaction-item {
         min-height: 68px;
 
@@ -2322,6 +2169,15 @@ svg {
     /* =====================================================
        META MOBILE
        ===================================================== */
+
+    .goal-panel {
+        background:
+            linear-gradient(
+                145deg,
+                #D6EADF,
+                #C4DFD1
+            );
+    }
 
     .goal-visual {
         height: 110px;
@@ -2396,7 +2252,7 @@ svg {
             rgba(255,255,255,.10);
 
         background:
-            rgba(8,19,15,.96);
+            rgba(8,19,15,.97);
 
         backdrop-filter: blur(18px);
         -webkit-backdrop-filter: blur(18px);
@@ -2416,7 +2272,7 @@ svg {
 
         gap: 5px;
 
-        color: #A0B1A8;
+        color: #C2D0C9;
 
         font-size: 9px;
         font-weight: 500;
@@ -2426,7 +2282,7 @@ svg {
         width: 22px;
         height: 22px;
 
-        stroke-width: 2;
+        stroke-width: 2.1;
     }
 
     .mobile-navigation a.active {
@@ -2434,7 +2290,7 @@ svg {
     }
 
     .mobile-navigation a:nth-child(2) {
-        color: #D3DDD8;
+        color: #D5E0DB;
     }
 
     .mobile-navigation a:nth-child(4) {
@@ -2442,7 +2298,7 @@ svg {
     }
 
     .mobile-navigation a:nth-child(5) {
-        color: #D3DDD8;
+        color: #D5E0DB;
     }
 
 
@@ -2458,10 +2314,7 @@ svg {
 
         margin: 0 auto;
 
-        border:
-            5px solid
-            #0B1712;
-
+        border: 5px solid #0B1712;
         border-radius: 50%;
 
         display: grid;
@@ -2499,11 +2352,8 @@ svg {
 @media (max-width: 390px) {
 
     .main-content {
-        padding-left:
-            13px !important;
-
-        padding-right:
-            13px !important;
+        padding-left: 13px !important;
+        padding-right: 13px !important;
     }
 
     .header h1 {
@@ -2533,7 +2383,6 @@ svg {
 
     .summary-card {
         padding: 12px;
-
         gap: 8px;
     }
 
