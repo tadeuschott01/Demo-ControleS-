@@ -1,6 +1,11 @@
 /* =========================================================
-   CONTROLES — WARM PREMIUM
-   Verde esmeralda + laranja quente + fundo creme
+   CONTROLES — DARK PREMIUM
+   Preto + verde esmeralda + laranja
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
    ========================================================= */
 
 * {
@@ -10,55 +15,61 @@
 }
 
 :root {
-    --bg: #F4EEE4;
-    --bg-2: #EFE5D8;
 
-    --surface: #FFFDF9;
-    --surface-2: #FFF8EF;
+    /* FUNDOS */
+    --bg: #080d0b;
+    --bg-soft: #0d1512;
+    --bg-card: #111c18;
+    --bg-card-2: #15231e;
 
-    --green-950: #073D2D;
-    --green-900: #07503A;
-    --green-800: #086246;
-    --green-700: #087653;
-    --green-600: #0B8B60;
-    --green-500: #19A36F;
-    --green-light: #55D29A;
+    /* VERDES */
+    --green-950: #052f23;
+    --green-900: #064936;
+    --green-800: #075f45;
+    --green-700: #087a55;
+    --green-600: #0b9665;
+    --green-500: #16ad73;
+    --green-400: #39ca8e;
+    --green-light: #71e5b0;
 
-    --orange: #FF7A18;
-    --orange-2: #FF922E;
-    --orange-dark: #E95D08;
-    --orange-soft: #FFF0DF;
+    /* LARANJA */
+    --orange: #ff7a18;
+    --orange-light: #ff983e;
+    --orange-dark: #e95e08;
+    --orange-soft: #3a2416;
 
-    --coral: #E86654;
+    /* TEXTO */
+    --text: #f4f8f6;
+    --text-secondary: #a8b9b1;
+    --muted: #71837b;
 
-    --text: #17362C;
-    --text-secondary: #61766D;
-    --muted: #8C9B94;
+    /* OUTROS */
+    --border: rgba(255,255,255,.09);
 
-    --border: #E5DDD2;
-
-    --positive: #0D9B67;
-    --negative: #DF6656;
+    --positive: #39d596;
+    --negative: #ff7568;
 
     --shadow:
-        0 10px 28px rgba(75, 58, 37, .08);
+        0 15px 35px rgba(0,0,0,.30);
 
-    --shadow-card:
-        0 14px 35px rgba(57, 46, 31, .10);
+    --shadow-strong:
+        0 22px 50px rgba(0,0,0,.40);
 }
 
 
 /* =========================================================
-   BASE
+   HTML / BODY
    ========================================================= */
 
 html {
     width: 100%;
     min-height: 100%;
-    background: var(--bg);
+
+    background: #080d0b;
 }
 
 body {
+
     width: 100%;
     min-height: 100vh;
 
@@ -66,19 +77,21 @@ body {
 
     background:
         radial-gradient(
-            circle at 100% 0%,
-            rgba(255, 137, 40, .10),
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 0% 35%,
-            rgba(19, 157, 105, .08),
+            circle at 90% 5%,
+            rgba(17, 170, 112, .14),
             transparent 30%
         ),
+
+        radial-gradient(
+            circle at 5% 60%,
+            rgba(255, 122, 24, .06),
+            transparent 30%
+        ),
+
         linear-gradient(
             180deg,
-            #F8F2E9 0%,
-            #F0E7DC 100%
+            #101713 0%,
+            #080d0b 100%
         );
 
     color: var(--text);
@@ -121,6 +134,7 @@ svg {
    ========================================================= */
 
 .sidebar {
+
     position: fixed;
 
     top: 0;
@@ -134,18 +148,20 @@ svg {
     padding: 30px 20px;
 
     background:
+
         radial-gradient(
             circle at 10% 0%,
-            rgba(37, 180, 122, .22),
-            transparent 28%
+            rgba(22, 173, 115, .18),
+            transparent 30%
         ),
+
         linear-gradient(
             180deg,
-            #07563E,
-            #06392B
+            #0b211a,
+            #07120f
         );
 
-    border-right: 1px solid rgba(255,255,255,.08);
+    border-right: 1px solid rgba(255,255,255,.07);
 
     color: white;
 
@@ -153,11 +169,17 @@ svg {
     flex-direction: column;
 }
 
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
 .brand-area {
     padding: 0 10px;
 }
 
 .brand {
+
     color: white;
 
     font-size: 26px;
@@ -171,20 +193,22 @@ svg {
 }
 
 .brand-area p {
+
     margin-top: 5px;
     margin-bottom: 30px;
 
-    color: #A8C9BC;
+    color: #849b91;
 
     font-size: 9px;
 }
 
 
 /* =========================================================
-   MENU LATERAL
+   MENU
    ========================================================= */
 
 .sidebar-menu {
+
     display: flex;
     flex-direction: column;
 
@@ -192,13 +216,14 @@ svg {
 }
 
 .sidebar-menu a {
+
     min-height: 44px;
 
     padding: 7px 10px;
 
     border-radius: 12px;
 
-    color: #B8D1C7;
+    color: #91a69d;
 
     display: flex;
     align-items: center;
@@ -207,29 +232,35 @@ svg {
 
     font-size: 12px;
     font-weight: 600;
+
+    transition: .2s ease;
 }
 
 .sidebar-menu a:hover {
-    background: rgba(255,255,255,.07);
+
+    background: rgba(255,255,255,.06);
 
     color: white;
 }
 
 .sidebar-menu a.active {
+
     background:
+
         linear-gradient(
             135deg,
-            #0D8A61,
-            #08704F
+            #0b8e62,
+            #076348
         );
 
     color: white;
 
     box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.10);
+        inset 0 1px 0 rgba(255,255,255,.08);
 }
 
 .menu-icon {
+
     width: 30px;
     height: 30px;
 
@@ -238,11 +269,13 @@ svg {
 }
 
 .menu-icon svg {
+
     width: 17px;
     height: 17px;
 }
 
 .ai-menu small {
+
     margin-left: auto;
 
     padding: 3px 6px;
@@ -251,7 +284,7 @@ svg {
 
     background: rgba(255,122,24,.18);
 
-    color: #FFB16F;
+    color: #ff9c55;
 
     font-size: 7px;
     font-weight: 800;
@@ -263,25 +296,30 @@ svg {
    ========================================================= */
 
 .premium-card {
+
     margin-top: auto;
 
     padding: 16px;
 
-    border: 1px solid rgba(255,255,255,.11);
+    border:
+        1px solid rgba(255,255,255,.09);
+
     border-radius: 17px;
 
     background:
+
         linear-gradient(
             145deg,
-            #0A6C4D,
-            #07513B
+            #12362b,
+            #0c241d
         );
 
     box-shadow:
-        0 15px 30px rgba(0,0,0,.14);
+        0 15px 30px rgba(0,0,0,.20);
 }
 
 .premium-icon {
+
     width: 34px;
     height: 34px;
 
@@ -289,29 +327,34 @@ svg {
 
     border-radius: 10px;
 
-    background: rgba(255,122,24,.19);
+    background:
+        rgba(255,122,24,.15);
 
-    color: #FF9B4C;
+    color:
+        #ff9746;
 
     display: grid;
     place-items: center;
 }
 
 .premium-icon svg {
+
     width: 16px;
     height: 16px;
 }
 
 .premium-card strong {
+
     color: white;
 
     font-size: 11px;
 }
 
 .premium-card p {
+
     margin: 7px 0 13px;
 
-    color: #BBD2C9;
+    color: #9db0a7;
 
     font-size: 8px;
 
@@ -319,18 +362,21 @@ svg {
 }
 
 .premium-card button {
+
     width: 100%;
 
     padding: 9px;
 
     border: 0;
+
     border-radius: 9px;
 
     background:
+
         linear-gradient(
             135deg,
-            #FF922E,
-            #FF6C0D
+            #ff943c,
+            #ff6b0b
         );
 
     color: white;
@@ -339,7 +385,7 @@ svg {
     font-weight: 700;
 
     box-shadow:
-        0 8px 20px rgba(255,108,13,.27);
+        0 8px 20px rgba(255,108,13,.25);
 }
 
 
@@ -348,11 +394,13 @@ svg {
    ========================================================= */
 
 .sidebar-profile {
+
     margin-top: 15px;
 
     padding-top: 15px;
 
-    border-top: 1px solid rgba(255,255,255,.09);
+    border-top:
+        1px solid rgba(255,255,255,.08);
 
     display: flex;
     align-items: center;
@@ -361,6 +409,7 @@ svg {
 }
 
 .avatar {
+
     width: 34px;
     height: 34px;
 
@@ -368,9 +417,9 @@ svg {
 
     border-radius: 50%;
 
-    background: #FFF0E1;
+    background: #18372d;
 
-    color: var(--green-800);
+    color: #65dca8;
 
     display: grid;
     place-items: center;
@@ -380,61 +429,72 @@ svg {
 }
 
 .profile-text {
+
     display: flex;
     flex-direction: column;
 }
 
 .profile-text strong {
+
     color: white;
 
     font-size: 9px;
 }
 
 .profile-text span {
-    color: #A6C2B7;
+
+    color: #82978e;
 
     font-size: 7px;
 }
 
 .more-button {
+
     margin-left: auto;
 
     border: 0;
 
     background: transparent;
 
-    color: #A6C2B7;
+    color: #82978e;
 }
 
 
 /* =========================================================
-   CONTEÚDO
+   CONTEÚDO PRINCIPAL
    ========================================================= */
 
 .main-content {
+
     width: calc(100% - 250px);
 
     min-height: 100vh;
 
     margin-left: 250px;
 
-    padding: 35px 4.5% 60px;
+    padding:
+        35px
+        4.5%
+        60px;
 
     background:
+
         radial-gradient(
-            circle at 100% 0%,
-            rgba(255,122,24,.10),
+            circle at 90% 5%,
+            rgba(14, 162, 105, .15),
             transparent 30%
         ),
+
         radial-gradient(
-            circle at 0% 40%,
-            rgba(11,139,96,.08),
-            transparent 30%
+            circle at 5% 65%,
+            rgba(255, 122, 24, .06),
+            transparent 28%
         ),
+
         linear-gradient(
             180deg,
-            #F8F2E9,
-            #F0E7DC
+            #101713 0%,
+            #080d0b 100%
         );
 }
 
@@ -444,15 +504,19 @@ svg {
    ========================================================= */
 
 .header {
+
     margin-bottom: 24px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 }
 
 .header-date {
-    color: var(--muted);
+
+    color: #708078;
 
     font-size: 8px;
     font-weight: 700;
@@ -461,40 +525,46 @@ svg {
 }
 
 .header h1 {
+
     margin: 5px 0;
 
-    color: var(--green-950);
+    color: #ffffff;
 
-    font-size: 26px;
+    font-size: 27px;
     font-weight: 800;
 
     letter-spacing: -1.2px;
 }
 
 .header p {
-    color: var(--text-secondary);
+
+    color: #9baaa3;
 
     font-size: 10px;
 }
 
 .header-actions {
+
     display: flex;
 
     gap: 8px;
 }
 
 .header-icon-button {
+
     width: 42px;
     height: 42px;
 
     padding: 0;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid rgba(255,255,255,.09);
+
     border-radius: 13px;
 
-    background: #FFFDF9;
+    background: #14211c;
 
-    color: var(--green-800);
+    color: #c9d7d1;
 
     display: grid;
     place-items: center;
@@ -503,26 +573,32 @@ svg {
 }
 
 .header-icon-button svg {
+
     width: 17px;
     height: 17px;
 }
 
 
-/* BOTÃO NOVO LANÇAMENTO — DESKTOP */
+/* =========================================================
+   NOVO LANÇAMENTO DESKTOP
+   ========================================================= */
 
 .new-transaction {
+
     height: 42px;
 
     padding: 0 17px;
 
     border: 0;
+
     border-radius: 13px;
 
     background:
+
         linear-gradient(
             145deg,
-            #FF962F,
-            #FF6E0F
+            #ff963c,
+            #ff6b0b
         );
 
     color: white;
@@ -536,20 +612,22 @@ svg {
     font-weight: 700;
 
     box-shadow:
-        0 10px 24px rgba(255,111,15,.27);
+        0 10px 25px rgba(255,111,15,.25);
 }
 
 .new-transaction svg {
+
     width: 17px;
     height: 17px;
 }
 
 
 /* =========================================================
-   CARD DE SALDO
+   CARD SALDO
    ========================================================= */
 
 .balance-card {
+
     position: relative;
 
     min-height: 210px;
@@ -558,34 +636,40 @@ svg {
 
     overflow: hidden;
 
-    border: 1px solid rgba(255,255,255,.18);
-    border-radius: 24px;
+    border:
+        1px solid rgba(255,255,255,.13);
+
+    border-radius: 25px;
 
     background:
+
         radial-gradient(
-            circle at 92% 8%,
-            rgba(52, 207, 143, .32),
-            transparent 39%
+            circle at 90% 10%,
+            rgba(63, 226, 157, .30),
+            transparent 40%
         ),
+
         radial-gradient(
-            circle at 10% 100%,
-            rgba(255, 132, 34, .11),
-            transparent 35%
+            circle at 5% 100%,
+            rgba(255,122,24,.10),
+            transparent 38%
         ),
+
         linear-gradient(
             135deg,
-            #07503A 0%,
-            #087653 48%,
-            #0A9565 100%
+            #07523b 0%,
+            #087a55 48%,
+            #0ca16c 100%
         );
 
     color: white;
 
     box-shadow:
-        0 20px 45px rgba(7,80,58,.20);
+        0 22px 45px rgba(0,0,0,.30);
 }
 
 .balance-card::before {
+
     content: "";
 
     position: absolute;
@@ -596,33 +680,40 @@ svg {
     top: -220px;
     right: -90px;
 
-    border: 1px solid rgba(255,255,255,.08);
+    border:
+        1px solid rgba(255,255,255,.08);
+
     border-radius: 50%;
 }
 
 .balance-card::after {
+
     content: "";
 
     position: absolute;
 
-    width: 260px;
-    height: 260px;
+    width: 270px;
+    height: 270px;
 
     bottom: -180px;
     left: 12%;
 
-    border: 1px solid rgba(255,255,255,.06);
+    border:
+        1px solid rgba(255,255,255,.06);
+
     border-radius: 50%;
 }
 
 .balance-info {
+
     position: relative;
 
     z-index: 4;
 }
 
 .balance-title {
-    color: #C7E0D6;
+
+    color: #c8ded5;
 
     display: flex;
     align-items: center;
@@ -633,29 +724,37 @@ svg {
 }
 
 .balance-title button {
+
     width: 27px;
     height: 27px;
 
     padding: 0;
 
     border: 0;
+
     border-radius: 8px;
 
-    background: rgba(255,255,255,.09);
+    background:
+        rgba(255,255,255,.09);
 
-    color: #E4F1EC;
+    color: #e4f1ec;
 
     display: grid;
     place-items: center;
 }
 
 .balance-title svg {
+
     width: 13px;
     height: 13px;
 }
 
 .balance-card h2 {
-    margin: 12px 0 15px;
+
+    margin:
+        12px
+        0
+        15px;
 
     color: white;
 
@@ -666,6 +765,7 @@ svg {
 }
 
 .balance-change {
+
     display: flex;
     align-items: center;
 
@@ -673,13 +773,15 @@ svg {
 }
 
 .balance-positive {
+
     padding: 7px 9px;
 
     border-radius: 9px;
 
-    background: rgba(73,236,166,.17);
+    background:
+        rgba(70,234,164,.16);
 
-    color: #86F2C0;
+    color: #78eeb7;
 
     display: flex;
     align-items: center;
@@ -691,12 +793,14 @@ svg {
 }
 
 .balance-change small {
-    color: #C2D8CF;
+
+    color: #bfd3cb;
 
     font-size: 8px;
 }
 
 .month-selector {
+
     position: absolute;
 
     top: 23px;
@@ -708,12 +812,15 @@ svg {
 
     padding: 0 12px;
 
-    border: 1px solid rgba(255,255,255,.17);
+    border:
+        1px solid rgba(255,255,255,.16);
+
     border-radius: 11px;
 
-    background: rgba(255,255,255,.09);
+    background:
+        rgba(255,255,255,.09);
 
-    color: #E6F1ED;
+    color: #e3efea;
 
     display: flex;
     align-items: center;
@@ -727,10 +834,11 @@ svg {
 
 
 /* =========================================================
-   GRÁFICO SALDO
+   GRÁFICO
    ========================================================= */
 
 .balance-chart {
+
     position: absolute;
 
     right: 3%;
@@ -743,58 +851,81 @@ svg {
 }
 
 .balance-chart svg {
+
     width: 100%;
     height: 100%;
 }
 
 .chart-fill {
-    fill: rgba(92,238,176,.13) !important;
 
-    stroke: none !important;
+    fill:
+        rgba(90,238,176,.12)
+        !important;
+
+    stroke:
+        none
+        !important;
 }
 
 .chart-stroke {
-    fill: none !important;
 
-    stroke: #69E6AE !important;
+    fill:
+        none
+        !important;
 
-    stroke-width: 2.6 !important;
+    stroke:
+        #68e6ad
+        !important;
 
-    stroke-linecap: round;
-    stroke-linejoin: round;
+    stroke-width:
+        2.6
+        !important;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
 }
 
 
 /* =========================================================
-   RESUMO
+   CARDS RESUMO
    ========================================================= */
 
 .summary-grid {
+
     margin: 15px 0;
 
     display: grid;
 
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns:
+        repeat(3,1fr);
 
     gap: 13px;
 }
 
 .summary-card {
+
     position: relative;
 
     min-width: 0;
+
     min-height: 100px;
 
     padding: 17px;
 
-    border: 1px solid #E5DDD2;
+    border:
+        1px solid rgba(255,255,255,.08);
+
     border-radius: 20px;
 
     background:
+
         linear-gradient(
             145deg,
-            #FFFDF9 0%,
-            #FFF7EC 100%
+            #16231e,
+            #101a16
         );
 
     display: flex;
@@ -802,11 +933,13 @@ svg {
 
     gap: 12px;
 
-    box-shadow: var(--shadow-card);
+    box-shadow: var(--shadow);
 }
 
 .summary-icon {
-    flex: 0 0 44px;
+
+    flex:
+        0 0 44px;
 
     width: 44px;
     height: 44px;
@@ -818,29 +951,37 @@ svg {
 }
 
 .summary-icon svg {
+
     width: 19px;
     height: 19px;
 }
 
 .income-icon {
-    background: #DDF7EB;
 
-    color: #0C9C68;
+    background:
+        rgba(25,179,117,.14);
+
+    color: #41d99c;
 }
 
 .expense-icon {
-    background: #FFE8E2;
 
-    color: #DF6656;
+    background:
+        rgba(255,106,91,.12);
+
+    color: #ff776b;
 }
 
 .receive-icon {
-    background: #FFE9D2;
 
-    color: #F37A18;
+    background:
+        rgba(255,122,24,.14);
+
+    color: #ff923d;
 }
 
 .summary-content {
+
     min-width: 0;
 
     display: flex;
@@ -848,15 +989,17 @@ svg {
 }
 
 .summary-content > span {
-    color: #778A82;
+
+    color: #83958d;
 
     font-size: 8px;
 }
 
 .summary-content > strong {
+
     margin: 4px 0;
 
-    color: #17362C;
+    color: #f4f8f6;
 
     font-size: 16px;
 
@@ -864,20 +1007,28 @@ svg {
 }
 
 .summary-content small {
-    color: var(--muted);
+
+    color: #71837b;
 
     font-size: 7px;
 }
 
 .positive-text {
-    color: #0C9C68 !important;
+
+    color:
+        #3bd797
+        !important;
 }
 
 .negative-text {
-    color: #DF6656 !important;
+
+    color:
+        #ff786c
+        !important;
 }
 
 .card-more {
+
     position: absolute;
 
     top: 9px;
@@ -890,15 +1041,16 @@ svg {
 
     background: transparent;
 
-    color: #899B93;
+    color: #71837b;
 }
 
 
 /* =========================================================
-   DASHBOARD
+   DASHBOARD GRID
    ========================================================= */
 
 .dashboard-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -908,56 +1060,71 @@ svg {
     gap: 14px;
 }
 
+
+/* =========================================================
+   PAINÉIS
+   ========================================================= */
+
 .panel {
+
     min-width: 0;
 
     padding: 20px;
 
-    border: 1px solid #E5DDD2;
+    border:
+        1px solid rgba(255,255,255,.08);
+
     border-radius: 20px;
 
     background:
+
         linear-gradient(
             145deg,
-            #FFFDF9,
-            #FFF7EC
+            #16231e,
+            #101a16
         );
 
-    color: var(--text);
+    color: white;
 
-    box-shadow: var(--shadow-card);
+    box-shadow: var(--shadow);
 }
 
 .panel-header {
+
     display: flex;
+
     align-items: flex-start;
+
     justify-content: space-between;
 
     gap: 10px;
 }
 
 .panel-header h3 {
+
     margin-bottom: 4px;
 
-    color: var(--green-950);
+    color: #f4f8f6;
 
     font-size: 12px;
 }
 
 .panel-header p {
-    color: var(--muted);
+
+    color: #75877f;
 
     font-size: 8px;
 }
 
 .text-button {
+
     padding: 0;
 
     border: 0;
 
     background: transparent;
 
-    color: var(--green-700);
+    color: #3bd797;
 
     font-size: 8px;
     font-weight: 750;
@@ -969,6 +1136,7 @@ svg {
    ========================================================= */
 
 .spending-body {
+
     margin-top: 22px;
 
     display: flex;
@@ -978,9 +1146,11 @@ svg {
 }
 
 .donut-chart {
+
     position: relative;
 
-    flex: 0 0 145px;
+    flex:
+        0 0 145px;
 
     width: 145px;
     height: 145px;
@@ -988,22 +1158,30 @@ svg {
     border-radius: 50%;
 
     background:
+
         conic-gradient(
-            #FF7A18 0 30%,
-            #0EA16C 30% 49%,
-            #FFB03D 49% 65%,
-            #E86654 65% 79%,
-            #E5D9C9 79% 100%
+
+            #ff7a18 0 30%,
+
+            #18b77b 30% 49%,
+
+            #ffb238 49% 65%,
+
+            #ff6f61 65% 79%,
+
+            #35443e 79% 100%
+
         );
 
     display: grid;
     place-items: center;
 
     box-shadow:
-        0 10px 24px rgba(83,57,28,.10);
+        0 10px 25px rgba(0,0,0,.20);
 }
 
 .donut-chart::before {
+
     content: "";
 
     position: absolute;
@@ -1013,10 +1191,11 @@ svg {
 
     border-radius: 50%;
 
-    background: #FFF9F0;
+    background: #121d19;
 }
 
 .donut-inner {
+
     position: relative;
 
     z-index: 2;
@@ -1025,20 +1204,23 @@ svg {
 }
 
 .donut-inner strong {
+
     display: block;
 
-    color: var(--green-950);
+    color: white;
 
     font-size: 14px;
 }
 
 .donut-inner span {
-    color: var(--muted);
+
+    color: #788a82;
 
     font-size: 7px;
 }
 
 .categories-list {
+
     flex: 1;
 
     display: grid;
@@ -1047,6 +1229,7 @@ svg {
 }
 
 .category-row {
+
     display: grid;
 
     grid-template-columns:
@@ -1062,7 +1245,8 @@ svg {
 }
 
 .category-name {
-    color: var(--text-secondary);
+
+    color: #9aaca4;
 
     display: flex;
     align-items: center;
@@ -1071,14 +1255,17 @@ svg {
 }
 
 .category-row strong {
-    color: var(--text);
+
+    color: #eef4f1;
 }
 
 .category-row > span {
-    color: var(--muted);
+
+    color: #71837b;
 }
 
 .dot {
+
     width: 7px;
     height: 7px;
 
@@ -1086,23 +1273,28 @@ svg {
 }
 
 .food-dot {
-    background: #FF7A18;
+
+    background: #ff7a18;
 }
 
 .transport-dot {
-    background: #0EA16C;
+
+    background: #18b77b;
 }
 
 .home-dot {
-    background: #FFB03D;
+
+    background: #ffb238;
 }
 
 .bill-dot {
-    background: #E86654;
+
+    background: #ff6f61;
 }
 
 .other-dot {
-    background: #B9A995;
+
+    background: #61736b;
 }
 
 
@@ -1111,39 +1303,47 @@ svg {
    ========================================================= */
 
 .ai-card {
+
     position: relative;
 
     padding: 20px;
 
     overflow: hidden;
 
-    border: 1px solid #D8CDBF;
+    border:
+        1px solid rgba(255,255,255,.08);
+
     border-radius: 20px;
 
     background:
+
         radial-gradient(
             circle at 100% 0%,
-            rgba(255,122,24,.13),
+            rgba(255,122,24,.11),
             transparent 35%
         ),
+
         linear-gradient(
             145deg,
-            #FFF8EC,
-            #F8ECDD
+            #17251f,
+            #101914
         );
 
-    color: var(--text);
+    color: white;
 
-    box-shadow: var(--shadow-card);
+    box-shadow: var(--shadow);
 }
 
 .ai-header {
+
     display: flex;
     align-items: center;
+
     justify-content: space-between;
 }
 
 .ai-brand {
+
     display: flex;
     align-items: center;
 
@@ -1151,16 +1351,18 @@ svg {
 }
 
 .ai-icon {
+
     width: 38px;
     height: 38px;
 
     border-radius: 12px;
 
     background:
+
         linear-gradient(
             145deg,
-            #0B9565,
-            #08704F
+            #0da16c,
+            #08724f
         );
 
     color: white;
@@ -1169,57 +1371,65 @@ svg {
     place-items: center;
 
     box-shadow:
-        0 8px 20px rgba(8,112,79,.20);
+        0 8px 20px rgba(9,145,96,.22);
 }
 
 .ai-icon svg {
+
     width: 17px;
     height: 17px;
 }
 
 .ai-brand strong {
-    color: var(--green-950);
+
+    color: white;
 
     font-size: 11px;
 }
 
 .ai-brand span {
+
     display: block;
 
     margin-top: 3px;
 
-    color: var(--muted);
+    color: #788b82;
 
     font-size: 7px;
 }
 
 .ai-premium {
+
     padding: 4px 7px;
 
     border-radius: 7px;
 
-    background: #FFE5CC;
+    background:
+        rgba(255,122,24,.15);
 
-    color: #E25F08;
+    color: #ff9747;
 
     font-size: 6px;
     font-weight: 800;
 }
 
 .ai-content {
+
     margin-top: 20px;
 }
 
 .ai-small {
-    color: var(--muted);
+
+    color: #74867e;
 
     font-size: 6px;
 }
 
 .ai-content h3 {
+
     margin: 6px 0 13px;
 
-    color: var(--green-950);
+    color: white;
 
     font-size: 13px;
 
@@ -1227,56 +1437,75 @@ svg {
 }
 
 .ai-suggestions {
+
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 5px;
 }
 
 .ai-suggestions button {
+
     padding: 6px 8px;
 
-    border: 1px solid #E4D6C5;
+    border:
+        1px solid rgba(255,255,255,.08);
+
     border-radius: 20px;
 
-    background: rgba(255,255,255,.72);
+    background:
+        rgba(255,255,255,.04);
 
-    color: var(--green-800);
+    color: #c1d0ca;
 
     font-size: 7px;
 }
 
 .ai-input {
+
     margin-top: 15px;
 
-    padding: 7px 7px 7px 10px;
+    padding:
+        7px
+        7px
+        7px
+        10px;
 
-    border: 1px solid #E3D5C4;
+    border:
+        1px solid rgba(255,255,255,.08);
+
     border-radius: 11px;
 
-    background: rgba(255,255,255,.82);
+    background:
+        rgba(255,255,255,.04);
 
-    color: #8B978F;
+    color: #71837b;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     font-size: 7px;
 }
 
 .ai-input button {
+
     width: 30px;
     height: 30px;
 
     border: 0;
+
     border-radius: 9px;
 
     background:
+
         linear-gradient(
             145deg,
-            #FF922E,
-            #FF6C0D
+            #ff9239,
+            #ff6b0b
         );
 
     color: white;
@@ -1291,17 +1520,21 @@ svg {
    ========================================================= */
 
 .transactions-panel {
+
     padding-bottom: 8px;
 }
 
 .transaction-list {
+
     margin-top: 9px;
 }
 
 .transaction-item {
+
     min-height: 56px;
 
-    border-bottom: 1px solid #EAE1D7;
+    border-bottom:
+        1px solid rgba(255,255,255,.07);
 
     display: grid;
 
@@ -1316,10 +1549,12 @@ svg {
 }
 
 .transaction-item:last-child {
+
     border-bottom: 0;
 }
 
 .transaction-icon {
+
     width: 35px;
     height: 35px;
 
@@ -1330,81 +1565,100 @@ svg {
 }
 
 .transaction-icon svg {
+
     width: 15px;
     height: 15px;
 }
 
 .supermarket {
-    background: #FFE8D3;
 
-    color: #F17416;
+    background:
+        rgba(255,122,24,.14);
+
+    color: #ff923d;
 }
 
 .salary-icon {
-    background: #DCF7E9;
 
-    color: #0D9B67;
+    background:
+        rgba(25,179,117,.14);
+
+    color: #41d99c;
 }
 
 .gas-icon {
-    background: #FFF0D1;
 
-    color: #E79412;
+    background:
+        rgba(255,178,56,.14);
+
+    color: #ffb238;
 }
 
 .internet-icon {
-    background: #F5E8E2;
 
-    color: #D86554;
+    background:
+        rgba(255,111,97,.13);
+
+    color: #ff776a;
 }
 
 .transaction-description {
+
     min-width: 0;
 
     display: flex;
+
     flex-direction: column;
 
     gap: 3px;
 }
 
 .transaction-description strong {
-    color: var(--text);
+
+    color: #edf4f1;
 
     font-size: 8px;
 }
 
 .transaction-description span {
+
     overflow: hidden;
 
-    color: var(--muted);
+    color: #71837b;
 
     font-size: 7px;
 
     text-overflow: ellipsis;
+
     white-space: nowrap;
 }
 
 .transaction-value {
+
     font-size: 8px;
+
     font-weight: 650;
 
     white-space: nowrap;
 }
 
 .expense-value {
-    color: var(--negative);
+
+    color: #ff7568;
 }
 
 .income-value {
-    color: var(--positive);
+
+    color: #39d596;
 }
 
 
 /* =========================================================
-   META
+   METAS
    ========================================================= */
 
 .goal-visual {
+
     position: relative;
 
     height: 74px;
@@ -1413,18 +1667,22 @@ svg {
 
     overflow: hidden;
 
-    border: 1px solid #E6D9C9;
+    border:
+        1px solid rgba(255,255,255,.07);
+
     border-radius: 14px;
 
     background:
+
         linear-gradient(
             130deg,
-            #FFF1DF,
-            #FFF9F0
+            #182720,
+            #111b17
         );
 }
 
 .goal-icon {
+
     position: absolute;
 
     top: 50%;
@@ -1435,75 +1693,91 @@ svg {
 
     border-radius: 50%;
 
-    background: #FFE0C1;
+    background:
+        rgba(255,122,24,.15);
 
-    color: #F17114;
+    color: #ff923d;
 
     display: grid;
     place-items: center;
 
-    transform: translate(-50%,-50%);
+    transform:
+        translate(-50%,-50%);
 }
 
 .goal-icon svg {
+
     width: 18px;
     height: 18px;
 }
 
 .goal-title {
+
     display: flex;
+
     align-items: flex-end;
+
     justify-content: space-between;
 }
 
 .goal-title > div {
+
     display: flex;
+
     flex-direction: column;
 }
 
 .goal-title span {
-    color: var(--muted);
+
+    color: #71837b;
 
     font-size: 6px;
     font-weight: 700;
 }
 
 .goal-title h4 {
+
     margin-top: 3px;
 
-    color: var(--text);
+    color: white;
 
     font-size: 11px;
 }
 
 .goal-title > strong {
-    color: var(--green-700);
+
+    color: #39d596;
 
     font-size: 11px;
 }
 
 .goal-money {
+
     margin-top: 10px;
 
     display: flex;
+
     align-items: center;
 
     gap: 5px;
 }
 
 .goal-money strong {
-    color: var(--text);
+
+    color: white;
 
     font-size: 9px;
 }
 
 .goal-money span {
-    color: var(--muted);
+
+    color: #71837b;
 
     font-size: 7px;
 }
 
 .goal-progress {
+
     height: 6px;
 
     margin: 9px 0;
@@ -1512,27 +1786,31 @@ svg {
 
     border-radius: 10px;
 
-    background: #E8DDD0;
+    background: #26342e;
 }
 
 .goal-progress div {
+
     width: 56%;
     height: 100%;
 
     border-radius: inherit;
 
     background:
+
         linear-gradient(
             90deg,
-            #FF7A18,
-            #FFB13D
+            #ff7413,
+            #ffad35
         );
 }
 
 .goal-footer {
-    color: var(--muted);
+
+    color: #71837b;
 
     display: flex;
+
     align-items: center;
 
     gap: 4px;
@@ -1542,10 +1820,11 @@ svg {
 
 
 /* =========================================================
-   MOBILE NAV
+   NAVEGAÇÃO MOBILE
    ========================================================= */
 
 .mobile-navigation {
+
     display: none;
 }
 
@@ -1557,19 +1836,24 @@ svg {
 @media (max-width: 1050px) {
 
     .sidebar {
+
         width: 220px;
     }
 
     .main-content {
-        width: calc(100% - 220px);
+
+        width:
+            calc(100% - 220px);
 
         margin-left: 220px;
 
         padding-left: 25px;
+
         padding-right: 25px;
     }
 
     .dashboard-grid {
+
         grid-template-columns: 1fr;
     }
 }
@@ -1581,170 +1865,243 @@ svg {
 
 @media (max-width: 760px) {
 
+
     html,
     body {
+
         width: 100%;
 
         overflow-x: hidden;
 
-        background: #F2E9DE !important;
+        background:
+            #080d0b
+            !important;
     }
+
 
     .sidebar {
-        display: none !important;
+
+        display:
+            none
+            !important;
     }
 
 
-    /* FUNDO */
+    /* =====================================================
+       FUNDO PRETO
+       ===================================================== */
 
     .main-content {
-        width: 100% !important;
 
-        min-height: 100vh;
+        width:
+            100%
+            !important;
 
-        margin: 0 !important;
+        min-height:
+            100vh;
+
+        margin:
+            0
+            !important;
 
         padding:
             24px
             16px
-            105px !important;
+            105px
+            !important;
 
         background:
+
             radial-gradient(
-                circle at 100% 0%,
-                rgba(255,122,24,.12),
-                transparent 27%
-            ),
-            radial-gradient(
-                circle at 0% 40%,
-                rgba(12,156,104,.08),
+                circle at 90% 3%,
+                rgba(14,170,109,.16),
                 transparent 30%
             ),
+
+            radial-gradient(
+                circle at 0% 65%,
+                rgba(255,122,24,.06),
+                transparent 30%
+            ),
+
             linear-gradient(
                 180deg,
-                #F8F1E8 0%,
-                #F0E6DA 100%
-            ) !important;
+                #101713 0%,
+                #080d0b 100%
+            )
+
+            !important;
     }
 
 
-    /* HEADER */
+    /* =====================================================
+       HEADER
+       ===================================================== */
 
     .header {
+
         margin-bottom: 22px;
 
         gap: 12px;
     }
 
     .header-date {
+
         display: none;
     }
 
     .header h1 {
-        margin: 0 0 5px;
 
-        color: #073D2D;
+        margin:
+            0
+            0
+            5px;
+
+        color:
+            #ffffff
+            !important;
 
         font-size: 27px;
+
         font-weight: 800;
 
         letter-spacing: -1.3px;
     }
 
     .header p {
+
         max-width: 290px;
 
-        color: #63776E;
+        color:
+            #9baaa3
+            !important;
 
         font-size: 10px;
 
         line-height: 1.4;
     }
 
-    .header-actions {
-        display: none !important;
-    }
-
 
     /*
-       REMOVE O BOTÃO + SUPERIOR NO CELULAR
-       O BOTÃO CENTRAL INFERIOR CONTINUA.
+       IMPORTANTE:
+       REMOVE O + DO TOPO
     */
 
+    .header-actions {
+
+        display:
+            none
+            !important;
+    }
+
     .new-transaction {
-        display: none !important;
+
+        display:
+            none
+            !important;
     }
 
 
     /* =====================================================
-       SALDO MOBILE
+       CARD SALDO
        ===================================================== */
 
     .balance-card {
+
         min-height: 225px;
 
-        padding: 28px 22px;
+        padding:
+            28px
+            22px;
 
-        border: 1px solid rgba(255,255,255,.18);
-        border-radius: 24px;
+        border:
+            1px solid
+            rgba(255,255,255,.13);
+
+        border-radius: 25px;
 
         background:
+
             radial-gradient(
                 circle at 92% 8%,
-                rgba(57,213,147,.34),
+                rgba(57,220,149,.32),
                 transparent 40%
             ),
+
             radial-gradient(
                 circle at 5% 100%,
-                rgba(255,127,28,.12),
-                transparent 36%
+                rgba(255,122,24,.10),
+                transparent 38%
             ),
+
             linear-gradient(
                 135deg,
-                #07503A 0%,
-                #087653 50%,
-                #0A9565 100%
-            ) !important;
+                #07523b 0%,
+                #087a55 50%,
+                #0ca16c 100%
+            )
+
+            !important;
 
         box-shadow:
-            0 18px 40px rgba(7,80,58,.21);
+            0 20px 45px
+            rgba(0,0,0,.30);
+    }
+
+    .balance-title {
+
+        color: #c8ded5;
     }
 
     .balance-card h2 {
-        margin: 13px 0 15px;
+
+        margin:
+            13px
+            0
+            15px;
 
         font-size: 32px;
+
         font-weight: 800;
     }
 
     .month-selector {
+
         top: 20px;
+
         right: 18px;
 
         height: 40px;
 
         border-radius: 12px;
 
-        background: rgba(255,255,255,.10);
+        background:
+            rgba(255,255,255,.10);
     }
 
     .balance-change {
+
         max-width: 170px;
 
         margin-top: 3px;
 
         display: flex;
+
         flex-direction: column;
+
         align-items: flex-start;
 
         gap: 8px;
     }
 
     .balance-chart {
+
         right: -2%;
+
         bottom: 18px;
 
         width: 54%;
+
         height: 92px;
 
         opacity: .90;
@@ -1756,69 +2113,94 @@ svg {
        ===================================================== */
 
     .summary-grid {
+
         margin: 13px 0;
 
         grid-template-columns:
-            repeat(2,minmax(0,1fr));
+            repeat(
+                2,
+                minmax(0,1fr)
+            );
 
         gap: 10px;
     }
 
     .summary-card {
+
         min-height: 104px;
 
-        padding: 14px 12px;
+        padding:
+            14px
+            12px;
 
-        border: 1px solid #E4D9CC;
+        border:
+            1px solid
+            rgba(255,255,255,.08);
+
         border-radius: 20px;
 
         background:
+
             linear-gradient(
                 145deg,
-                #FFFDF9,
-                #FFF4E7
-            ) !important;
+                #16231e,
+                #101a16
+            )
+
+            !important;
 
         gap: 10px;
 
         box-shadow:
-            0 10px 27px rgba(82,55,27,.09);
+            0 12px 28px
+            rgba(0,0,0,.25);
     }
 
     .summary-card:nth-child(3) {
-        grid-column: 1 / -1;
+
+        grid-column:
+            1 / -1;
 
         min-height: 88px;
     }
 
     .summary-icon {
-        flex: 0 0 43px;
+
+        flex:
+            0 0 43px;
 
         width: 43px;
+
         height: 43px;
 
         border-radius: 14px;
     }
 
     .summary-content > span {
-        color: #71837B;
+
+        color: #83958d;
 
         font-size: 8px;
     }
 
     .summary-content > strong {
+
         margin: 4px 0;
 
-        color: #17362C;
+        color:
+            #f4f8f6
+            !important;
 
         font-size: 14px;
     }
 
     .summary-content small {
+
         font-size: 7px;
     }
 
     .card-more {
+
         display: none;
     }
 
@@ -1828,6 +2210,7 @@ svg {
        ===================================================== */
 
     .dashboard-grid {
+
         grid-template-columns: 1fr;
 
         gap: 11px;
@@ -1835,35 +2218,47 @@ svg {
 
     .panel,
     .ai-card {
+
         padding: 18px;
 
         border-radius: 20px;
     }
 
     .panel {
-        border: 1px solid #E4D9CC;
+
+        border:
+            1px solid
+            rgba(255,255,255,.08);
 
         background:
+
             linear-gradient(
                 145deg,
-                #FFFDF9,
-                #FFF4E7
-            ) !important;
+                #16231e,
+                #101a16
+            )
+
+            !important;
 
         box-shadow:
-            0 10px 27px rgba(82,55,27,.09);
+            0 12px 28px
+            rgba(0,0,0,.25);
     }
 
     .panel-header h3 {
-        color: #17362C;
+
+        color:
+            #ffffff
+            !important;
 
         font-size: 13px;
     }
 
     .panel-header p {
+
         margin-top: 3px;
 
-        color: #84938D;
+        color: #7b8d85;
 
         font-size: 8px;
     }
@@ -1874,30 +2269,38 @@ svg {
        ===================================================== */
 
     .spending-body {
+
         margin-top: 22px;
 
         gap: 22px;
     }
 
     .donut-chart {
-        flex: 0 0 118px;
+
+        flex:
+            0 0 118px;
 
         width: 118px;
+
         height: 118px;
     }
 
     .donut-chart::before {
+
         width: 76px;
+
         height: 76px;
 
-        background: #FFF8EF;
+        background: #121d19;
     }
 
     .donut-inner strong {
+
         font-size: 12px;
     }
 
     .categories-list {
+
         gap: 10px;
     }
 
@@ -1907,25 +2310,34 @@ svg {
        ===================================================== */
 
     .ai-card {
-        border: 1px solid #E0CFBC;
+
+        border:
+            1px solid
+            rgba(255,255,255,.08);
 
         background:
+
             radial-gradient(
                 circle at 100% 0%,
-                rgba(255,122,24,.14),
+                rgba(255,122,24,.11),
                 transparent 35%
             ),
+
             linear-gradient(
                 145deg,
-                #FFF7EA,
-                #F7E8D6
-            ) !important;
+                #17251f,
+                #101914
+            )
+
+            !important;
 
         box-shadow:
-            0 10px 27px rgba(82,55,27,.09);
+            0 12px 28px
+            rgba(0,0,0,.25);
     }
 
     .ai-content h3 {
+
         max-width: 240px;
 
         font-size: 14px;
@@ -1937,6 +2349,7 @@ svg {
        ===================================================== */
 
     .transaction-item {
+
         min-height: 58px;
     }
 
@@ -1946,6 +2359,7 @@ svg {
        ===================================================== */
 
     .mobile-navigation {
+
         position: fixed;
 
         left: 0;
@@ -1961,80 +2375,112 @@ svg {
             8px
             10px;
 
-        border-top: 1px solid #E6DCCF;
+        border-top:
+            1px solid
+            rgba(255,255,255,.08);
 
         background:
-            rgba(255,250,244,.97) !important;
+            rgba(12,19,16,.96)
+            !important;
 
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter:
+            blur(20px);
 
-        display: flex !important;
+        -webkit-backdrop-filter:
+            blur(20px);
+
+        display:
+            flex
+            !important;
+
         align-items: center;
-        justify-content: space-around;
+
+        justify-content:
+            space-around;
 
         box-shadow:
-            0 -10px 30px rgba(82,55,27,.09);
+            0 -10px 30px
+            rgba(0,0,0,.25);
     }
 
     .mobile-navigation a {
+
         min-width: 52px;
 
-        color: #84948D;
+        color: #71837b;
 
         display: flex;
+
         flex-direction: column;
+
         align-items: center;
 
         gap: 5px;
 
         font-size: 7px;
+
         font-weight: 500;
     }
 
     .mobile-navigation a svg {
+
         width: 20px;
+
         height: 20px;
 
         stroke-width: 1.8;
     }
 
     .mobile-navigation a.active {
-        color: #087653;
+
+        color: #43d99c;
     }
 
 
-    /* BOTÃO + CENTRAL */
+    /* =====================================================
+       + CENTRAL LARANJA
+       ===================================================== */
 
     .mobile-add {
+
         width: 58px;
+
         height: 58px;
 
         margin-top: -32px;
 
         padding: 0;
 
-        border: 4px solid #FFF8EF;
+        border:
+            4px solid
+            #111a16;
+
         border-radius: 50%;
 
         background:
+
             linear-gradient(
                 145deg,
-                #FF9A37,
-                #FF6E0F
+                #ff993f,
+                #ff6b0b
             );
 
         color: white;
 
         display: grid;
+
         place-items: center;
 
         box-shadow:
-            0 12px 30px rgba(255,111,15,.34);
+
+            0 12px 32px
+            rgba(255,111,15,.38);
     }
 
     .mobile-add svg {
+
         width: 23px;
+
         height: 23px;
     }
 }
@@ -2047,75 +2493,101 @@ svg {
 @media (max-width: 480px) {
 
     .main-content {
-        padding-left: 14px !important;
-        padding-right: 14px !important;
+
+        padding-left:
+            14px
+            !important;
+
+        padding-right:
+            14px
+            !important;
     }
 
     .header h1 {
+
         font-size: 26px;
     }
 
     .header p {
+
         max-width: 280px;
     }
 
     .balance-card {
+
         min-height: 220px;
 
-        padding: 26px 20px;
+        padding:
+            26px
+            20px;
     }
 
     .balance-card h2 {
+
         font-size: 30px;
     }
 
     .month-selector {
+
         right: 15px;
     }
 
     .balance-chart {
+
         width: 54%;
     }
 
     .summary-card {
-        padding: 13px 10px;
+
+        padding:
+            13px
+            10px;
     }
 
     .summary-icon {
-        flex: 0 0 40px;
+
+        flex:
+            0 0 40px;
 
         width: 40px;
+
         height: 40px;
     }
 
     .summary-content > strong {
+
         font-size: 13px;
     }
 
     .spending-body {
+
         flex-direction: column;
 
         align-items: stretch;
     }
 
     .donut-chart {
-        margin: 0 auto;
+
+        margin:
+            0 auto;
     }
 
     .categories-list {
+
         margin-top: 5px;
     }
 }
 
 
 /* =========================================================
-   CORREÇÕES
+   CORREÇÕES FINAIS
    ========================================================= */
 
 .more-button,
 .card-more,
 .balance-title button,
 .text-button {
+
     border: 0;
 }
 
@@ -2125,87 +2597,87 @@ svg {
    ========================================================= */
 
 ::-webkit-scrollbar {
+
     width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #F2E9DE;
+
+    background: #080d0b;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #BFAF9D;
+
+    background: #28453a;
 
     border-radius: 20px;
 }
-/* TESTE — FUNDO PRETO PREMIUM */
+
+
+/* =========================================================
+   FORÇA O TEMA ESCURO
+   Evita que regras antigas deixem o fundo creme
+   ========================================================= */
 
 html,
 body {
-    background: #090D0B !important;
+
+    background-color:
+        #080d0b
+        !important;
 }
-
-.main-content {
-    background:
-        radial-gradient(
-            circle at 85% 5%,
-            rgba(16, 145, 96, 0.16),
-            transparent 32%
-        ),
-        radial-gradient(
-            circle at 10% 70%,
-            rgba(255, 122, 24, 0.07),
-            transparent 30%
-        ),
-        linear-gradient(
-            180deg,
-            #101713 0%,
-            #090D0B 100%
-        ) !important;
-}
-
-/* Textos do topo para aparecerem no fundo preto */
-
-.header h1 {
-    color: #FFFFFF !important;
-}
-
-.header p {
-    color: #AAB8B1 !important;
-}
-
-/* MOBILE */
 
 @media (max-width: 760px) {
 
     html,
     body {
-        background: #090D0B !important;
+
+        background-color:
+            #080d0b
+            !important;
+
+        background-image:
+            none
+            !important;
     }
 
     .main-content {
+
         background:
+
             radial-gradient(
                 circle at 90% 3%,
-                rgba(20, 166, 109, 0.17),
+                rgba(14,170,109,.16),
                 transparent 30%
             ),
+
             radial-gradient(
                 circle at 0% 65%,
-                rgba(255, 122, 24, 0.07),
-                transparent 28%
+                rgba(255,122,24,.06),
+                transparent 30%
             ),
+
             linear-gradient(
                 180deg,
-                #111914 0%,
-                #090D0B 100%
-            ) !important;
+                #101713 0%,
+                #080d0b 100%
+            )
+
+            !important;
     }
 
-    .header h1 {
-        color: #FFFFFF !important;
-    }
 
-    .header p {
-        color: #9EADA6 !important;
+    /*
+       GARANTE QUE O BOTÃO +
+       SUPERIOR NÃO APAREÇA
+    */
+
+    .header-actions,
+    .header .new-transaction,
+    .header-actions .new-transaction {
+
+        display:
+            none
+            !important;
     }
 }
