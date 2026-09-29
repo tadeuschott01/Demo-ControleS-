@@ -1859,3 +1859,267 @@ svg {
     max-width: 220px;
   }
 }
+
+/* =========================================================
+   CONTROLES — DARK PREMIUM
+   Cole no FINAL do style.css
+   ========================================================= */
+
+:root {
+    --bg: #071a15;
+    --card: #0d251e;
+    --text: #f1f6f3;
+    --text-soft: #b0c1ba;
+    --muted: #7f9990;
+    --border: #18372d;
+}
+
+/* FUNDO GERAL */
+
+body,
+.main-content {
+    background: #071a15;
+    color: #f1f6f3;
+}
+
+
+/* CABEÇALHO */
+
+.header h1 {
+    color: #f5f8f6;
+}
+
+.header p,
+.header-date {
+    color: #829a91;
+}
+
+
+/* BOTÕES DO TOPO */
+
+.header-icon-button {
+    background: #102b23;
+    border-color: #1b4034;
+    color: #d9e7e1;
+}
+
+.new-transaction {
+    background: #0b513b;
+    color: #ffffff;
+}
+
+
+/* CARDS DE RECEITA / DESPESA / A RECEBER */
+
+.summary-card {
+    background:
+        linear-gradient(
+            145deg,
+            #102b23,
+            #0b221b
+        );
+
+    border-color: #193c31;
+
+    color: #f1f6f3;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, .15);
+}
+
+.summary-content > span {
+    color: #8fa79e;
+}
+
+.summary-content > strong {
+    color: #f4f8f6;
+}
+
+.card-more {
+    color: #78958a;
+}
+
+
+/* ÍCONES DOS CARDS */
+
+.income-icon {
+    background: rgba(29, 184, 107, .12);
+    color: #45d991;
+}
+
+.expense-icon {
+    background: rgba(229, 87, 74, .12);
+    color: #ef786d;
+}
+
+.receive-icon {
+    background: rgba(244, 123, 32, .13);
+    color: #ff9a50;
+}
+
+
+/* PAINÉIS */
+
+.panel {
+    background:
+        linear-gradient(
+            145deg,
+            #102b23,
+            #0b211a
+        );
+
+    border-color: #193a30;
+
+    color: #f1f6f3;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, .13);
+}
+
+.panel-header h3 {
+    color: #f1f6f3;
+}
+
+.panel-header p {
+    color: #7f998f;
+}
+
+.text-button {
+    color: #50ce98;
+}
+
+
+/* GRÁFICO DE GASTOS */
+
+.donut-chart::before {
+    background: #0d251e;
+}
+
+.donut-inner strong {
+    color: #f2f7f4;
+}
+
+.donut-inner span {
+    color: #7f9990;
+}
+
+.category-name {
+    color: #b6c8c1;
+}
+
+.category-row strong {
+    color: #edf4f1;
+}
+
+.category-row > span {
+    color: #718c82;
+}
+
+
+/* LANÇAMENTOS */
+
+.transaction-item {
+    border-bottom-color: #19372e;
+}
+
+.transaction-description strong {
+    color: #edf4f1;
+}
+
+.transaction-description span {
+    color: #789087;
+}
+
+.supermarket {
+    background: rgba(244, 123, 32, .12);
+}
+
+.salary-icon {
+    background: rgba(19, 168, 100, .12);
+}
+
+.gas-icon {
+    background: rgba(41, 149, 201, .12);
+}
+
+.internet-icon {
+    background: rgba(110, 88, 199, .15);
+}
+
+
+/* META */
+
+.goal-visual {
+    background:
+        linear-gradient(
+            135deg,
+            #12382c,
+            #0b261e
+        );
+}
+
+.goal-icon {
+    background: #173d31;
+    color: #5cdaa3;
+}
+
+.goal-title h4,
+.goal-money strong {
+    color: #f1f6f3;
+}
+
+.goal-title span,
+.goal-money span,
+.goal-footer {
+    color: #789087;
+}
+
+.goal-progress {
+    background: #18372d;
+}
+
+
+/* MENU INFERIOR DO CELULAR */
+
+.mobile-navigation {
+    background:
+        rgba(7, 26, 21, .97);
+
+    border-top-color: #19372e;
+
+    box-shadow:
+        0 -10px 30px
+        rgba(0, 0, 0, .18);
+}
+
+.mobile-navigation a {
+    color: #789087;
+}
+
+.mobile-navigation a.active {
+    color: #55d79f;
+}
+
+.mobile-add {
+    border-color: #071a15;
+
+    background: #f47b20;
+}
+
+
+/* SCROLL */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #071a15;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1c4436;
+    border-radius: 10px;
+}
