@@ -2493,3 +2493,371 @@ svg {
         height: 59px;
     }
 }
+/* =========================================================
+   CONTROLES — TODOS OS CARDS BRANCOS
+   Cole no FINAL do style.css
+   ========================================================= */
+
+
+/* CARDS DE RESUMO */
+
+.summary-card,
+.summary-card:nth-child(1),
+.summary-card:nth-child(2),
+.summary-card:nth-child(3) {
+    background: linear-gradient(
+        145deg,
+        #ffffff 0%,
+        #f3f7f5 100%
+    ) !important;
+
+    border: 1px solid rgba(8, 90, 63, .10) !important;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.22) !important;
+}
+
+
+/* TEXTOS DOS CARDS DE RESUMO */
+
+.summary-card .summary-content > span {
+    color: #697a72 !important;
+}
+
+.summary-card .summary-content > strong {
+    color: #10231b !important;
+}
+
+.summary-card .summary-content small {
+    color: #75867e !important;
+}
+
+.summary-card .positive-text {
+    color: #07865b !important;
+}
+
+.summary-card .negative-text {
+    color: #e75f54 !important;
+}
+
+.summary-card .card-more {
+    color: #7a8b83 !important;
+}
+
+
+/* =========================================================
+   TODOS OS PAINÉIS GRANDES BRANCOS
+   ========================================================= */
+
+.panel,
+.spending-panel,
+.transactions-panel,
+.goal-panel {
+    background: linear-gradient(
+        145deg,
+        #ffffff 0%,
+        #f1f6f3 100%
+    ) !important;
+
+    border: 1px solid rgba(8, 90, 63, .10) !important;
+
+    box-shadow:
+        0 16px 38px rgba(0,0,0,.23) !important;
+}
+
+
+/* TÍTULOS */
+
+.panel .panel-header h3 {
+    color: #10231b !important;
+}
+
+.panel .panel-header p {
+    color: #718078 !important;
+}
+
+.panel .text-button {
+    color: #087e58 !important;
+}
+
+
+/* =========================================================
+   GASTOS DO MÊS
+   ========================================================= */
+
+.spending-panel {
+    color: #10231b !important;
+}
+
+.donut-chart {
+    box-shadow:
+        0 10px 25px rgba(16,35,27,.12) !important;
+}
+
+.donut-chart::before {
+    background: #ffffff !important;
+}
+
+.donut-inner strong {
+    color: #10231b !important;
+}
+
+.donut-inner span {
+    color: #718078 !important;
+}
+
+.category-name {
+    color: #53675e !important;
+}
+
+.category-row strong {
+    color: #10231b !important;
+}
+
+.category-row > span {
+    color: #718078 !important;
+}
+
+
+/* =========================================================
+   CONTROLES IA — BRANCO
+   ========================================================= */
+
+.ai-card {
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(255,120,23,.08),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 0% 100%,
+            rgba(8,134,91,.08),
+            transparent 40%
+        ),
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #edf5f1 100%
+        ) !important;
+
+    border: 1px solid rgba(8,134,91,.12) !important;
+
+    box-shadow:
+        0 16px 38px rgba(0,0,0,.23) !important;
+
+    color: #10231b !important;
+}
+
+
+/* IA — TEXTOS */
+
+.ai-brand strong {
+    color: #10231b !important;
+}
+
+.ai-brand span {
+    color: #718078 !important;
+}
+
+.ai-small {
+    color: #087e58 !important;
+}
+
+.ai-content h3 {
+    color: #10231b !important;
+}
+
+
+/* BOTÕES DE SUGESTÃO IA */
+
+.ai-suggestions button {
+    background: #ffffff !important;
+
+    border: 1px solid rgba(8,90,63,.12) !important;
+
+    color: #40564c !important;
+
+    box-shadow:
+        0 5px 15px rgba(15,60,43,.05);
+}
+
+.ai-suggestions button svg {
+    color: #07865b !important;
+}
+
+
+/* INPUT IA */
+
+.ai-input {
+    background: #ffffff !important;
+
+    border: 1px solid rgba(8,90,63,.13) !important;
+
+    color: #718078 !important;
+
+    box-shadow:
+        inset 0 1px 3px rgba(0,0,0,.03);
+}
+
+.ai-input > div > svg {
+    color: #07865b !important;
+}
+
+
+/* =========================================================
+   ÚLTIMOS LANÇAMENTOS
+   ========================================================= */
+
+.transactions-panel {
+    color: #10231b !important;
+}
+
+.transactions-panel .transaction-item {
+    border-bottom:
+        1px solid rgba(16,35,27,.08) !important;
+}
+
+.transactions-panel .transaction-description strong {
+    color: #10231b !important;
+}
+
+.transactions-panel .transaction-description span {
+    color: #718078 !important;
+}
+
+
+/* =========================================================
+   META
+   ========================================================= */
+
+.goal-panel {
+    color: #10231b !important;
+}
+
+.goal-visual {
+    background:
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(255,120,23,.10),
+            transparent 50%
+        ),
+        linear-gradient(
+            145deg,
+            #f7faf8,
+            #e8f1ed
+        ) !important;
+
+    border:
+        1px solid rgba(8,90,63,.08) !important;
+}
+
+.goal-title span {
+    color: #718078 !important;
+}
+
+.goal-title h4 {
+    color: #10231b !important;
+}
+
+.goal-title > strong {
+    color: #07865b !important;
+}
+
+.goal-money strong {
+    color: #10231b !important;
+}
+
+.goal-money span {
+    color: #718078 !important;
+}
+
+.goal-progress {
+    background: #dce7e2 !important;
+}
+
+.goal-footer {
+    color: #718078 !important;
+}
+
+
+/* =========================================================
+   ÍCONES DOS CARDS
+   ========================================================= */
+
+.income-icon {
+    color: #087e58 !important;
+
+    background: #dcf4e9 !important;
+}
+
+.expense-icon {
+    color: #e85f55 !important;
+
+    background: #ffe7e4 !important;
+}
+
+.receive-icon {
+    color: #ef710e !important;
+
+    background: #ffead8 !important;
+}
+
+
+/* =========================================================
+   LANÇAMENTOS — ÍCONES
+   ========================================================= */
+
+.supermarket {
+    color: #ef710e !important;
+    background: #fff0e3 !important;
+}
+
+.salary-icon {
+    color: #07865b !important;
+    background: #dcf4e9 !important;
+}
+
+.gas-icon {
+    color: #c9820b !important;
+    background: #fff3d8 !important;
+}
+
+.internet-icon {
+    color: #e25c52 !important;
+    background: #ffe8e5 !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .summary-card,
+    .summary-card:nth-child(1),
+    .summary-card:nth-child(2),
+    .summary-card:nth-child(3),
+    .panel,
+    .spending-panel,
+    .transactions-panel,
+    .goal-panel,
+    .ai-card {
+
+        background:
+            linear-gradient(
+                145deg,
+                #ffffff 0%,
+                #f1f6f3 100%
+            ) !important;
+
+        border:
+            1px solid
+            rgba(8,90,63,.10) !important;
+
+        box-shadow:
+            0 14px 32px
+            rgba(0,0,0,.25) !important;
+    }
+}
