@@ -1,6 +1,6 @@
 /* =========================================================
-   CONTROLES — PREMIUM GREEN
-   Verde sofisticado + verde-gelo + laranja
+   CONTROLES — WARM PREMIUM
+   Verde esmeralda + laranja quente + fundo creme
    ========================================================= */
 
 * {
@@ -10,37 +10,41 @@
 }
 
 :root {
-    --bg: #dceae4;
-    --bg-soft: #e9f2ee;
+    --bg: #F4EEE4;
+    --bg-2: #EFE5D8;
 
-    --card: #f6faf8;
-    --card-soft: #e8f2ed;
+    --surface: #FFFDF9;
+    --surface-2: #FFF8EF;
 
-    --green-950: #082f25;
-    --green-900: #0c4031;
-    --green-800: #11523e;
-    --green-700: #17664d;
-    --green-600: #1e7b5b;
-    --green-500: #29936d;
-    --green-400: #52ad88;
-    --green-light: #8acbb0;
+    --green-950: #073D2D;
+    --green-900: #07503A;
+    --green-800: #086246;
+    --green-700: #087653;
+    --green-600: #0B8B60;
+    --green-500: #19A36F;
+    --green-light: #55D29A;
 
-    --orange: #f47b20;
-    --orange-dark: #dc650d;
-    --orange-light: #ff9c4d;
-    --orange-soft: #fff0e3;
+    --orange: #FF7A18;
+    --orange-2: #FF922E;
+    --orange-dark: #E95D08;
+    --orange-soft: #FFF0DF;
 
-    --text: #102a21;
-    --text-secondary: #506a60;
-    --muted: #82978e;
+    --coral: #E86654;
 
-    --border: #c8ddd4;
+    --text: #17362C;
+    --text-secondary: #61766D;
+    --muted: #8C9B94;
 
-    --positive: #218b62;
-    --negative: #d96b60;
+    --border: #E5DDD2;
 
-    --shadow: 0 12px 32px rgba(10, 57, 43, .09);
-    --shadow-strong: 0 20px 45px rgba(10, 57, 43, .15);
+    --positive: #0D9B67;
+    --negative: #DF6656;
+
+    --shadow:
+        0 10px 28px rgba(75, 58, 37, .08);
+
+    --shadow-card:
+        0 14px 35px rgba(57, 46, 31, .10);
 }
 
 
@@ -57,18 +61,24 @@ html {
 body {
     width: 100%;
     min-height: 100vh;
+
     overflow-x: hidden;
 
     background:
         radial-gradient(
-            circle at 90% 0%,
-            rgba(41, 147, 109, .13),
-            transparent 32%
+            circle at 100% 0%,
+            rgba(255, 137, 40, .10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 0% 35%,
+            rgba(19, 157, 105, .08),
+            transparent 30%
         ),
         linear-gradient(
             180deg,
-            #eaf3ef 0%,
-            #d8e8e1 100%
+            #F8F2E9 0%,
+            #F0E7DC 100%
         );
 
     color: var(--text);
@@ -91,6 +101,7 @@ select {
 
 button {
     cursor: pointer;
+
     appearance: none;
     -webkit-appearance: none;
 }
@@ -111,6 +122,7 @@ svg {
 
 .sidebar {
     position: fixed;
+
     top: 0;
     left: 0;
     bottom: 0;
@@ -118,18 +130,19 @@ svg {
     z-index: 100;
 
     width: 250px;
+
     padding: 30px 20px;
 
     background:
         radial-gradient(
             circle at 10% 0%,
-            rgba(56, 165, 123, .20),
-            transparent 30%
+            rgba(37, 180, 122, .22),
+            transparent 28%
         ),
         linear-gradient(
             180deg,
-            #0c4938,
-            #092f25
+            #07563E,
+            #06392B
         );
 
     border-right: 1px solid rgba(255,255,255,.08);
@@ -146,8 +159,10 @@ svg {
 
 .brand {
     color: white;
+
     font-size: 26px;
     font-weight: 800;
+
     letter-spacing: -1px;
 }
 
@@ -159,41 +174,44 @@ svg {
     margin-top: 5px;
     margin-bottom: 30px;
 
-    color: #a9c1b7;
+    color: #A8C9BC;
+
     font-size: 9px;
 }
 
 
 /* =========================================================
-   MENU
+   MENU LATERAL
    ========================================================= */
 
 .sidebar-menu {
     display: flex;
     flex-direction: column;
+
     gap: 5px;
 }
 
 .sidebar-menu a {
     min-height: 44px;
+
     padding: 7px 10px;
 
     border-radius: 12px;
 
-    color: #b6cbc3;
+    color: #B8D1C7;
 
     display: flex;
     align-items: center;
+
     gap: 10px;
 
     font-size: 12px;
     font-weight: 600;
-
-    transition: .2s ease;
 }
 
 .sidebar-menu a:hover {
-    background: rgba(255,255,255,.06);
+    background: rgba(255,255,255,.07);
+
     color: white;
 }
 
@@ -201,14 +219,14 @@ svg {
     background:
         linear-gradient(
             135deg,
-            #1b7658,
-            #125b45
+            #0D8A61,
+            #08704F
         );
 
     color: white;
 
     box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.08);
+        inset 0 1px 0 rgba(255,255,255,.10);
 }
 
 .menu-icon {
@@ -231,9 +249,9 @@ svg {
 
     border-radius: 6px;
 
-    background: rgba(244,123,32,.17);
+    background: rgba(255,122,24,.18);
 
-    color: #ffad69;
+    color: #FFB16F;
 
     font-size: 7px;
     font-weight: 800;
@@ -246,20 +264,21 @@ svg {
 
 .premium-card {
     margin-top: auto;
+
     padding: 16px;
 
-    border: 1px solid rgba(255,255,255,.10);
-    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,.11);
+    border-radius: 17px;
 
     background:
         linear-gradient(
             145deg,
-            #176148,
-            #104937
+            #0A6C4D,
+            #07513B
         );
 
     box-shadow:
-        0 12px 30px rgba(0,0,0,.13);
+        0 15px 30px rgba(0,0,0,.14);
 }
 
 .premium-icon {
@@ -270,9 +289,9 @@ svg {
 
     border-radius: 10px;
 
-    background: rgba(244,123,32,.16);
+    background: rgba(255,122,24,.19);
 
-    color: #ff9d50;
+    color: #FF9B4C;
 
     display: grid;
     place-items: center;
@@ -285,19 +304,23 @@ svg {
 
 .premium-card strong {
     color: white;
+
     font-size: 11px;
 }
 
 .premium-card p {
     margin: 7px 0 13px;
 
-    color: #b6ccc3;
+    color: #BBD2C9;
+
     font-size: 8px;
+
     line-height: 1.5;
 }
 
 .premium-card button {
     width: 100%;
+
     padding: 9px;
 
     border: 0;
@@ -306,8 +329,8 @@ svg {
     background:
         linear-gradient(
             135deg,
-            #ff9341,
-            #f47718
+            #FF922E,
+            #FF6C0D
         );
 
     color: white;
@@ -316,7 +339,7 @@ svg {
     font-weight: 700;
 
     box-shadow:
-        0 8px 18px rgba(244,123,32,.24);
+        0 8px 20px rgba(255,108,13,.27);
 }
 
 
@@ -326,23 +349,27 @@ svg {
 
 .sidebar-profile {
     margin-top: 15px;
+
     padding-top: 15px;
 
     border-top: 1px solid rgba(255,255,255,.09);
 
     display: flex;
     align-items: center;
+
     gap: 9px;
 }
 
 .avatar {
     width: 34px;
     height: 34px;
+
     flex: 0 0 34px;
 
     border-radius: 50%;
 
-    background: #e8f4ef;
+    background: #FFF0E1;
+
     color: var(--green-800);
 
     display: grid;
@@ -359,19 +386,24 @@ svg {
 
 .profile-text strong {
     color: white;
+
     font-size: 9px;
 }
 
 .profile-text span {
-    color: #a6bdb4;
+    color: #A6C2B7;
+
     font-size: 7px;
 }
 
 .more-button {
     margin-left: auto;
+
     border: 0;
+
     background: transparent;
-    color: #a6bdb4;
+
+    color: #A6C2B7;
 }
 
 
@@ -381,21 +413,28 @@ svg {
 
 .main-content {
     width: calc(100% - 250px);
+
     min-height: 100vh;
 
     margin-left: 250px;
+
     padding: 35px 4.5% 60px;
 
     background:
         radial-gradient(
-            circle at 90% 0%,
-            rgba(31, 126, 93, .11),
-            transparent 32%
+            circle at 100% 0%,
+            rgba(255,122,24,.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 0% 40%,
+            rgba(11,139,96,.08),
+            transparent 30%
         ),
         linear-gradient(
             180deg,
-            #eaf3ef 0%,
-            #d9e9e2 100%
+            #F8F2E9,
+            #F0E7DC
         );
 }
 
@@ -417,6 +456,7 @@ svg {
 
     font-size: 8px;
     font-weight: 700;
+
     letter-spacing: 1px;
 }
 
@@ -427,16 +467,19 @@ svg {
 
     font-size: 26px;
     font-weight: 800;
+
     letter-spacing: -1.2px;
 }
 
 .header p {
     color: var(--text-secondary);
+
     font-size: 10px;
 }
 
 .header-actions {
     display: flex;
+
     gap: 8px;
 }
 
@@ -449,7 +492,7 @@ svg {
     border: 1px solid var(--border);
     border-radius: 13px;
 
-    background: rgba(255,255,255,.75);
+    background: #FFFDF9;
 
     color: var(--green-800);
 
@@ -464,8 +507,12 @@ svg {
     height: 17px;
 }
 
+
+/* BOTÃO NOVO LANÇAMENTO — DESKTOP */
+
 .new-transaction {
     height: 42px;
+
     padding: 0 17px;
 
     border: 0;
@@ -474,21 +521,22 @@ svg {
     background:
         linear-gradient(
             145deg,
-            #ff9440,
-            #f37013
+            #FF962F,
+            #FF6E0F
         );
 
     color: white;
 
     display: flex;
     align-items: center;
+
     gap: 7px;
 
     font-size: 10px;
     font-weight: 700;
 
     box-shadow:
-        0 10px 25px rgba(244,123,32,.27);
+        0 10px 24px rgba(255,111,15,.27);
 }
 
 .new-transaction svg {
@@ -498,7 +546,7 @@ svg {
 
 
 /* =========================================================
-   SALDO
+   CARD DE SALDO
    ========================================================= */
 
 .balance-card {
@@ -510,26 +558,31 @@ svg {
 
     overflow: hidden;
 
-    border: 1px solid rgba(255,255,255,.16);
+    border: 1px solid rgba(255,255,255,.18);
     border-radius: 24px;
 
     background:
         radial-gradient(
-            circle at 88% 10%,
-            rgba(76,190,143,.31),
-            transparent 38%
+            circle at 92% 8%,
+            rgba(52, 207, 143, .32),
+            transparent 39%
+        ),
+        radial-gradient(
+            circle at 10% 100%,
+            rgba(255, 132, 34, .11),
+            transparent 35%
         ),
         linear-gradient(
             135deg,
-            #0b4535 0%,
-            #126047 48%,
-            #1b7959 100%
+            #07503A 0%,
+            #087653 48%,
+            #0A9565 100%
         );
 
     color: white;
 
     box-shadow:
-        0 20px 45px rgba(9,61,45,.18);
+        0 20px 45px rgba(7,80,58,.20);
 }
 
 .balance-card::before {
@@ -540,10 +593,10 @@ svg {
     width: 340px;
     height: 340px;
 
-    top: -210px;
-    right: -100px;
+    top: -220px;
+    right: -90px;
 
-    border: 1px solid rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.08);
     border-radius: 50%;
 }
 
@@ -555,23 +608,25 @@ svg {
     width: 260px;
     height: 260px;
 
-    bottom: -170px;
-    left: 15%;
+    bottom: -180px;
+    left: 12%;
 
-    border: 1px solid rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.06);
     border-radius: 50%;
 }
 
 .balance-info {
     position: relative;
+
     z-index: 4;
 }
 
 .balance-title {
-    color: #c0d8ce;
+    color: #C7E0D6;
 
     display: flex;
     align-items: center;
+
     gap: 7px;
 
     font-size: 10px;
@@ -586,9 +641,9 @@ svg {
     border: 0;
     border-radius: 8px;
 
-    background: rgba(255,255,255,.08);
+    background: rgba(255,255,255,.09);
 
-    color: #dcebe5;
+    color: #E4F1EC;
 
     display: grid;
     place-items: center;
@@ -613,6 +668,7 @@ svg {
 .balance-change {
     display: flex;
     align-items: center;
+
     gap: 7px;
 }
 
@@ -621,12 +677,13 @@ svg {
 
     border-radius: 9px;
 
-    background: rgba(75,225,160,.16);
+    background: rgba(73,236,166,.17);
 
-    color: #77e9b5;
+    color: #86F2C0;
 
     display: flex;
     align-items: center;
+
     gap: 4px;
 
     font-size: 8px;
@@ -634,7 +691,8 @@ svg {
 }
 
 .balance-change small {
-    color: #bdd1c9;
+    color: #C2D8CF;
+
     font-size: 8px;
 }
 
@@ -647,17 +705,19 @@ svg {
     z-index: 5;
 
     height: 38px;
+
     padding: 0 12px;
 
-    border: 1px solid rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.17);
     border-radius: 11px;
 
-    background: rgba(255,255,255,.08);
+    background: rgba(255,255,255,.09);
 
-    color: #e0ece7;
+    color: #E6F1ED;
 
     display: flex;
     align-items: center;
+
     gap: 8px;
 
     font-size: 8px;
@@ -688,30 +748,34 @@ svg {
 }
 
 .chart-fill {
-    fill: rgba(81,221,162,.11) !important;
+    fill: rgba(92,238,176,.13) !important;
+
     stroke: none !important;
 }
 
 .chart-stroke {
     fill: none !important;
 
-    stroke: #60dca6 !important;
+    stroke: #69E6AE !important;
 
-    stroke-width: 2.5 !important;
+    stroke-width: 2.6 !important;
+
     stroke-linecap: round;
     stroke-linejoin: round;
 }
 
 
 /* =========================================================
-   CARDS RESUMO
+   RESUMO
    ========================================================= */
 
 .summary-grid {
     margin: 15px 0;
 
     display: grid;
+
     grid-template-columns: repeat(3,1fr);
+
     gap: 13px;
 }
 
@@ -723,29 +787,29 @@ svg {
 
     padding: 17px;
 
-    border: 1px solid #c9ddd4;
+    border: 1px solid #E5DDD2;
     border-radius: 20px;
 
     background:
         linear-gradient(
             145deg,
-            #f9fcfa 0%,
-            #e7f1ec 100%
+            #FFFDF9 0%,
+            #FFF7EC 100%
         );
 
     display: flex;
     align-items: center;
+
     gap: 12px;
 
-    box-shadow:
-        0 10px 30px rgba(13,64,49,.08);
+    box-shadow: var(--shadow-card);
 }
 
 .summary-icon {
-    flex: 0 0 43px;
+    flex: 0 0 44px;
 
-    width: 43px;
-    height: 43px;
+    width: 44px;
+    height: 44px;
 
     border-radius: 14px;
 
@@ -759,18 +823,21 @@ svg {
 }
 
 .income-icon {
-    background: #dff3ea;
-    color: #188b62;
+    background: #DDF7EB;
+
+    color: #0C9C68;
 }
 
 .expense-icon {
-    background: #f9e6e2;
-    color: #d9685d;
+    background: #FFE8E2;
+
+    color: #DF6656;
 }
 
 .receive-icon {
-    background: #ffead8;
-    color: #ef771b;
+    background: #FFE9D2;
+
+    color: #F37A18;
 }
 
 .summary-content {
@@ -781,14 +848,15 @@ svg {
 }
 
 .summary-content > span {
-    color: #71877e;
+    color: #778A82;
+
     font-size: 8px;
 }
 
 .summary-content > strong {
     margin: 4px 0;
 
-    color: var(--green-950);
+    color: #17362C;
 
     font-size: 16px;
 
@@ -797,15 +865,16 @@ svg {
 
 .summary-content small {
     color: var(--muted);
+
     font-size: 7px;
 }
 
 .positive-text {
-    color: #188b62 !important;
+    color: #0C9C68 !important;
 }
 
 .negative-text {
-    color: #d9685d !important;
+    color: #DF6656 !important;
 }
 
 .card-more {
@@ -818,9 +887,10 @@ svg {
     height: 26px;
 
     border: 0;
+
     background: transparent;
 
-    color: #82988f;
+    color: #899B93;
 }
 
 
@@ -843,20 +913,19 @@ svg {
 
     padding: 20px;
 
-    border: 1px solid #c9ddd4;
+    border: 1px solid #E5DDD2;
     border-radius: 20px;
 
     background:
         linear-gradient(
             145deg,
-            #f9fcfa,
-            #e9f2ee
+            #FFFDF9,
+            #FFF7EC
         );
 
     color: var(--text);
 
-    box-shadow:
-        0 10px 30px rgba(13,64,49,.08);
+    box-shadow: var(--shadow-card);
 }
 
 .panel-header {
@@ -871,11 +940,13 @@ svg {
     margin-bottom: 4px;
 
     color: var(--green-950);
+
     font-size: 12px;
 }
 
 .panel-header p {
     color: var(--muted);
+
     font-size: 8px;
 }
 
@@ -883,6 +954,7 @@ svg {
     padding: 0;
 
     border: 0;
+
     background: transparent;
 
     color: var(--green-700);
@@ -917,18 +989,18 @@ svg {
 
     background:
         conic-gradient(
-            #f47b20 0 28%,
-            #38a4cc 28% 46%,
-            #7d70d2 46% 61%,
-            #34b49c 61% 73%,
-            #bfd4cb 73% 100%
+            #FF7A18 0 30%,
+            #0EA16C 30% 49%,
+            #FFB03D 49% 65%,
+            #E86654 65% 79%,
+            #E5D9C9 79% 100%
         );
 
     display: grid;
     place-items: center;
 
     box-shadow:
-        0 8px 20px rgba(10,70,50,.08);
+        0 10px 24px rgba(83,57,28,.10);
 }
 
 .donut-chart::before {
@@ -941,11 +1013,12 @@ svg {
 
     border-radius: 50%;
 
-    background: #f3f8f5;
+    background: #FFF9F0;
 }
 
 .donut-inner {
     position: relative;
+
     z-index: 2;
 
     text-align: center;
@@ -955,11 +1028,13 @@ svg {
     display: block;
 
     color: var(--green-950);
+
     font-size: 14px;
 }
 
 .donut-inner span {
     color: var(--muted);
+
     font-size: 7px;
 }
 
@@ -967,6 +1042,7 @@ svg {
     flex: 1;
 
     display: grid;
+
     gap: 12px;
 }
 
@@ -979,6 +1055,7 @@ svg {
         30px;
 
     align-items: center;
+
     gap: 10px;
 
     font-size: 8px;
@@ -1009,23 +1086,23 @@ svg {
 }
 
 .food-dot {
-    background: #f47b20;
+    background: #FF7A18;
 }
 
 .transport-dot {
-    background: #38a4cc;
+    background: #0EA16C;
 }
 
 .home-dot {
-    background: #7d70d2;
+    background: #FFB03D;
 }
 
 .bill-dot {
-    background: #34b49c;
+    background: #E86654;
 }
 
 .other-dot {
-    background: #9eb9ae;
+    background: #B9A995;
 }
 
 
@@ -1040,25 +1117,24 @@ svg {
 
     overflow: hidden;
 
-    border: 1px solid #bad7cb;
+    border: 1px solid #D8CDBF;
     border-radius: 20px;
 
     background:
         radial-gradient(
             circle at 100% 0%,
-            rgba(47,157,116,.14),
+            rgba(255,122,24,.13),
             transparent 35%
         ),
         linear-gradient(
             145deg,
-            #e0efe8,
-            #d3e7de
+            #FFF8EC,
+            #F8ECDD
         );
 
     color: var(--text);
 
-    box-shadow:
-        0 10px 30px rgba(13,64,49,.08);
+    box-shadow: var(--shadow-card);
 }
 
 .ai-header {
@@ -1070,6 +1146,7 @@ svg {
 .ai-brand {
     display: flex;
     align-items: center;
+
     gap: 9px;
 }
 
@@ -1082,8 +1159,8 @@ svg {
     background:
         linear-gradient(
             145deg,
-            #1b7959,
-            #115740
+            #0B9565,
+            #08704F
         );
 
     color: white;
@@ -1092,7 +1169,7 @@ svg {
     place-items: center;
 
     box-shadow:
-        0 8px 18px rgba(17,87,64,.20);
+        0 8px 20px rgba(8,112,79,.20);
 }
 
 .ai-icon svg {
@@ -1102,6 +1179,7 @@ svg {
 
 .ai-brand strong {
     color: var(--green-950);
+
     font-size: 11px;
 }
 
@@ -1111,6 +1189,7 @@ svg {
     margin-top: 3px;
 
     color: var(--muted);
+
     font-size: 7px;
 }
 
@@ -1119,9 +1198,9 @@ svg {
 
     border-radius: 7px;
 
-    background: #ffe7d2;
+    background: #FFE5CC;
 
-    color: #d9610b;
+    color: #E25F08;
 
     font-size: 6px;
     font-weight: 800;
@@ -1133,6 +1212,7 @@ svg {
 
 .ai-small {
     color: var(--muted);
+
     font-size: 6px;
 }
 
@@ -1142,6 +1222,7 @@ svg {
     color: var(--green-950);
 
     font-size: 13px;
+
     line-height: 1.4;
 }
 
@@ -1155,10 +1236,10 @@ svg {
 .ai-suggestions button {
     padding: 6px 8px;
 
-    border: 1px solid #c6ddd3;
+    border: 1px solid #E4D6C5;
     border-radius: 20px;
 
-    background: rgba(255,255,255,.62);
+    background: rgba(255,255,255,.72);
 
     color: var(--green-800);
 
@@ -1170,12 +1251,12 @@ svg {
 
     padding: 7px 7px 7px 10px;
 
-    border: 1px solid #c5dbd2;
+    border: 1px solid #E3D5C4;
     border-radius: 11px;
 
-    background: rgba(255,255,255,.76);
+    background: rgba(255,255,255,.82);
 
-    color: #7f948b;
+    color: #8B978F;
 
     display: flex;
     align-items: center;
@@ -1194,8 +1275,8 @@ svg {
     background:
         linear-gradient(
             145deg,
-            #ff9440,
-            #f37013
+            #FF922E,
+            #FF6C0D
         );
 
     color: white;
@@ -1220,7 +1301,7 @@ svg {
 .transaction-item {
     min-height: 56px;
 
-    border-bottom: 1px solid #d7e5df;
+    border-bottom: 1px solid #EAE1D7;
 
     display: grid;
 
@@ -1230,6 +1311,7 @@ svg {
         auto;
 
     align-items: center;
+
     gap: 10px;
 }
 
@@ -1253,23 +1335,27 @@ svg {
 }
 
 .supermarket {
-    background: #ffead8;
-    color: #ef771b;
+    background: #FFE8D3;
+
+    color: #F17416;
 }
 
 .salary-icon {
-    background: #dff3ea;
-    color: #188b62;
+    background: #DCF7E9;
+
+    color: #0D9B67;
 }
 
 .gas-icon {
-    background: #e1f1f7;
-    color: #3599c0;
+    background: #FFF0D1;
+
+    color: #E79412;
 }
 
 .internet-icon {
-    background: #ece9f8;
-    color: #7567ca;
+    background: #F5E8E2;
+
+    color: #D86554;
 }
 
 .transaction-description {
@@ -1277,11 +1363,13 @@ svg {
 
     display: flex;
     flex-direction: column;
+
     gap: 3px;
 }
 
 .transaction-description strong {
     color: var(--text);
+
     font-size: 8px;
 }
 
@@ -1289,6 +1377,7 @@ svg {
     overflow: hidden;
 
     color: var(--muted);
+
     font-size: 7px;
 
     text-overflow: ellipsis;
@@ -1324,14 +1413,14 @@ svg {
 
     overflow: hidden;
 
-    border: 1px solid #c7ddd4;
+    border: 1px solid #E6D9C9;
     border-radius: 14px;
 
     background:
         linear-gradient(
             130deg,
-            #dcece5,
-            #edf5f1
+            #FFF1DF,
+            #FFF9F0
         );
 }
 
@@ -1346,9 +1435,9 @@ svg {
 
     border-radius: 50%;
 
-    background: #cae7da;
+    background: #FFE0C1;
 
-    color: var(--green-700);
+    color: #F17114;
 
     display: grid;
     place-items: center;
@@ -1383,11 +1472,13 @@ svg {
     margin-top: 3px;
 
     color: var(--text);
+
     font-size: 11px;
 }
 
 .goal-title > strong {
     color: var(--green-700);
+
     font-size: 11px;
 }
 
@@ -1402,11 +1493,13 @@ svg {
 
 .goal-money strong {
     color: var(--text);
+
     font-size: 9px;
 }
 
 .goal-money span {
     color: var(--muted);
+
     font-size: 7px;
 }
 
@@ -1419,7 +1512,7 @@ svg {
 
     border-radius: 10px;
 
-    background: #ccddd6;
+    background: #E8DDD0;
 }
 
 .goal-progress div {
@@ -1431,8 +1524,8 @@ svg {
     background:
         linear-gradient(
             90deg,
-            #1a8962,
-            #4acb93
+            #FF7A18,
+            #FFB13D
         );
 }
 
@@ -1494,7 +1587,7 @@ svg {
 
         overflow-x: hidden;
 
-        background: #dceae4 !important;
+        background: #F2E9DE !important;
     }
 
     .sidebar {
@@ -1502,10 +1595,11 @@ svg {
     }
 
 
-    /* FUNDO PREMIUM VERDE MÉDIO */
+    /* FUNDO */
 
     .main-content {
         width: 100% !important;
+
         min-height: 100vh;
 
         margin: 0 !important;
@@ -1517,14 +1611,19 @@ svg {
 
         background:
             radial-gradient(
-                circle at 90% 0%,
-                rgba(30,123,91,.14),
+                circle at 100% 0%,
+                rgba(255,122,24,.12),
+                transparent 27%
+            ),
+            radial-gradient(
+                circle at 0% 40%,
+                rgba(12,156,104,.08),
                 transparent 30%
             ),
             linear-gradient(
                 180deg,
-                #e3efe9 0%,
-                #d4e5dd 100%
+                #F8F1E8 0%,
+                #F0E6DA 100%
             ) !important;
     }
 
@@ -1533,6 +1632,7 @@ svg {
 
     .header {
         margin-bottom: 22px;
+
         gap: 12px;
     }
 
@@ -1543,92 +1643,71 @@ svg {
     .header h1 {
         margin: 0 0 5px;
 
-        color: #0a3528;
+        color: #073D2D;
 
-        font-size: 26px;
+        font-size: 27px;
         font-weight: 800;
 
-        letter-spacing: -1.2px;
+        letter-spacing: -1.3px;
     }
 
     .header p {
-        max-width: 270px;
+        max-width: 290px;
 
-        color: #5e776d;
+        color: #63776E;
 
         font-size: 10px;
+
         line-height: 1.4;
     }
 
     .header-actions {
-        flex-shrink: 0;
+        display: none !important;
     }
 
-    .header-icon-button {
-        display: none;
-    }
+
+    /*
+       REMOVE O BOTÃO + SUPERIOR NO CELULAR
+       O BOTÃO CENTRAL INFERIOR CONTINUA.
+    */
 
     .new-transaction {
-        width: 51px;
-        height: 51px;
-
-        padding: 0;
-
-        border: 0;
-        border-radius: 16px;
-
-        background:
-            linear-gradient(
-                145deg,
-                #ff9644,
-                #f37013
-            );
-
-        justify-content: center;
-
-        box-shadow:
-            0 12px 27px rgba(244,123,32,.30);
-    }
-
-    .new-transaction span {
-        display: none;
-    }
-
-    .new-transaction svg {
-        width: 21px;
-        height: 21px;
+        display: none !important;
     }
 
 
-    /* SALDO */
+    /* =====================================================
+       SALDO MOBILE
+       ===================================================== */
 
     .balance-card {
         min-height: 225px;
 
         padding: 28px 22px;
 
-        border: 1px solid rgba(255,255,255,.17);
+        border: 1px solid rgba(255,255,255,.18);
         border-radius: 24px;
 
         background:
             radial-gradient(
-                circle at 90% 8%,
-                rgba(79,193,146,.32),
+                circle at 92% 8%,
+                rgba(57,213,147,.34),
                 transparent 40%
+            ),
+            radial-gradient(
+                circle at 5% 100%,
+                rgba(255,127,28,.12),
+                transparent 36%
             ),
             linear-gradient(
                 135deg,
-                #0b4535 0%,
-                #126047 50%,
-                #1b7959 100%
+                #07503A 0%,
+                #087653 50%,
+                #0A9565 100%
             ) !important;
 
         box-shadow:
-            0 18px 40px rgba(9,61,45,.18);
-    }
-
-    .balance-title {
-        color: #c2d8cf;
+            0 18px 40px rgba(7,80,58,.21);
     }
 
     .balance-card h2 {
@@ -1646,7 +1725,7 @@ svg {
 
         border-radius: 12px;
 
-        background: rgba(255,255,255,.09);
+        background: rgba(255,255,255,.10);
     }
 
     .balance-change {
@@ -1668,11 +1747,13 @@ svg {
         width: 54%;
         height: 92px;
 
-        opacity: .88;
+        opacity: .90;
     }
 
 
-    /* CARDS */
+    /* =====================================================
+       CARDS
+       ===================================================== */
 
     .summary-grid {
         margin: 13px 0;
@@ -1688,20 +1769,20 @@ svg {
 
         padding: 14px 12px;
 
-        border: 1px solid #c3d9d0;
+        border: 1px solid #E4D9CC;
         border-radius: 20px;
 
         background:
             linear-gradient(
                 145deg,
-                #f7faf9 0%,
-                #e4efea 100%
+                #FFFDF9,
+                #FFF4E7
             ) !important;
 
         gap: 10px;
 
         box-shadow:
-            0 10px 26px rgba(12,66,48,.09);
+            0 10px 27px rgba(82,55,27,.09);
     }
 
     .summary-card:nth-child(3) {
@@ -1720,14 +1801,15 @@ svg {
     }
 
     .summary-content > span {
-        color: #6c8379;
+        color: #71837B;
+
         font-size: 8px;
     }
 
     .summary-content > strong {
         margin: 4px 0;
 
-        color: #0b3025;
+        color: #17362C;
 
         font-size: 14px;
     }
@@ -1741,50 +1823,59 @@ svg {
     }
 
 
-    /* PAINÉIS */
+    /* =====================================================
+       PAINÉIS
+       ===================================================== */
 
     .dashboard-grid {
         grid-template-columns: 1fr;
+
         gap: 11px;
     }
 
     .panel,
     .ai-card {
         padding: 18px;
+
         border-radius: 20px;
     }
 
     .panel {
-        border: 1px solid #c3d9d0;
+        border: 1px solid #E4D9CC;
 
         background:
             linear-gradient(
                 145deg,
-                #f7faf9,
-                #e4efea
+                #FFFDF9,
+                #FFF4E7
             ) !important;
 
         box-shadow:
-            0 10px 26px rgba(12,66,48,.09);
+            0 10px 27px rgba(82,55,27,.09);
     }
 
     .panel-header h3 {
-        color: #0b3025;
+        color: #17362C;
+
         font-size: 13px;
     }
 
     .panel-header p {
         margin-top: 3px;
 
-        color: #7b9188;
+        color: #84938D;
+
         font-size: 8px;
     }
 
 
-    /* GASTOS */
+    /* =====================================================
+       GASTOS
+       ===================================================== */
 
     .spending-body {
         margin-top: 22px;
+
         gap: 22px;
     }
 
@@ -1799,7 +1890,7 @@ svg {
         width: 76px;
         height: 76px;
 
-        background: #edf5f1;
+        background: #FFF8EF;
     }
 
     .donut-inner strong {
@@ -1811,41 +1902,48 @@ svg {
     }
 
 
-    /* IA */
+    /* =====================================================
+       IA
+       ===================================================== */
 
     .ai-card {
-        border: 1px solid #bad6ca;
+        border: 1px solid #E0CFBC;
 
         background:
             radial-gradient(
                 circle at 100% 0%,
-                rgba(32,135,98,.13),
+                rgba(255,122,24,.14),
                 transparent 35%
             ),
             linear-gradient(
                 145deg,
-                #deeee7,
-                #cee3da
+                #FFF7EA,
+                #F7E8D6
             ) !important;
 
         box-shadow:
-            0 10px 26px rgba(12,66,48,.09);
+            0 10px 27px rgba(82,55,27,.09);
     }
 
     .ai-content h3 {
         max-width: 240px;
+
         font-size: 14px;
     }
 
 
-    /* TRANSAÇÕES */
+    /* =====================================================
+       TRANSAÇÕES
+       ===================================================== */
 
     .transaction-item {
         min-height: 58px;
     }
 
 
-    /* MENU INFERIOR */
+    /* =====================================================
+       MENU INFERIOR
+       ===================================================== */
 
     .mobile-navigation {
         position: fixed;
@@ -1863,10 +1961,10 @@ svg {
             8px
             10px;
 
-        border-top: 1px solid rgba(15,82,61,.12);
+        border-top: 1px solid #E6DCCF;
 
         background:
-            rgba(232,242,237,.96) !important;
+            rgba(255,250,244,.97) !important;
 
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
@@ -1876,13 +1974,13 @@ svg {
         justify-content: space-around;
 
         box-shadow:
-            0 -10px 30px rgba(10,62,45,.10);
+            0 -10px 30px rgba(82,55,27,.09);
     }
 
     .mobile-navigation a {
         min-width: 52px;
 
-        color: #72877e;
+        color: #84948D;
 
         display: flex;
         flex-direction: column;
@@ -1902,8 +2000,11 @@ svg {
     }
 
     .mobile-navigation a.active {
-        color: #12664c;
+        color: #087653;
     }
+
+
+    /* BOTÃO + CENTRAL */
 
     .mobile-add {
         width: 58px;
@@ -1913,14 +2014,14 @@ svg {
 
         padding: 0;
 
-        border: 4px solid #e1ede7;
+        border: 4px solid #FFF8EF;
         border-radius: 50%;
 
         background:
             linear-gradient(
                 145deg,
-                #ff9644,
-                #f37013
+                #FF9A37,
+                #FF6E0F
             );
 
         color: white;
@@ -1929,7 +2030,7 @@ svg {
         place-items: center;
 
         box-shadow:
-            0 12px 30px rgba(244,123,32,.34);
+            0 12px 30px rgba(255,111,15,.34);
     }
 
     .mobile-add svg {
@@ -1951,15 +2052,16 @@ svg {
     }
 
     .header h1 {
-        font-size: 25px;
+        font-size: 26px;
     }
 
     .header p {
-        max-width: 245px;
+        max-width: 280px;
     }
 
     .balance-card {
         min-height: 220px;
+
         padding: 26px 20px;
     }
 
@@ -1992,6 +2094,7 @@ svg {
 
     .spending-body {
         flex-direction: column;
+
         align-items: stretch;
     }
 
@@ -2026,10 +2129,11 @@ svg {
 }
 
 ::-webkit-scrollbar-track {
-    background: #dceae4;
+    background: #F2E9DE;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #8fb5a5;
+    background: #BFAF9D;
+
     border-radius: 20px;
 }
